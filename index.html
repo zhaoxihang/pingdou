@@ -9,7 +9,7 @@
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; min-height: 100dvh; overflow-x: hidden; }
-    body { font-family: "Segoe UI", "PingFang SC", sans-serif; background: #1c140c url("./art/bead-bg-desk.png") center/cover no-repeat; background-attachment: scroll; color: #f6efe4; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+    body { font-family: "Segoe UI", "PingFang SC", sans-serif; background: #1c140c url("./art/bead-bg-desk.webp") center/cover no-repeat; background-attachment: scroll; color: #f6efe4; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
     button { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
     .bead-root { max-width: 560px; width: 100%; margin: 0 auto; padding: 12px 12px 24px; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     .bead-root.ironing { overscroll-behavior: none; }
@@ -34,16 +34,16 @@
     .topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
     .title { font-weight: 700; flex: 1; min-width: 0; }
     .remain { opacity: .8; font-size: 13px; white-space: nowrap; }
-    .board-wrap { position: relative; width: 100%; background: #2a1f14 url("./art/bead-board-frame.png") center/cover no-repeat; border-radius: 16px; padding: 18px; display: flex; justify-content: center; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+    .board-wrap { position: relative; width: 100%; background: #2a1f14 url("./art/bead-board-frame.webp") center/cover no-repeat; border-radius: 16px; padding: 18px; display: flex; justify-content: center; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
     .board { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 8px; background: #3a2a1c; touch-action: none; }
     @keyframes iron { from { left: -30%; } to { left: 100%; } }
     .hold-hint { position: absolute; left: 50%; transform: translateX(-50%); }
     .queue { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
     .rack-row, .qrow, .tools { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
     .qrow { flex-wrap: nowrap; justify-content: center; min-width: min-content; }
-    .peg, .hole { width: 56px; height: 72px; border-radius: 10px; background: url("./art/bead-peg.png") center/contain no-repeat; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
+    .peg, .hole { width: 56px; height: 72px; border-radius: 10px; background: url("./art/bead-peg.webp") center/contain no-repeat; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
     .peg.empty { outline: none; opacity: .85; }
-    .hole { width: 64px; height: 64px; border-radius: 50%; background: url("./art/bead-hole.png") center/contain no-repeat; font-size: 0; color: transparent; }
+    .hole { width: 64px; height: 64px; border-radius: 50%; background: url("./art/bead-hole.webp") center/contain no-repeat; font-size: 0; color: transparent; }
     .cap { align-self: center; font-size: 12px; opacity: .8; }
     .needle.buried { opacity: .45; cursor: default; }
     .ghost-slot { width: 48px; height: 48px; }
@@ -108,7 +108,7 @@
   <div id="app"></div>
   <p class="debug-note">拼豆烫画</p>
   <script type="module">
-    import { startHtmlPlayer } from "./player.bundle.js?v=bead-min1";
+    import { startHtmlPlayer } from "./player.bundle.js?v=art2";
     startHtmlPlayer(document.getElementById("app"));
   </script>
 </body>
