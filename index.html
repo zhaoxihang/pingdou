@@ -23,12 +23,12 @@
     .paper-sheet { position: absolute; top: 18px; right: 18px; bottom: 18px; left: 18px; width: auto; height: auto; opacity: .55; pointer-events: none; object-fit: cover; transform: scale(1.34); transform-origin: center; }
     .iron-layer { position: absolute; inset: 0; z-index: 1; border-radius: 16px; overflow: hidden; background: rgba(255,248,230,.12); cursor: grab; touch-action: none; }
     .iron-layer:active { cursor: grabbing; }
-    .bead-root.ironing .rack-row, .bead-root.ironing .queue, .bead-root.ironing .tools { display: none; }
+    .bead-root.ironing .rack-row, .bead-root.ironing .queue, .bead-root.ironing .tools, .bead-root.ironing .mode-row { display: none; }
     .hold-hint { bottom: 18px; background: rgba(27,18,10,.72); padding: 6px 12px; border-radius: 12px; font-size: 12px; max-width: 90%; text-align: center; }
     .skip { position: relative; left: auto; top: auto; transform: none; z-index: 8; display: block; margin: 12px auto 0; padding: 12px 28px; font-size: 16px; font-weight: 800; pointer-events: auto; background: #e3942f; }
     .needle { position: relative; overflow: visible; width: 64px; height: 64px; border: 0; background-color: transparent; border-radius: 0; font-weight: 800; cursor: pointer; font-size: 16px; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
     .needle span { position: absolute; top: -4px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: #fffdf8; color: #1b120a; font-size: 12px; line-height: 20px; border: 1px solid #1b120a; text-shadow: none; z-index: 1; }
-    .needle .code { position: absolute; top: -4px; left: -6px; right: auto; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: #fff; color: #1b120a; font-size: 11px; line-height: 18px; border: 1px solid #1b120a; }
+    .needle .code { position: absolute; left: 50%; bottom: -2px; top: auto; right: auto; transform: translateX(-50%); min-width: 16px; height: 16px; padding: 0 4px; border-radius: 4px; background: #1b120a; color: #ffe08a; font-size: 11px; line-height: 16px; border: 0; font-style: normal; font-weight: 800; }
     .legend { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 8px 0 0; }
     .chip { min-width: 28px; height: 22px; border: 1px solid rgba(0,0,0,.35); border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
     .topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -40,6 +40,9 @@
     .hold-hint { position: absolute; left: 50%; transform: translateX(-50%); }
     .queue { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
     .rack-row, .qrow, .tools { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+    .mode-row { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 12px; }
+    .mode-btn { min-width: 160px; }
+    .mode-hint { font-size: 12px; opacity: .72; text-align: center; }
     .qrow { flex-wrap: nowrap; justify-content: center; min-width: min-content; }
     .peg, .hole { width: 56px; height: 72px; border-radius: 10px; background: url("./art/bead-peg.webp") center/contain no-repeat; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
     .peg.empty { outline: none; opacity: .85; }
@@ -58,6 +61,8 @@
     .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); z-index: 40; overflow: auto; -webkit-overflow-scrolling: touch; }
     .card { background: #3b2a1c; padding: 28px 22px 18px; border-radius: 16px; width: min(360px, 100%); max-height: calc(100dvh - 24px); overflow: auto; display: flex; flex-direction: column; gap: 10px; }
     .card.gallery { width: min(520px, 100%); }
+    .card.pick { width: min(400px, 100%); }
+    .pick-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px 6px; justify-items: center; align-items: start; }
     .ggroup { margin-top: 10px; }
     .ggroup-title { font-size: 13px; opacity: .85; margin-bottom: 6px; text-align: left; }
     .grow { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
@@ -66,14 +71,18 @@
     .gslot { padding: 10px; border: 0; border-radius: 10px; background: #2a1f14; color: inherit; font: inherit; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; }
     .gslot.empty { opacity: .45; cursor: default; }
     .gallery-thumb { display: block; width: 100%; height: auto; border-radius: 8px; background: #f4ead8; }
-    .gallery-art { display: block; width: 100%; height: auto; border-radius: 6px; background: #f4ead8; }
+    .gallery-art { display: block; width: 100%; height: auto; border-radius: 6px; background: #f4ead8; image-rendering: pixelated; }
+    .res-row { display: flex; align-items: center; gap: 10px; margin: 2px 0 4px; }
+    .res-end { font-size: 12px; opacity: .75; min-width: 1.2em; }
+    .res-hint { font-size: 13px; opacity: .82; margin: 0; }
+    .res-slider { flex: 1; height: 28px; margin: 0; accent-color: #e3942f; }
     .debug-note { text-align: center; opacity: .5; font-size: 12px; margin: 0 12px 12px; }
     @media (max-width: 480px) {
       .bead-root { padding: 8px 8px 16px; }
       .mascot { width: 40px; height: 40px; }
       .title { font-size: 14px; }
       .remain { font-size: 12px; }
-      .board-wrap { padding: 10px; border-radius: 12px; }
+      .iron-sprite { width: 22%; }
       .paper-sheet { top: 10px; right: 10px; bottom: 10px; left: 10px; }
       .needle { width: 52px; height: 52px; }
       .needle span { min-width: 18px; height: 18px; font-size: 11px; line-height: 18px; }
@@ -86,6 +95,7 @@
       .hold-hint { font-size: 11px; bottom: 10px; padding: 6px 10px; max-width: 94%; }
       .card { padding: 18px 14px 14px; width: 100%; }
       .card.piece, .card.gallery { width: 100%; }
+      .pick-grid { gap: 6px 4px; }
       .grow { grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); }
       .tools { gap: 6px; }
     }
@@ -106,9 +116,9 @@
 </head>
 <body>
   <div id="app"></div>
-  <p class="debug-note">拼豆烫画</p>
+  <p class="debug-note">调试入口 · 打开本页即可试玩；可用「上传出关」把图片变成自制关（只存在本机）</p>
   <script type="module">
-    import { startHtmlPlayer } from "./player.bundle.js?v=art2";
+    import { startHtmlPlayer } from "./player.bundle.js?v=bead34";
     startHtmlPlayer(document.getElementById("app"));
   </script>
 </body>
