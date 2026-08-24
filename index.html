@@ -44,9 +44,12 @@
     .mode-btn { min-width: 160px; }
     .mode-hint { font-size: 12px; opacity: .72; text-align: center; }
     .qrow { flex-wrap: nowrap; justify-content: center; min-width: min-content; }
-    .peg, .hole { width: 56px; height: 72px; border-radius: 10px; background: url("./art/bead-peg.webp") center/contain no-repeat; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
+    .peg { position: relative; width: 52px; height: 96px; border-radius: 10px; background: url("./art/bead-peg.webp") center bottom / contain no-repeat; display: flex; align-items: stretch; justify-content: center; padding: 0; overflow: visible; }
     .peg.empty { outline: none; opacity: .85; }
-    .hole { width: 64px; height: 64px; border-radius: 50%; background: url("./art/bead-hole.webp") center/contain no-repeat; font-size: 0; color: transparent; }
+    .needle.skewer { width: 100%; height: 100%; background-image: none; }
+    .skewer-bead { position: absolute; left: 50%; width: 36px; height: 36px; margin-left: -18px; background-size: contain; background-repeat: no-repeat; background-position: center; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,.3)); }
+    .needle.skewer span { top: -2px; right: -6px; }
+    .needle.skewer .code { bottom: 0; }
     .cap { align-self: center; font-size: 12px; opacity: .8; }
     .needle.buried { opacity: .45; cursor: default; }
     .ghost-slot { width: 48px; height: 48px; }
@@ -86,8 +89,8 @@
       .paper-sheet { top: 10px; right: 10px; bottom: 10px; left: 10px; }
       .needle { width: 52px; height: 52px; }
       .needle span { min-width: 18px; height: 18px; font-size: 11px; line-height: 18px; }
-      .peg { width: 48px; height: 62px; }
-      .hole { width: 52px; height: 52px; }
+      .peg { width: 46px; height: 84px; }
+      .skewer-bead { width: 32px; height: 32px; margin-left: -16px; }
       .ghost-slot { width: 40px; height: 40px; }
       .icon-btn img { width: 44px; height: 44px; }
       .icon-btn { font-size: 10px; min-width: 52px; }
@@ -101,8 +104,7 @@
     }
     @media (max-width: 360px) {
       .needle { width: 46px; height: 46px; }
-      .peg { width: 44px; height: 56px; }
-      .hole { width: 46px; height: 46px; }
+      .peg { width: 42px; height: 76px; }
       .grow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-height: 500px) and (orientation: landscape) {
@@ -118,7 +120,7 @@
   <div id="app"></div>
   <p class="debug-note">调试入口 · 打开本页即可试玩；可用「上传出关」把图片变成自制关（只存在本机）</p>
   <script type="module">
-    import { startHtmlPlayer } from "./player.bundle.js?v=bead34";
+    import { startHtmlPlayer } from "./player.bundle.js?v=bead42";
     startHtmlPlayer(document.getElementById("app"));
   </script>
 </body>
