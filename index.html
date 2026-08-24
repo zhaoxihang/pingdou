@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1c140c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>拼豆烫画</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; min-height: 100dvh; overflow-x: hidden; }
+    body { font-family: "Segoe UI", "PingFang SC", sans-serif; background: #1c140c url("./art/bead-bg-desk.png") center/cover no-repeat; background-attachment: scroll; color: #f6efe4; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+    button { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+    .bead-root { max-width: 560px; width: 100%; margin: 0 auto; padding: 12px 12px 24px; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    .bead-root.ironing { overscroll-behavior: none; }
+    .mascot { width: 52px; height: 52px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,.35)); }
+    .icon-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; border: 0; background: transparent; color: #f6efe4; cursor: pointer; font-size: 11px; }
+    .icon-btn img { width: 56px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 3px rgba(0,0,0,.35)); }
+    .icon-btn.hot img { filter: drop-shadow(0 0 6px #ffe08a); }
+    .icon-btn.dim { opacity: .45; }
+    .iron-sprite { position: absolute; top: 18%; width: 28%; height: auto; left: 12%; pointer-events: none; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+    .iron-sprite.run { animation: none; }
+    .paper-sheet { position: absolute; top: 18px; right: 18px; bottom: 18px; left: 18px; width: auto; height: auto; opacity: .55; pointer-events: none; object-fit: cover; transform: scale(1.34); transform-origin: center; }
+    .iron-layer { position: absolute; inset: 0; z-index: 1; border-radius: 16px; overflow: hidden; background: rgba(255,248,230,.12); cursor: grab; touch-action: none; }
+    .iron-layer:active { cursor: grabbing; }
+    .bead-root.ironing .rack-row, .bead-root.ironing .queue, .bead-root.ironing .tools { display: none; }
+    .hold-hint { bottom: 18px; background: rgba(27,18,10,.72); padding: 6px 12px; border-radius: 12px; font-size: 12px; max-width: 90%; text-align: center; }
+    .skip { position: relative; left: auto; top: auto; transform: none; z-index: 8; display: block; margin: 12px auto 0; padding: 12px 28px; font-size: 16px; font-weight: 800; pointer-events: auto; background: #e3942f; }
+    .needle { position: relative; overflow: visible; width: 64px; height: 64px; border: 0; background-color: transparent; border-radius: 0; font-weight: 800; cursor: pointer; font-size: 16px; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+    .needle span { position: absolute; top: -4px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: #fffdf8; color: #1b120a; font-size: 12px; line-height: 20px; border: 1px solid #1b120a; text-shadow: none; z-index: 1; }
+    .needle .code { position: absolute; top: -4px; left: -6px; right: auto; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: #fff; color: #1b120a; font-size: 11px; line-height: 18px; border: 1px solid #1b120a; }
+    .legend { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 8px 0 0; }
+    .chip { min-width: 28px; height: 22px; border: 1px solid rgba(0,0,0,.35); border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+    .topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .title { font-weight: 700; flex: 1; min-width: 0; }
+    .remain { opacity: .8; font-size: 13px; white-space: nowrap; }
+    .board-wrap { position: relative; width: 100%; background: #2a1f14 url("./art/bead-board-frame.png") center/cover no-repeat; border-radius: 16px; padding: 18px; display: flex; justify-content: center; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+    .board { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 8px; background: #3a2a1c; touch-action: none; }
+    @keyframes iron { from { left: -30%; } to { left: 100%; } }
+    .hold-hint { position: absolute; left: 50%; transform: translateX(-50%); }
+    .queue { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+    .rack-row, .qrow, .tools { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+    .qrow { flex-wrap: nowrap; justify-content: center; min-width: min-content; }
+    .peg, .hole { width: 56px; height: 72px; border-radius: 10px; background: url("./art/bead-peg.png") center/contain no-repeat; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
+    .peg.empty { outline: none; opacity: .85; }
+    .hole { width: 64px; height: 64px; border-radius: 50%; background: url("./art/bead-hole.png") center/contain no-repeat; font-size: 0; color: transparent; }
+    .cap { align-self: center; font-size: 12px; opacity: .8; }
+    .needle.buried { opacity: .45; cursor: default; }
+    .ghost-slot { width: 48px; height: 48px; }
+    .btn { border: 0; border-radius: 18px; padding: 10px 14px; min-height: 40px; background: #c47a2c; color: #fff; cursor: pointer; font-size: 15px; }
+    .btn.ghost { background: transparent; border: 1px solid #c47a2c; color: #f6efe4; }
+    .btn.primary { background: #e3942f; }
+    .btn.hot { box-shadow: 0 0 0 2px #ffe08a; }
+    .btn.dim { opacity: .45; }
+    .hidden { display: none !important; }
+    .fly-layer { position: fixed; inset: 0; pointer-events: none; z-index: 30; }
+    .fly-bead { position: absolute; display: block; background: none; border: 0; padding: 0; filter: drop-shadow(0 5px 6px rgba(0,0,0,.35)); will-change: left, top, width, height; }
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); z-index: 40; overflow: auto; -webkit-overflow-scrolling: touch; }
+    .card { background: #3b2a1c; padding: 28px 22px 18px; border-radius: 16px; width: min(360px, 100%); max-height: calc(100dvh - 24px); overflow: auto; display: flex; flex-direction: column; gap: 10px; }
+    .card.gallery { width: min(520px, 100%); }
+    .ggroup { margin-top: 10px; }
+    .ggroup-title { font-size: 13px; opacity: .85; margin-bottom: 6px; text-align: left; }
+    .grow { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+    .card.piece { width: min(480px, 100%); background: #3b2a1c; }
+    .art-well { background: #f4ead8; padding: 8px; border-radius: 8px; }
+    .gslot { padding: 10px; border: 0; border-radius: 10px; background: #2a1f14; color: inherit; font: inherit; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .gslot.empty { opacity: .45; cursor: default; }
+    .gallery-thumb { display: block; width: 100%; height: auto; border-radius: 8px; background: #f4ead8; }
+    .gallery-art { display: block; width: 100%; height: auto; border-radius: 6px; background: #f4ead8; }
+    .debug-note { text-align: center; opacity: .5; font-size: 12px; margin: 0 12px 12px; }
+    @media (max-width: 480px) {
+      .bead-root { padding: 8px 8px 16px; }
+      .mascot { width: 40px; height: 40px; }
+      .title { font-size: 14px; }
+      .remain { font-size: 12px; }
+      .board-wrap { padding: 10px; border-radius: 12px; }
+      .paper-sheet { top: 10px; right: 10px; bottom: 10px; left: 10px; }
+      .needle { width: 52px; height: 52px; }
+      .needle span { min-width: 18px; height: 18px; font-size: 11px; line-height: 18px; }
+      .peg { width: 48px; height: 62px; }
+      .hole { width: 52px; height: 52px; }
+      .ghost-slot { width: 40px; height: 40px; }
+      .icon-btn img { width: 44px; height: 44px; }
+      .icon-btn { font-size: 10px; min-width: 52px; }
+      .skip { width: 100%; max-width: none; position: sticky; bottom: calc(8px + env(safe-area-inset-bottom)); margin: 10px 0 0; }
+      .hold-hint { font-size: 11px; bottom: 10px; padding: 6px 10px; max-width: 94%; }
+      .card { padding: 18px 14px 14px; width: 100%; }
+      .card.piece, .card.gallery { width: 100%; }
+      .grow { grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); }
+      .tools { gap: 6px; }
+    }
+    @media (max-width: 360px) {
+      .needle { width: 46px; height: 46px; }
+      .peg { width: 44px; height: 56px; }
+      .hole { width: 46px; height: 46px; }
+      .grow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-height: 500px) and (orientation: landscape) {
+      .bead-root { padding: 6px 8px; }
+      .mascot { width: 32px; height: 32px; }
+      .topbar { margin-bottom: 4px; }
+      .board-wrap { padding: 8px; }
+      .skip { position: sticky; bottom: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <p class="debug-note">拼豆烫画</p>
+  <script type="module">
+    import { startHtmlPlayer } from "./player.bundle.js?v=bead-min1";
+    startHtmlPlayer(document.getElementById("app"));
+  </script>
+</body>
+</html>
