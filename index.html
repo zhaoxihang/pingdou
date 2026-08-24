@@ -80,6 +80,9 @@
     .res-hint { font-size: 13px; opacity: .82; margin: 0; }
     .res-slider { flex: 1; height: 28px; margin: 0; accent-color: #e3942f; }
     .debug-note { text-align: center; opacity: .5; font-size: 12px; margin: 0 12px 12px; }
+    @media (max-width: 768px) and (orientation: portrait) {
+      body { background-image: url("./art/bead-bg-desk-mobile.webp"); }
+    }
     @media (max-width: 480px) {
       .bead-root { padding: 8px 8px 16px; }
       .mascot { width: 40px; height: 40px; }
@@ -120,7 +123,7 @@
   <div id="app"></div>
   <p class="debug-note">调试入口 · 打开本页即可试玩；可用「上传出关」把图片变成自制关（只存在本机）</p>
   <script type="module">
-    import { startHtmlPlayer } from "./player.bundle.js?v=bead42";
+    import { startHtmlPlayer } from "./player.bundle.js?v=bead45";
     startHtmlPlayer(document.getElementById("app"));
   </script>
 </body>
