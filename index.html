@@ -80,6 +80,25 @@
     .res-hint { font-size: 13px; opacity: .82; margin: 0; }
     .res-slider { flex: 1; height: 28px; margin: 0; accent-color: #e3942f; }
     .debug-note { text-align: center; opacity: .5; font-size: 12px; margin: 0 12px 12px; }
+    .overlay.guide { background: transparent; pointer-events: none; align-items: flex-start; justify-content: center; padding-top: 10px; z-index: 45; }
+    .overlay.guide .guide-tip { pointer-events: auto; width: min(340px, 94%); background: rgba(27,18,10,.9); padding: 10px 12px 8px; border-radius: 14px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 8px 22px rgba(0,0,0,.45); }
+    .overlay.guide .guide-tip h2 { margin: 0; font-size: 16px; }
+    .overlay.guide .guide-tip p { margin: 0; font-size: 13px; opacity: .9; line-height: 1.4; }
+    .overlay.guide .guide-actions { display: flex; gap: 8px; justify-content: flex-end; }
+    .overlay.guide .guide-actions .btn { min-height: 34px; padding: 6px 12px; font-size: 13px; }
+    .guide-step { font-size: 12px; opacity: .72; }
+    .queue, .rack-row { position: relative; }
+    .guide-spot { z-index: 41; border-radius: 12px; box-shadow: 0 0 0 3px #ffe08a, 0 0 0 9999px rgba(0,0,0,.5); }
+    .queue.guide-spot { overflow: visible; }
+    .needle.guide-target { z-index: 42; }
+    .guide-layer { position: fixed; inset: 0; pointer-events: none; z-index: 50; overflow: hidden; }
+    .guide-finger { position: absolute; width: 92px; height: 92px; filter: drop-shadow(0 4px 6px rgba(0,0,0,.45)); }
+    .guide-finger .poke { transform-origin: 18px 14px; animation: guide-poke .7s ease-in-out infinite; }
+    .guide-finger svg { display: block; width: 100%; height: 100%; }
+    @keyframes guide-poke {
+      0%, 100% { transform: translate(16px, 16px); }
+      50% { transform: translate(0, 0); }
+    }
     @media (max-width: 768px) and (orientation: portrait) {
       body { background-image: url("./art/bead-bg-desk-mobile.webp"); }
     }
@@ -123,7 +142,7 @@
   <div id="app"></div>
   <p class="debug-note">调试入口 · 打开本页即可试玩；可用「上传出关」把图片变成自制关（只存在本机）</p>
   <script type="module">
-    import { startHtmlPlayer } from "./player.bundle.js?v=bead45";
+    import { startHtmlPlayer } from "./player.bundle.js?v=bead49";
     startHtmlPlayer(document.getElementById("app"));
   </script>
 </body>
