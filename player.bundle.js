@@ -7385,10 +7385,12 @@ function startHtmlPlayer(root) {
   };
   const title = el(bar, "div", "title");
   const remain = el(bar, "div", "remain");
-  const levelSelectBtn = iconBtn(bar, ART + "bead-btn-gallery.webp", "\u9009\u5173", function() {
+  const levelSelectBtn = button(bar, "\u9009\u5173", function() {
     showingLevelSelect = true;
     render();
   });
+  levelSelectBtn.className = "btn ghost";
+  levelSelectBtn.style.cssText = "min-height: 32px; padding: 6px 12px; font-size: 13px; margin-right: 6px;";
   const galleryBtn = iconBtn(bar, ART + "bead-btn-gallery.webp", "\u56FE\u9274", function() {
     if (guideStep >= 0 && GUIDE_STEPS[guideStep] && GUIDE_STEPS[guideStep].spot === "gallery") {
       closeGuide(true);
