@@ -1,2 +1,9190 @@
-var De={id:"banana",width:21,height:40,needleSizeMin:6,needleSizeMax:12,frontRowSize:5,cells:[["w","w","w","w","w","w","w","w","w","w","w","h","p","p","h","w","w","w","w","w","w"],["w","w","w","w","v","h","h","v","w","w","w","e","e","e","z","w","w","w","w","w","w"],["w","w","w","w","w","h","h","p","w","w","w","e","e","e","w","w","w","w","w","w","w"],["w","w","w","w","w","h","h","n","z","z","z","e","e","e","w","w","w","w","w","w","w"],["w","w","w","w","w","k","d","d","n","y","h","t","t","o","w","w","w","w","w","w","w"],["w","w","w","w","w","k","d","d","n","y","y","y","o","v","w","w","w","w","w","w","w"],["w","w","w","w","k","k","d","d","n","y","y","y","h","v","k","w","w","w","w","w","w"],["w","k","w","w","v","h","n","y","y","y","y","y","y","v","v","k","w","h","h","h","w"],["w","w","v","w","n","y","n","y","y","y","y","y","y","y","v","v","k","p","o","v","w"],["w","w","p","v","n","h","y","y","y","y","y","y","y","y","y","o","p","p","p","o","w"],["w","w","w","p","v","y","y","y","y","y","y","y","h","y","y","y","o","p","o","w","w"],["w","w","w","w","h","y","y","y","y","y","y","y","y","y","y","y","t","w","w","w","w"],["w","w","w","w","h","y","y","y","y","y","y","y","y","y","y","y","w","w","w","w","w"],["w","w","w","w","h","h","y","y","y","y","y","y","y","y","y","y","o","w","w","w","w"],["w","w","w","w","h","h","y","y","y","y","y","y","y","y","y","y","h","w","w","w","w"],["w","w","w","w","h","h","y","v","y","y","y","y","y","y","y","y","o","w","w","w","w"],["w","w","w","w","h","v","v","v","v","o","y","y","y","y","y","y","y","w","w","w","w"],["w","w","w","o","o","h","v","h","z","z","h","y","y","y","y","y","y","w","w","w","w"],["w","w","w","p","p","p","p","p","z","z","z","h","h","y","y","y","y","w","w","w","w"],["w","w","p","p","z","p","p","p","p","z","z","p","h","h","y","y","y","w","w","w","w"],["w","w","v","k","v","z","z","z","z","n","k","k","p","h","y","y","y","w","w","w","w"],["w","w","h","k","z","z","z","z","z","z","k","v","h","h","y","y","y","w","w","w","w"],["w","w","o","p","p","p","z","z","p","p","o","h","h","h","y","y","y","w","w","w","w"],["w","w","h","o","o","o","o","p","p","h","h","h","h","h","y","y","y","w","w","w","w"],["w","w","h","h","h","h","h","o","h","h","h","h","h","y","y","y","t","w","w","w","w"],["w","w","h","h","h","h","o","o","h","h","h","h","y","y","y","h","w","w","w","w","w"],["w","w","v","h","h","h","h","o","h","h","h","y","y","y","y","h","w","w","w","w","w"],["w","w","w","h","y","h","h","y","y","y","y","y","y","y","y","h","w","w","w","w","w"],["w","w","w","h","y","y","y","y","y","y","y","y","y","y","h","o","w","w","w","w","w"],["w","w","w","h","y","y","y","y","y","y","y","y","y","y","y","w","w","w","w","w","w"],["w","w","w","y","y","y","y","y","y","y","y","y","y","y","h","w","w","w","w","w","w"],["w","w","w","y","y","y","y","y","y","y","y","y","y","h","w","w","w","w","w","w","w"],["w","w","w","w","y","h","y","y","y","y","y","y","o","w","w","w","w","w","w","w","w"],["w","w","w","w","v","n","y","y","y","y","y","t","w","w","w","w","w","w","w","w","w"],["w","w","w","w","w","k","d","y","y","y","w","w","w","w","w","w","w","w","w","w","w"],["w","w","w","w","w","k","d","k","w","w","w","w","w","w","w","w","w","w","w","w","w"],["w","w","w","w","w","d","d","k","w","w","w","w","w","w","w","w","w","w","w","w","w"],["w","w","w","w","k","n","n","w","w","w","w","w","w","w","w","w","w","w","w","w","w"],["w","w","w","w","d","n","n","w","w","w","w","w","w","w","w","w","w","w","w","w","w"],["w","w","w","k","d","n","n","w","w","w","w","w","w","w","w","w","w","w","w","w","w"]]},Pe={id:"cat",width:40,height:40,needleSizeMin:6,needleSizeMax:12,frontRowSize:5,cells:[["h","v","v","n","d","d","d","d","d","d","d","d","d","d","d","n","n","n","n","n","n","n","n","v","v","n","n","n","n","d","d","d","d","d","d","p","w","w","w","w"],["h","v","v","v","n","n","c","n","n","n","n","n","n","n","n","n","v","v","v","v","v","v","v","v","v","v","v","n","n","n","n","n","n","d","h","u","w","w","w","w"],["h","v","n","n","n","c","c","n","n","n","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","c","c","n","n","n","n","h","z","u","w","w","w"],["h","n","n","n","n","c","c","n","n","v","v","v","v","v","v","v","v","v","v","v","v","h","h","h","v","v","v","v","c","c","n","n","n","n","v","h","z","a","u","w"],["v","n","n","n","n","c","c","v","v","v","v","v","v","v","v","v","v","v","v","v","h","h","h","h","v","v","v","v","c","c","n","n","n","n","n","v","z","a","u","w"],["v","n","n","n","n","c","c","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","c","c","n","n","n","n","n","v","o","a","u","w"],["v","n","n","n","n","c","c","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","h","h","c","c","v","v","n","v","n","v","h","z","e","u"],["v","n","n","n","n","c","c","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","v","h","h","c","c","v","v","v","v","v","v","h","z","a","u"],["v","n","n","n","n","v","c","v","v","v","v","v","v","v","v","v","v","v","v","n","n","n","n","v","v","v","h","h","c","c","v","v","v","v","n","v","h","z","a","u"],["h","v","n","n","v","v","c","h","h","v","v","v","v","n","n","n","n","n","n","n","n","v","v","v","v","h","h","h","c","c","v","v","v","v","v","v","h","z","a","e"],["o","h","v","n","v","v","c","c","h","h","v","v","v","v","v","n","n","n","n","n","v","v","v","v","v","h","h","h","c","c","v","v","v","n","v","v","o","z","a","a"],["o","h","v","n","n","n","c","c","h","h","h","h","v","v","v","v","v","v","n","v","v","v","v","h","h","h","h","h","c","c","v","v","v","v","v","h","o","z","a","a"],["o","o","h","v","v","n","c","c","h","h","h","h","h","h","h","h","v","v","v","n","v","v","h","h","h","h","h","h","c","c","n","v","v","v","v","h","o","z","a","a"],["h","h","h","v","v","v","c","c","v","h","h","h","h","h","h","h","h","h","v","n","n","v","h","h","h","h","h","h","c","c","n","n","n","n","v","v","o","z","a","a"],["h","h","h","v","v","n","c","c","n","v","v","v","v","h","h","h","h","v","n","n","n","d","n","v","v","v","v","n","c","c","n","n","n","n","v","v","o","a","a","z"],["h","h","h","v","n","n","c","c","n","n","n","n","v","v","v","v","n","d","n","n","n","d","n","n","v","v","v","n","c","c","n","n","n","n","v","v","t","a","a","t"],["o","o","h","v","n","n","c","c","n","n","n","n","v","v","v","v","n","n","n","n","n","n","n","n","n","v","n","c","c","c","c","c","n","n","v","v","z","a","a","o"],["h","o","h","v","v","n","c","c","c","n","n","n","v","n","n","n","n","v","v","v","v","n","n","n","d","n","d","d","c","c","c","c","v","v","v","h","z","a","z","h"],["h","o","h","h","v","v","c","c","c","d","d","d","d","d","d","n","v","v","v","v","v","v","n","n","d","d","d","d","c","c","n","v","v","v","v","o","a","a","z","v"],["v","h","h","h","v","v","c","c","c","d","k","k","d","d","d","n","v","v","v","v","v","v","v","v","d","d","d","k","k","d","d","n","n","v","h","z","a","a","z","v"],["n","v","h","h","h","v","v","v","n","d","k","k","k","k","d","v","v","v","v","v","v","v","v","h","d","d","k","k","k","d","n","n","n","v","h","z","a","a","z","v"],["n","n","h","h","h","v","v","n","n","n","k","k","k","k","d","v","v","v","v","v","v","v","v","h","n","d","k","d","d","d","n","n","v","v","o","z","a","z","z","v"],["n","n","v","h","h","v","v","n","n","n","n","d","k","d","n","v","v","n","n","n","v","v","v","h","v","n","d","d","d","n","v","v","v","h","p","z","z","z","z","v"],["n","n","v","h","h","v","v","v","n","n","d","d","d","n","v","v","v","n","n","n","n","v","v","h","h","v","n","n","n","v","h","h","h","h","p","z","z","z","z","t"],["n","n","n","h","h","v","v","v","v","v","n","n","n","v","v","v","n","n","n","n","n","v","v","v","v","v","v","v","v","h","h","h","h","h","p","z","z","z","z","t"],["n","n","n","v","h","v","h","h","h","h","v","v","v","v","v","v","n","n","n","n","n","n","v","v","v","v","v","v","v","h","h","h","h","h","p","z","z","z","z","z"],["h","h","h","h","h","h","h","h","h","v","v","v","v","v","v","h","v","n","n","n","n","n","v","v","v","v","h","h","h","h","h","h","h","h","p","z","z","z","z","z"],["z","z","z","t","o","h","h","o","h","h","v","v","v","v","n","v","v","n","n","n","n","n","v","v","v","v","h","h","h","h","h","h","o","o","p","z","z","z","z","z"],["z","z","z","z","o","o","o","o","h","h","h","h","h","v","v","v","v","n","n","n","n","n","v","v","v","h","h","h","h","h","h","h","o","o","p","z","z","z","z","z"],["z","z","z","z","p","p","p","o","o","h","h","h","h","h","h","h","v","v","v","n","v","v","h","o","p","p","o","h","h","h","h","o","o","o","t","z","z","z","z","z"],["a","z","o","h","p","p","p","p","o","h","h","h","h","o","t","t","p","o","h","h","h","o","z","f","f","f","p","o","h","h","h","o","o","p","t","z","z","z","z","z"],["h","n","n","v","p","p","p","p","o","o","o","h","o","p","a","e","e","a","f","z","f","f","a","a","a","a","f","p","o","o","o","o","o","p","p","a","z","z","z","z"],["a","z","z","z","z","p","p","p","p","o","o","o","p","t","e","e","e","e","e","e","e","e","e","e","e","e","a","f","p","o","o","o","o","o","z","a","z","z","z","z"],["u","u","u","u","e","t","p","p","p","o","o","p","z","e","e","e","e","e","e","e","e","e","e","e","e","e","e","a","z","p","o","o","o","o","z","a","z","z","z","z"],["u","u","u","u","u","z","p","p","p","p","p","t","e","e","e","e","e","e","e","e","e","e","e","e","e","a","e","a","a","z","t","o","o","p","f","a","f","z","z","z"],["u","u","u","u","u","a","p","p","p","p","t","e","e","u","e","e","e","e","e","e","e","e","e","e","e","e","e","a","a","a","z","t","p","z","a","f","f","z","z","z"],["u","u","u","u","u","u","z","t","t","t","a","u","u","u","e","e","u","e","e","e","e","e","e","e","e","e","e","a","a","a","a","a","a","a","a","f","f","f","z","z"],["u","u","u","u","u","u","e","f","f","e","u","u","u","e","e","e","u","e","e","e","e","e","e","e","e","e","e","e","e","e","a","a","a","a","f","f","f","f","z","z"],["u","u","u","u","u","u","u","u","u","u","u","u","u","e","u","u","u","u","e","e","e","e","e","e","e","e","e","e","e","e","a","a","a","a","f","f","f","f","z","z"],["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","e","u","e","e","e","e","e","e","e","e","e","e","e","a","a","a","f","f","f","f","z","z"]]},Re={id:"daodun",name:"\u5200\u76FE",width:40,height:24,needleSizeMin:6,needleSizeMax:12,frontRowSize:5,cells:[["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c5","c3","c3","c9","c9","c9","c8","c8","c8","c8","c8","c8","c8","c7","c6","c7","c9","c9","c9","c9","c9","c9","c9","c9","c9","c4","c4","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c0","c9","c9","c3","c3","c3","c3","c8","c8","c8","c8","c8","c8","c8","c8","c8","c8","c7","c7","c7","c7","c9","c9","c3","c2","c3","c9","c4","c2","c2","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c0","c0","c0","c9","c9","c3","c3","c7","c3","c3","c3","c3","c5","c8","c8","c6","c6","c7","c7","c7","c7","c7","c7","c3","c2","c2","c3","c9","c4","c2","c2","c3","c9","c9","c9"],["c9","c9","c9","c9","c9","c0","c0","c0","c9","c9","c5","c5","c2","c1","c2","c4","c3","c1","c3","c7","c5","c3","c3","c3","c6","c7","c7","c7","c3","c3","c3","c9","c2","c4","c2","c2","c3","c9","c9","c9"],["c9","c9","c9","c9","c6","c5","c0","c3","c3","c3","c5","c6","c0","c0","c0","c5","c5","c5","c3","c7","c7","c3","c3","c3","c3","c6","c7","c7","c6","c3","c9","c9","c2","c2","c2","c2","c3","c9","c9","c9"],["c9","c9","c9","c9","c5","c5","c0","c3","c3","c3","c3","c4","c0","c0","c1","c5","c5","c6","c7","c8","c8","c6","c5","c3","c3","c3","c6","c6","c6","c9","c9","c9","c3","c2","c2","c2","c3","c4","c9","c9"],["c9","c9","c9","c9","c5","c0","c5","c3","c3","c3","c7","c8","c2","c2","c2","c3","c5","c6","c8","c8","c8","c7","c5","c3","c3","c3","c5","c6","c3","c3","c3","c0","c3","c2","c2","c1","c3","c4","c9","c9"],["c9","c9","c9","c9","c0","c0","c5","c9","c9","c5","c7","c8","c3","c2","c2","c2","c2","c6","c6","c6","c8","c7","c5","c3","c3","c3","c3","c5","c3","c3","c3","c0","c3","c1","c1","c3","c3","c3","c9","c9"],["c9","c9","c9","c4","c5","c5","c9","c9","c9","c9","c7","c8","c0","c0","c5","c5","c5","c0","c0","c0","c3","c3","c3","c3","c3","c3","c3","c3","c5","c5","c5","c1","c3","c3","c2","c2","c2","c4","c9","c9"],["c9","c9","c7","c4","c5","c5","c9","c9","c9","c9","c9","c5","c0","c6","c6","c5","c5","c5","c5","c5","c3","c3","c3","c3","c3","c3","c5","c5","c6","c9","c9","c9","c2","c1","c1","c1","c2","c3","c9","c9"],["c9","c9","c7","c4","c4","c4","c9","c9","c9","c9","c9","c5","c5","c7","c6","c5","c5","c5","c5","c3","c3","c3","c3","c3","c3","c5","c5","c5","c6","c9","c9","c9","c3","c1","c1","c1","c2","c3","c9","c9"],["c9","c9","c7","c4","c4","c9","c9","c9","c9","c9","c9","c9","c5","c6","c6","c5","c3","c3","c3","c3","c3","c3","c3","c3","c5","c5","c5","c5","c9","c9","c9","c9","c2","c1","c1","c1","c1","c2","c3","c9"],["c9","c9","c4","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c5","c5","c3","c3","c3","c3","c3","c5","c5","c5","c5","c5","c5","c5","c9","c9","c9","c9","c9","c2","c1","c1","c1","c1","c2","c3","c9"],["c9","c9","c4","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c5","c5","c3","c3","c3","c3","c3","c5","c5","c5","c5","c5","c9","c9","c9","c9","c9","c9","c9","c2","c2","c0","c1","c2","c3","c9"],["c9","c6","c4","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c5","c5","c5","c5","c5","c5","c5","c5","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c4","c2","c0","c2","c9","c9"],["c9","c6","c4","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c2","c9","c9","c9"],["c9","c6","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c6","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c4","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c4","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"]],palette:{c0:"#20150a",c1:"#3c3225",c2:"#4d4135",c3:"#7c5b44",c4:"#726b65",c5:"#93735c",c6:"#a3856b",c7:"#ac9375",c8:"#b3a38b",c9:"#fefefe"}},rt={id:"dui",name:"\u5C0F\u5806",width:28,height:23,needleSizeMin:3,needleSizeMax:6,frontRowSize:3,cells:[["c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1","c1","c0","c0","c0","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1"],["c1","c1","c1","c0","c0","c0","c0","c0","c0","c0","c0","c0","c1","c0","c0","c0","c0","c0","c0","c0","c0","c0","c0","c0","c0","c1","c1","c1"],["c1","c1","c0","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1"],["c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0"],["c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0"],["c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c1"],["c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1"],["c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c1","c1"],["c1","c1","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c1","c1"],["c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1"],["c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1"],["c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c0","c1","c0","c0","c0","c1","c0","c1","c1","c1","c1","c1","c1","c1","c1","c0","c1","c1"],["c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c0","c1","c1","c1","c1","c1","c0","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1","c1"],["c1","c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1","c1","c1","c1"],["c1","c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1","c1","c1","c1"],["c1","c1","c1","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c1","c1","c1","c1"],["c1","c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1","c1","c1","c1"],["c1","c1","c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1","c1","c1","c1"],["c1","c1","c1","c1","c1","c0","c0","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1","c1","c1","c1","c1","c1"],["c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c0","c0","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1","c1","c1","c1","c1","c1","c1"],["c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c1","c1","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1"],["c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c0","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1"],["c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c0","c0","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1","c1"]],palette:{c0:"#252422",c1:"#ffffff"}},Ne={id:"white",name:"\u5C0F\u767D",width:34,height:40,needleSizeMin:6,needleSizeMax:12,frontRowSize:5,cells:[["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c6","c6","c7","c7","c7","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c2","c0","c0","c4","c0","c4","c4","c3","c3","c6","c6","c8","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c2","c4","c3","c0","c2","c0","c3","c3","c3","c3","c3","c3","c4","c7","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c0","c0","c0","c0","c8","c3","c0","c0","c3","c4","c3","c3","c0","c2","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c0","c0","c0","c0","c8","c8","c8","c3","c2","c0","c0","c2","c0","c2","c0","c1","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c1","c0","c8","c0","c2","c9","c9","c9","c8","c9","c9","c2","c0","c2","c8","c2","c0","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c0","c2","c9","c2","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c3","c0","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c2","c2","c7","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c0","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c2","c0","c0","c0","c0","c0","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c0","c7","c8","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c7","c0","c0","c2","c2","c8","c3","c7","c9","c9","c9","c7","c6","c6","c8","c9","c9","c9","c9","c9","c1","c0","c1","c0","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c2","c0","c3","c8","c8","c7","c7","c7","c8","c9","c9","c9","c9","c9","c6","c6","c8","c8","c8","c8","c9","c6","c0","c8","c1","c0","c9","c9","c9","c9"],["c9","c9","c9","c7","c1","c7","c7","c7","c7","c7","c7","c7","c7","c8","c9","c9","c9","c9","c9","c9","c6","c6","c6","c9","c9","c3","c3","c9","c2","c0","c9","c9","c9","c9"],["c9","c9","c8","c0","c6","c6","c7","c7","c7","c8","c8","c7","c8","c8","c9","c9","c9","c9","c9","c9","c9","c9","c7","c7","c9","c9","c9","c9","c2","c0","c9","c9","c9","c9"],["c9","c9","c0","c7","c6","c6","c6","c2","c0","c0","c0","c0","c0","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c0","c9","c9","c9","c9","c9"],["c9","c9","c0","c6","c6","c3","c0","c0","c6","c3","c3","c3","c0","c0","c7","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c2","c0","c8","c9","c9","c9","c9"],["c9","c9","c0","c6","c4","c0","c6","c6","c0","c0","c0","c0","c0","c2","c0","c8","c8","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c0","c0","c9","c9","c9","c9"],["c9","c0","c0","c7","c0","c1","c7","c0","c0","c0","c0","c0","c0","c0","c0","c8","c6","c6","c7","c7","c8","c8","c9","c9","c9","c9","c8","c8","c7","c2","c0","c9","c9","c9"],["c9","c0","c1","c7","c0","c3","c0","c0","c0","c0","c0","c0","c0","c0","c2","c0","c7","c6","c6","c6","c7","c8","c8","c2","c2","c8","c8","c8","c8","c8","c1","c9","c9","c9"],["c9","c0","c7","c3","c0","c3","c0","c0","c0","c0","c2","c2","c0","c0","c0","c1","c6","c6","c6","c6","c6","c0","c0","c0","c0","c0","c0","c2","c8","c7","c6","c0","c9","c9"],["c9","c1","c0","c2","c0","c2","c0","c0","c0","c2","c2","c3","c0","c0","c0","c0","c6","c6","c6","c7","c0","c3","c0","c0","c0","c0","c4","c1","c1","c8","c8","c0","c9","c9"],["c9","c9","c0","c3","c0","c3","c0","c0","c2","c9","c9","c9","c9","c0","c0","c0","c6","c6","c6","c0","c0","c0","c0","c0","c0","c0","c0","c7","c0","c0","c7","c2","c0","c9"],["c9","c9","c0","c6","c0","c3","c0","c0","c3","c9","c8","c9","c9","c0","c0","c3","c6","c6","c1","c0","c0","c0","c0","c1","c0","c0","c0","c2","c3","c0","c7","c2","c0","c9"],["c9","c9","c0","c2","c2","c0","c3","c0","c2","c9","c9","c9","c9","c0","c0","c6","c6","c6","c0","c0","c0","c0","c0","c2","c0","c0","c0","c0","c6","c0","c6","c7","c0","c9"],["c9","c9","c9","c3","c6","c3","c0","c2","c0","c2","c3","c8","c0","c0","c6","c6","c6","c6","c0","c0","c8","c7","c8","c2","c0","c0","c0","c0","c3","c0","c2","c7","c0","c9"],["c9","c9","c9","c8","c8","c6","c6","c0","c0","c0","c0","c0","c0","c6","c6","c6","c6","c6","c0","c1","c8","c9","c9","c8","c2","c0","c0","c0","c3","c0","c2","c6","c0","c9"],["c9","c9","c9","c9","c0","c7","c6","c6","c6","c7","c7","c6","c6","c6","c6","c6","c6","c6","c2","c0","c8","c9","c9","c9","c1","c0","c0","c0","c6","c0","c6","c0","c9","c9"],["c9","c9","c9","c9","c0","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c0","c3","c9","c8","c9","c0","c0","c0","c3","c1","c0","c8","c0","c9","c9"],["c9","c9","c9","c9","c0","c6","c5","c5","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c2","c0","c2","c1","c0","c0","c0","c2","c1","c1","c6","c3","c2","c9","c9"],["c9","c9","c9","c9","c0","c6","c5","c5","c5","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c1","c0","c0","c0","c2","c2","c0","c0","c6","c6","c0","c9","c9","c9"],["c9","c9","c9","c9","c0","c7","c5","c5","c5","c5","c2","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c4","c3","c0","c3","c0","c3","c7","c2","c0","c9","c9","c9","c9"],["c9","c9","c9","c9","c0","c3","c5","c5","c5","c6","c0","c0","c2","c6","c6","c6","c6","c6","c6","c6","c6","c6","c6","c7","c7","c7","c3","c0","c0","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c0","c0","c7","c5","c5","c7","c0","c0","c0","c0","c2","c1","c3","c7","c6","c5","c6","c6","c6","c6","c3","c0","c0","c3","c8","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c8","c0","c0","c2","c2","c0","c7","c9","c9","c9","c1","c0","c3","c5","c5","c5","c5","c6","c7","c2","c2","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c8","c9","c0","c0","c0","c9","c9","c9","c9","c9","c9","c0","c6","c5","c5","c5","c5","c6","c2","c0","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c0","c6","c5","c5","c5","c5","c0","c0","c8","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c0","c6","c6","c6","c7","c0","c0","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c8","c0","c0","c0","c0","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c3","c3","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"],["c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9","c9"]],palette:{c0:"#10110e",c1:"#343433",c2:"#545453",c3:"#bbbcbc",c4:"#c4c4c4",c5:"#fbccdc",c6:"#dcdcdb",c7:"#ecebeb",c8:"#f4f4f4",c9:"#fefdfd"}},Tt=class{constructor(){this.mode="auto-grant",this.blocked=!1,this.lastPlacement=null,this.prompt=null}async showRewarded(c){return this.lastPlacement=c,this.blocked?!1:this.mode==="auto-grant"?!0:this.mode==="auto-deny"?!1:this.prompt?this.prompt(c):!1}},Ot="beadPuzzle.gallery";function _t(){const c={},e=typeof localStorage<"u"?localStorage:null;return e||{getItem(t){return Object.prototype.hasOwnProperty.call(c,t)?c[t]:null},setItem(t,o){c[t]=o}}}function hc(c){if(!c||!c.ironed)return!1;for(let e=0;e<c.ironed.length;e++){const t=c.ironed[e];if(t){for(let o=0;o<t.length;o++)if(!t[o])return!0}}return!1}var Ht=class{constructor(c){this.storage=c||_t()}loadAll(){const c=this.readRaw(),e=Te(c);return e.dirty&&this.writeAll(e.entries),e.entries}list(){return this.loadAll().slice().sort(_e)}listByLevel(c){return this.list().filter(function(e){return e.levelId===c})}get(c){const e=this.loadAll();for(let t=0;t<e.length;t++)if(e[t].id===c)return e[t];return null}hasCleared(c){return this.listByLevel(c).length>0}save(c,e,t,o,s,l){const w=this.loadAll(),p=Date.now(),m={id:Oe(c,p),levelId:c,pixels:ut(e),ironed:s?lt(s):null,ironQuality:t,frameId:o||"",clearedAt:p,updatedAt:p,palette:at(l)};return w.push(m),this.writeAll(w),m}update(c,e,t,o,s,l){const w=this.loadAll();for(let p=0;p<w.length;p++){if(w[p].id!==c)continue;const m=w[p],I={id:m.id,levelId:m.levelId,pixels:ut(e),ironed:s?lt(s):null,ironQuality:t,frameId:o||"",clearedAt:m.clearedAt,updatedAt:Date.now(),palette:at(l||m.palette)};return w[p]=I,this.writeAll(w),I}return null}applyFrame(c,e){const t=this.loadAll();for(let o=0;o<t.length;o++)if(t[o].id===c)return t[o].frameId=e||"",t[o].updatedAt=Date.now(),this.writeAll(t),t[o];return null}readRaw(){try{const c=this.storage.getItem(Ot);if(!c)return null;const e=JSON.parse(c);return e&&typeof e=="object"?e:null}catch{return null}}writeAll(c){this.storage.setItem(Ot,JSON.stringify({version:2,entries:c}))}};function Te(c){if(!c)return{entries:[],dirty:!1};if(c.version===2&&Array.isArray(c.entries)){const o=[];for(let s=0;s<c.entries.length;s++){const l=Gt(c.entries[s],c.entries[s]&&c.entries[s].levelId);l&&o.push(l)}return{entries:o,dirty:!1}}const e=[],t=Object.keys(c);for(let o=0;o<t.length;o++){const s=t[o];if(s==="version"||s==="entries")continue;const l=Gt(c[s],s);l&&e.push(l)}return{entries:e,dirty:e.length>0}}function Gt(c,e){if(!c||!c.pixels)return null;const t=c.id||e+"-"+(c.clearedAt||Date.now());return{id:String(t),levelId:c.levelId||e||"unknown",pixels:ut(c.pixels),ironed:c.ironed?lt(c.ironed):null,ironQuality:c.ironQuality||"normal",frameId:c.frameId||"",clearedAt:c.clearedAt||Date.now(),updatedAt:c.updatedAt||c.clearedAt||Date.now(),palette:at(c.palette)}}function Oe(c,e){return c+"-"+e+"-"+Math.random().toString(36).slice(2,8)}function _e(c,e){return(e.updatedAt||e.clearedAt||0)-(c.updatedAt||c.clearedAt||0)}function ut(c){const e=[];for(let t=0;t<c.length;t++)e.push(c[t].slice());return e}function lt(c){const e=[];for(let t=0;t<c.length;t++)e.push(c[t].slice());return e}function at(c){if(!c)return null;const e={},t=Object.keys(c);for(let o=0;o<t.length;o++)e[t[o]]=c[t[o]];return e}var Ut="beadPuzzle.customLevels",He=24,Ge=class{constructor(c){this.storage=c||_t()}list(){return this.readAll().slice()}get(c){const e=this.readAll();for(let t=0;t<e.length;t++)if(e[t].id===c)return e[t];return null}save(c){if(!c||!c.id||!c.cells)return null;const e=We(c);e.custom=!0;const t=this.readAll().filter(function(o){return o.id!==e.id});return t.unshift(e),this.writeAll(t.slice(0,He)),e}remove(c){const e=this.readAll(),t=e.filter(function(o){return o.id!==c});return t.length===e.length?!1:(this.writeAll(t),!0)}readAll(){try{const c=this.storage.getItem(Ut);if(!c)return[];const e=JSON.parse(c),t=e&&e.levels;if(!Array.isArray(t))return[];const o=[];for(let s=0;s<t.length;s++){const l=Ue(t[s]);l&&o.push(l)}return o}catch{return[]}}writeAll(c){this.storage.setItem(Ut,JSON.stringify({version:1,levels:c}))}};function Ue(c){return!c||!c.id||!c.cells||!c.cells.length?null:{id:String(c.id),name:c.name?String(c.name):"",width:c.width||c.cells[0].length,height:c.height||c.cells.length,cells:c.cells,palette:c.palette||void 0,custom:!0,needleSizeMin:c.needleSizeMin,needleSizeMax:c.needleSizeMax,frontRowSize:c.frontRowSize}}function We(c){const e=[];for(let o=0;o<c.cells.length;o++)e.push(c.cells[o].slice());const t=c.palette?JSON.parse(JSON.stringify(c.palette)):void 0;return{id:c.id,name:c.name||"",width:c.width,height:c.height,cells:e,palette:t,custom:!0,needleSizeMin:c.needleSizeMin,needleSizeMax:c.needleSizeMax,frontRowSize:c.frontRowSize}}var Wt=40,jt=10,qt=42,je=.26,qe=2200,Qe=360,Qt=28e3;function Xt(c,e){const t=e||{},o=Ve(c),s=t.crop===!1?o:Ye(o),l=Je(s.width,s.height,t.maxSide||Wt),w=$e(s,t.maxColors||jt),p=cn(s,l.tw,l.th,w),m={};for(let S=0;S<w.length;S++)m[gc(S)]=Xe(w[S]);const I=nn(p);return{id:t.id||"custom",name:t.name||"",width:l.tw,height:l.th,cells:I,palette:m,custom:!!t.custom,needleSizeMin:t.needleSizeMin||6,needleSizeMax:t.needleSizeMax||12,frontRowSize:t.frontRowSize||5}}function Xe(c){return"#"+[c.r,c.g,c.b].map(sn).join("")}function gc(c){return"c"+c}function Ve(c){const e=c.width,t=c.height,o=c.data,s=[];for(let l=0;l<e*t;l++){const w=l*4,p=o.length>w+3?o[w+3]:255;if(p<12){s.push({r:255,g:255,b:255});continue}const m=p/255;s.push({r:Tc(o[w]*m+255*(1-m)),g:Tc(o[w+1]*m+255*(1-m)),b:Tc(o[w+2]*m+255*(1-m))})}return{width:e,height:t,px:s}}function Ye(c){const e=Ke(c),t=c.width,o=c.height;let s=t,l=o,w=-1,p=-1;for(let x=0;x<o;x++)for(let A=0;A<t;A++)ht(c.px[x*t+A],e)<=qe||(A<s&&(s=A),x<l&&(l=x),A>w&&(w=A),x>p&&(p=x));if(w<s)return c;const m=Math.max(2,Math.round(Math.max(t,o)*.02));s=Math.max(0,s-m),l=Math.max(0,l-m),w=Math.min(t-1,w+m),p=Math.min(o-1,p+m);const I=w-s+1,S=p-l+1,B=[];for(let x=l;x<=p;x++)for(let A=s;A<=w;A++)B.push(c.px[x*t+A]);return{width:I,height:S,px:B}}function Ke(c){const e=c.width,t=c.height,o=[[1,1],[e-2,1],[1,t-2],[e-2,t-2],[Math.floor(e/2),1],[Math.floor(e/2),t-2]],s=[];for(let l=0;l<o.length;l++){const w=Math.max(0,Math.min(e-1,o[l][0])),p=Math.max(0,Math.min(t-1,o[l][1]));s.push(c.px[p*e+w])}return s.sort(function(l,w){return dc(l)-dc(w)}),s[Math.floor(s.length/2)]}function Je(c,e,t){const o=Math.max(8,t||Wt);return c>=e?{tw:o,th:Math.max(8,Math.round(e*o/c))}:{tw:Math.max(8,Math.round(c*o/e)),th:o}}function $e(c,e){const t=Math.max(2,Math.min(16,e||jt)),o=[],s=[];for(let p=0;p<c.px.length;p++){const m=c.px[p];dc(m)<qt?o.push(m):s.push(m)}const l=[];o.length>0&&l.push(on(o));const w=Ze(s);w.sort(function(p,m){return m.count-p.count});for(let p=0;p<w.length&&l.length<t;p++){const m=w[p].color;Vt(m,l,Qe)||l.push(m)}for(let p=0;p<w.length&&l.length<t;p++){const m=w[p].color;Vt(m,l,40)||l.push(m)}return l.length===0&&l.push({r:252,g:248,b:240}),l.sort(function(p,m){return dc(p)-dc(m)}),l}function Ze(c){const e={},t=c.length>Qt?Math.ceil(c.length/Qt):1;for(let l=0;l<c.length;l+=t){const w=c[l],p=(w.r>>3)+","+(w.g>>3)+","+(w.b>>3),m=e[p];m?(m.r+=w.r,m.g+=w.g,m.b+=w.b,m.count+=1):e[p]={r:w.r,g:w.g,b:w.b,count:1}}const o=[],s=Object.keys(e);for(let l=0;l<s.length;l++){const w=e[s[l]];o.push({count:w.count,color:{r:Math.round(w.r/w.count),g:Math.round(w.g/w.count),b:Math.round(w.b/w.count)}})}return o}function cn(c,e,t,o){const s=c.width,l=c.height,w=[];for(let p=0;p<t;p++){const m=Math.floor(p*l/t),I=Math.max(m+1,Math.floor((p+1)*l/t)),S=[];for(let B=0;B<e;B++){const x=Math.floor(B*s/e),A=Math.max(x+1,Math.floor((B+1)*s/e));S.push(tn(c,x,m,A,I,o))}w.push(S)}return w}function tn(c,e,t,o,s,l){const w=c.width;let p=0,m=0;const I={};for(let A=t;A<s;A++)for(let _=e;_<o;_++){const oc=c.px[A*w+_];p+=1,dc(oc)<qt&&(m+=1);const Z=en(oc,l);I[Z]=(I[Z]||0)+1}if(p<=0)return gc(l.length-1);if(m/p>=je)return gc(0);let S=gc(0),B=-1;const x=Object.keys(I);for(let A=0;A<x.length;A++)I[x[A]]>B&&(B=I[x[A]],S=x[A]);return S}function en(c,e){let t=0,o=1e12;for(let s=0;s<e.length;s++){const l=ht(c,e[s]);l<o&&(o=l,t=s)}return gc(t)}function nn(c){const e=[];for(let t=c.length-1;t>=0;t--)e.push(c[t].slice());return e}function Vt(c,e,t){for(let o=0;o<e.length;o++)if(ht(c,e[o])<t)return!0;return!1}function on(c){let e=0,t=0,o=0;for(let l=0;l<c.length;l++)e+=c[l].r,t+=c[l].g,o+=c[l].b;const s=c.length||1;return{r:Math.round(e/s),g:Math.round(t/s),b:Math.round(o/s)}}function ht(c,e){const t=c.r-e.r,o=c.g-e.g,s=c.b-e.b,l=.299*t+.587*o+.114*s;return 2.2*l*l+t*t+o*o+s*s}function dc(c){return .299*c.r+.587*c.g+.114*c.b}function Tc(c){return Math.max(0,Math.min(255,Math.round(c)))}function sn(c){const e=Tc(c).toString(16);return e.length===1?"0"+e:e}var rn={g:"#5cb85c",s:"#7ec8e3",o:"#bc7032",w:"#fcf8f0",k:"#18120e",y:"#f7d154",b:"#3d6fb8",p:"#d88076",n:"#603c22",r:"#9e202a",a:"#d0c6b6",z:"#bab09f",u:"#f7e8d0",e:"#e8d0ac",f:"#d6b084",t:"#d29a5c",h:"#966034",v:"#785238",d:"#342216",m:"#e4b09e",c:"#34b0e0"};function ic(c,e){return e&&e[c]?e[c]:rn[c]||"#888888"}function un(c,e){const t=ic(c,e);return an(t,"#ffffff",.42)}var dt=["c","r","k","d","n","v","h","o","t","f","e","u","w","p","m","a","z","g","s","y","b"];function ft(c){const e={};for(let l=0;l<c.length;l++)for(let w=0;w<c[l].length;w++)e[c[l][w]]=!0;const t=[];for(let l=0;l<dt.length;l++)e[dt[l]]&&t.push(dt[l]);const o=Object.keys(e);o.sort(ln);for(let l=0;l<o.length;l++)t.indexOf(o[l])<0&&t.push(o[l]);const s={};for(let l=0;l<t.length;l++)s[t[l]]=l+1;return s}function ln(c,e){const t=Yt(c),o=Yt(e);return t>=0&&o>=0?t-o:t>=0?1:o>=0||c<e?-1:c>e?1:0}function Yt(c){return!c||!/^c\d+$/.test(c)?-1:Number(c.slice(1))}function Oc(c){const e=c.replace("#",""),t=parseInt(e.slice(0,2),16),o=parseInt(e.slice(2,4),16),s=parseInt(e.slice(4,6),16);return .299*t+.587*o+.114*s>150?"#1b120a":"#fffdf8"}function an(c,e,t){const o=parseInt(c.slice(1,3),16),s=parseInt(c.slice(3,5),16),l=parseInt(c.slice(5,7),16),w=parseInt(e.slice(1,3),16),p=parseInt(e.slice(3,5),16),m=parseInt(e.slice(5,7),16),I=Math.round(o+(w-o)*t),S=Math.round(s+(p-s)*t),B=Math.round(l+(m-l)*t);return"#"+[I,S,B].map(hn).join("")}function hn(c){const e=c.toString(16);return e.length===1?"0"+e:e}var Kt=5,yc=8,_c=5,Jt=5,dn=3,fn=8,mc=class extends Error{constructor(c){super(c),this.name="LevelError"}};function $t(c){let e=c>>>0;return{next(){e+=1831565813;let t=Math.imul(e^e>>>15,1|e);return t^=t+Math.imul(t^t>>>7,61|t),((t^t>>>14)>>>0)/4294967296}}}function wn(c){if(!c||!c.id||c.width<1||c.height<1)throw new mc("\u5173\u5361\u7F3A\u5C11 id \u6216\u5BBD\u9AD8");if(!c.cells||c.cells.length!==c.height)throw new mc("cells \u884C\u6570\u5FC5\u987B\u7B49\u4E8E height\uFF0C\u4E14\u7B2C 0 \u884C\u4E3A\u5E95\u884C");for(let e=0;e<c.height;e++){const t=c.cells[e];if(!t||t.length!==c.width)throw new mc("\u6BCF\u4E00\u884C\u957F\u5EA6\u5FC5\u987B\u7B49\u4E8E width\uFF0C\u7981\u6B62\u7F3A\u683C");for(let o=0;o<c.width;o++){const s=t[o];if(s==null||String(s).length===0)throw new mc("\u6BCF\u4E2A\u683C\u5B50\u5FC5\u987B\u6709\u76EE\u6807\u8272\uFF0C\u7981\u6B62\u7A7A\u683C\u6216\u900F\u660E\u683C")}}}function vn(c){const e={};for(let t=0;t<c.height;t++)for(let o=0;o<c.width;o++){const s=c.cells[t][o];e[s]=(e[s]||0)+1}return e}function pn(c,e,t,o){if(c<=0)return[];const s=Math.max(1,Math.min(e,c)),l=Math.max(s,t),w=[];let p=c;for(;p>0;){if(p<=l){p<s&&w.length>0?w[w.length-1]+=p:w.push(p);break}let m=s+Math.floor(o.next()*(l-s+1));m>p&&(m=p),p-m>0&&p-m<s&&(m=p-s,m<1&&(m=p)),w.push(m),p-=m}return w}var gn=1;function yn(c,e){const t=c.needleSizeMin!=null?c.needleSizeMin:dn,o=c.needleSizeMax!=null?c.needleSizeMax:fn,s=vn(c),l=[],w=Object.keys(s);for(let p=0;p<w.length;p++){const m=w[p],I=pn(s[m],t,o,e);let S=0;for(let B=0;B<I.length;B++)S+=I[B],l.push({id:gn++,color:m,count:I[B]});if(S!==s[m])throw new mc("\u9488\u6570\u91CF\u603B\u548C\u5FC5\u987B\u7B49\u4E8E\u8BE5\u8272\u683C\u5B50\u6570: "+m)}return Zt(l,e),l}function Zt(c,e){for(let t=c.length-1;t>0;t--){const o=Math.floor(e.next()*(t+1)),s=c[t];c[t]=c[o],c[o]=s}}function ce(c,e){const t=Math.max(1,e||Jt),o=[];for(let s=0;s<t;s++)o.push([]);for(let s=0;s<c.length;s++)o[s%t].push(c[s]);return o}function mn(c){const e=[];let t=0,o=0;for(let s=0;s<c.length;s++)c[s].length>o&&(o=c[s].length);for(t=0;t<o;t++)for(let s=0;s<c.length;s++)t<c[s].length&&e.push(c[s][t]);return e}var wt=[[1,0],[-1,0],[0,1],[0,-1]],En=class{constructor(c,e){this.def=null,this.filled=[],this.ironed=[],this.columns=[],this.rack=[],this.rackCap=Kt,this.pendingPark=null,this.state="IdleSelect",this.speedScale=1,this.highlightAnyOrShuffle=!1,this.lastActivate=null,this.placingBusy=0,this.ironQuality="normal",this.frameId="",this.savedEntry=null,this.editingEntryId="",this.lastGalleryWrite="add",this.galleryReturnState="IdleSelect",this.placeMode="adjacent",this.gallery=c||new Ht,this.adPort=e||new Tt,this.rng=$t(1)}loadLevel(c,e=1){wn(c),this.def=c,this.rng=$t(e),this.filled=[],this.ironed=[];for(let o=0;o<c.height;o++){const s=[],l=[];for(let w=0;w<c.width;w++)s.push(!1),l.push(!1);this.filled.push(s),this.ironed.push(l)}const t=c.frontRowSize!=null?c.frontRowSize:Jt;this.columns=ce(yn(c,this.rng),t),this.rackCap=Kt,this.rack=[];for(let o=0;o<this.rackCap;o++)this.rack.push(null);this.pendingPark=null,this.state="IdleSelect",this.speedScale=1,this.highlightAnyOrShuffle=!1,this.lastActivate=null,this.placingBusy=0,this.ironQuality="normal",this.frameId="",this.savedEntry=null,this.editingEntryId="",this.lastGalleryWrite="add",this.galleryReturnState="IdleSelect",this.syncAdBlock(),this.refreshSoftBlock()}remainingEmpty(){let c=0;for(let e=0;e<this.def.height;e++)for(let t=0;t<this.def.width;t++)this.filled[e][t]||c++;return c}isLegal(c,e,t){if(!this.inBounds(c,e)||this.filled[c][e]||this.def.cells[c][e]!==t)return!1;if(c===0)return!0;if(this.placeMode==="stack")return!!this.filled[c-1][e];for(let o=0;o<wt.length;o++){const s=c+wt[o][0],l=e+wt[o][1];if(this.inBounds(s,l)&&this.filled[s][l])return!0}return!1}hasPlaced(){if(!this.def)return!1;for(let c=0;c<this.def.height;c++)for(let e=0;e<this.def.width;e++)if(this.filled[c][e])return!0;return!1}canSwitchPlaceMode(){return this.state==="IdleSelect"&&!this.hasPlaced()}setPlaceMode(c){return this.canSwitchPlaceMode()?(this.placeMode=c==="stack"?"stack":"adjacent",!0):!1}togglePlaceMode(){return this.setPlaceMode(this.placeMode==="stack"?"adjacent":"stack")}pickLegalCell(c){for(let e=0;e<this.def.height;e++)for(let t=0;t<this.def.width;t++)if(this.isLegal(e,t,c))return{row:e,col:t};return null}canPlace(c){return!!c&&c.count>0&&!!this.pickLegalCell(c.color)}frontNeedles(){const c=[];for(let e=0;e<this.columns.length;e++)this.columns[e].length>0&&c.push({col:e,needle:this.columns[e][0]});return c}buriedNeedles(){const c=[];for(let e=0;e<this.columns.length;e++)for(let t=1;t<this.columns[e].length;t++)c.push({col:e,depth:t,needle:this.columns[e][t]});return c}remainingColorSet(){const c={};if(!this.def)return c;for(let e=0;e<this.def.height;e++)for(let t=0;t<this.def.width;t++)this.filled[e][t]||(c[this.def.cells[e][t]]=!0);return c}buriedColorChoices(){const c=this.remainingColorSet(),e={},t=[],o=this.buriedNeedles();for(let s=0;s<o.length;s++){const l=o[s].needle.color;!c[l]||e[l]||(e[l]=!0,t.push(o[s]))}return t}canTapFront(c){return this.canTapWhilePlaying()?!!this.columns[c]&&this.columns[c].length>0:!1}canTapRack(c){return this.canTapWhilePlaying()?!!this.rack[c]:!1}canTapWhilePlaying(){return!this.def||this.remainingEmpty()<=0||this.pendingPark?!1:this.state==="IdleSelect"||this.state==="SoftBlocked"||this.state==="Placing"}activateFront(c){if(!this.canTapFront(c))return null;const e=this.columns[c].shift();return this.runActivate(e)}activateRack(c){if(!this.canTapRack(c))return null;const e=this.rack[c];return this.rack[c]=null,this.runActivate(e)}activateBuried(c,e){if(this.pendingPark||this.state!=="IdleSelect"&&this.state!=="SoftBlocked")return null;const t=this.columns[c];if(!t||e<1||e>=t.length)return null;const o=t.splice(e,1)[0];return this.runActivate(o)}onPlacePlaybackDone(){return this.placingBusy>0&&(this.placingBusy-=1),this.placingBusy>0?this.state:this.state!=="Placing"?this.state:this.remainingEmpty()===0?(this.state="Complete",this.syncAdBlock(),this.state):(this.refreshSoftBlock(),this.syncAdBlock(),this.state)}debugFillAll(){if(!this.def)return this.state;if(this.state==="Ironing"||this.state==="Placing")return this.state;for(let c=0;c<this.def.height;c++)for(let e=0;e<this.def.width;e++)this.filled[c][e]=!0;return this.pendingPark=null,this.state="Complete",this.syncAdBlock(),this.state}beginIroning(){if(this.state==="Complete"){this.editingEntryId="",this.savedEntry=null,this.lastGalleryWrite="add",this.state="Ironing",this.ironed=[];for(let c=0;c<this.def.height;c++){const e=[];for(let t=0;t<this.def.width;t++)e.push(!1);this.ironed.push(e)}this.syncAdBlock()}}resumeIroning(c){if(!c||!this.def||this.def.id!==c.levelId)return!1;for(let e=0;e<this.def.height;e++)for(let t=0;t<this.def.width;t++)this.filled[e][t]=!0;this.ironed=[];for(let e=0;e<this.def.height;e++){const t=[];for(let o=0;o<this.def.width;o++)t.push(!!(c.ironed&&c.ironed[e]&&c.ironed[e][o]));this.ironed.push(t)}return this.pendingPark=null,this.editingEntryId=c.id,this.savedEntry=c,this.frameId=c.frameId||"",this.ironQuality=c.ironQuality||"normal",this.lastGalleryWrite="update",this.state="Ironing",this.syncAdBlock(),!0}canSkipIroning(){return this.gallery.hasCleared(this.def.id)}finishIroning(c){this.ironQuality=c||"normal";const e=this.snapshotPixels(),t=this.snapshotIroned();if(this.editingEntryId){const o=this.gallery.update(this.editingEntryId,e,this.ironQuality,this.frameId||"",t,this.def.palette);o?(this.savedEntry=o,this.lastGalleryWrite="update"):(this.savedEntry=this.gallery.save(this.def.id,e,this.ironQuality,this.frameId||"",t,this.def.palette),this.editingEntryId=this.savedEntry.id,this.lastGalleryWrite="add")}else this.savedEntry=this.gallery.save(this.def.id,e,this.ironQuality,this.frameId||"",t,this.def.palette),this.editingEntryId=this.savedEntry.id,this.lastGalleryWrite="add";this.state="Result",this.syncAdBlock()}applyFrame(c){if(this.frameId=c||"",this.savedEntry&&this.savedEntry.id){const e=this.gallery.applyFrame(this.savedEntry.id,this.frameId);e&&(this.savedEntry=e)}}openGallery(){this.galleryReturnState=this.state,this.state="Gallery",this.syncAdBlock()}closeGalleryToPlay(){const c=this.galleryReturnState;this.galleryReturnState="IdleSelect",c==="Ironing"||c==="Result"?this.state=c:this.remainingEmpty()===0&&this.savedEntry?this.state="Result":this.isSoftBlockedNow()?this.state="SoftBlocked":this.state="IdleSelect",this.syncAdBlock()}async tryAd(c){return!this.isAdAllowed(c)||!await this.adPort.showRewarded(c)?!1:(c==="rack"?this.expandRack():c==="shuffle"?this.shuffleQueue():c==="speed"?this.speedScale<_c&&(this.speedScale+=1):c==="frame"&&this.applyFrame("gold"),!0)}isAdAllowed(c){return this.state==="Ironing"||this.state==="Placing"?!1:c==="frame"?this.state==="Result"&&!!this.savedEntry:c==="speed"?this.speedScale<_c:!0}expandRack(){return this.rackCap>=yc?(this.highlightAnyOrShuffle=!0,!1):(this.rackCap+=1,this.rack.push(null),this.pendingPark&&(this.parkNeedle(this.pendingPark),this.pendingPark=null),this.refreshSoftBlock(),!0)}shuffleQueue(){const c=mn(this.columns);Zt(c,this.rng),this.columns=ce(c,this.columns.length),this.refreshSoftBlock()}isSoftBlockedNow(){if(this.pendingPark)return!0;if(this.emptyRackSlots()>0)return!1;const c=this.frontNeedles();for(let t=0;t<c.length;t++)if(this.canPlace(c[t].needle))return!1;for(let t=0;t<this.rack.length;t++)if(this.canPlace(this.rack[t]))return!1;return(c.length>0||this.rack.some(function(t){return!!t})||this.buriedNeedles().length>0)&&this.remainingEmpty()>0}emptyRackSlots(){let c=0;for(let e=0;e<this.rack.length;e++)this.rack[e]||c++;return c}ironCell(c,e){return!this.inBounds(c,e)||this.ironed[c][e]?!1:(this.ironed[c][e]=!0,!0)}allIroned(){if(!this.def)return!1;for(let c=0;c<this.def.height;c++)for(let e=0;e<this.def.width;e++)if(!this.ironed[c][e])return!1;return!0}snapshotIroned(){const c=[];for(let e=0;e<this.ironed.length;e++)c.push(this.ironed[e].slice());return c}snapshotPixels(){const c=[];for(let e=0;e<this.def.height;e++){const t=[];for(let o=0;o<this.def.width;o++)t.push(this.def.cells[e][o]);c.push(t)}return c}runActivate(c){this.placingBusy+=1,this.state="Placing",this.syncAdBlock();const e=[];for(;c.count>0;){const p=this.pickLegalCell(c.color);if(!p)break;this.filled[p.row][p.col]=!0,c.count-=1,e.push({row:p.row,col:p.col,color:c.color,needleId:c.id})}let t="exhausted",o=-1,s=!1,l=!1;if(c.count>0){t="parked";const p=this.parkNeedle(c);o=p.index,l=p.merged,o<0&&(this.pendingPark||(this.pendingPark=c),s=!0)}const w={needle:c,steps:e,outcome:t,parkedIndex:o,pendingPark:s,parkMerged:l};return this.lastActivate=w,w}parkNeedle(c){for(let e=0;e<this.rack.length;e++)if(this.rack[e]&&this.rack[e].color===c.color)return this.rack[e].count+=c.count,{index:e,merged:!0};for(let e=0;e<this.rack.length;e++)if(!this.rack[e])return this.rack[e]=c,{index:e,merged:!1};return{index:-1,merged:!1}}refreshSoftBlock(){if(this.remainingEmpty()===0){this.state="Complete";return}this.rackCap>=yc&&this.isSoftBlockedNow()&&(this.highlightAnyOrShuffle=!0),this.state=this.isSoftBlockedNow()?"SoftBlocked":"IdleSelect"}inBounds(c,e){return c>=0&&e>=0&&c<this.def.height&&e<this.def.width}syncAdBlock(){this.adPort.blocked=this.state==="Ironing"||this.state==="Placing"}},V="./art/";function Cn(c){const e=new Tt;e.mode="prompt",e.prompt=function(n){return Promise.resolve(window.confirm(`\u89C2\u770B\u5E7F\u544A\uFF1F
-`+n))};const t=new En(new Ht,e),o=new Ge;let s=rt;t.loadLevel(s,7),c.innerHTML="",c.className="bead-root";const l=C(c,"div","topbar"),w=document.createElement("img");w.className="mascot",w.src=V+"bead-mascot.webp",w.alt="\u62FC\u8C46",l.appendChild(w);const p=C(l,"div","title"),m=C(l,"div","remain"),I=Ec(l,V+"bead-btn-gallery.webp","\u56FE\u9274",function(){z>=0&&H[z]&&H[z].spot==="gallery"&&Kc(!0),Y="",t.openGallery(),L()}),S=C(c,"div","board-wrap"),B=document.createElement("canvas");B.className="board",S.appendChild(B);const x=C(S,"div","iron-layer hidden"),A=document.createElement("img");A.className="paper-sheet",A.src=V+"bead-paper.webp",x.appendChild(A);const _=document.createElement("img");_.className="iron-sprite",_.src=V+"bead-iron.webp",x.appendChild(_);const oc=C(x,"div","hold-hint hidden");oc.textContent="\u6309\u4F4F\u62D6\u52A8\u71A8\u6597\uFF0C\u7ECF\u8FC7\u7684\u8C46\u5B50\u4F1A\u70EB\u6210\u50CF\u7D20\u5757\u3002\u53EF\u4E0D\u70EB\u6216\u53EA\u70EB\u4E00\u90E8\u5206\uFF0C\u518D\u70B9\u5B8C\u6210\u3002";const Z=M(c,"\u5B8C\u6210",function(){Dt()});Z.type="button",Z.className="btn skip hidden",Z.onpointerdown=function(n){n.preventDefault(),n.stopPropagation(),Dt()};const vt=C(c,"div","legend"),U=C(c,"div","rack-row"),sc=C(c,"div","queue"),W=C(c,"div","tools"),Hc=C(c,"div","mode-row"),R=C(c,"div","overlay hidden"),fc=C(c,"div","fly-layer"),Gc=C(document.body,"div","guide-layer hidden"),Uc=C(Gc,"div","guide-finger");Uc.innerHTML='<div class="poke"><svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g transform="rotate(-42 48 48)"><path fill="#fffdf8" stroke="#1b120a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" d="M40 8c-5 0-9 4-9 9v37.5h-3.5V28c0-4.2-3.4-7.6-7.6-7.6S12.3 23.8 12.3 28v32c0 2 1 4 2.6 5.2L28 76v12h32V74l11 6c4.6 2.6 10.4.6 12.4-4.2 2-5-1-10.6-6-12.8L66 57V17c0-5-4-9-9-9s-9 4-9 9v28h-3V17c0-5-4-9-9-9z"/><circle cx="31" cy="10" r="6" fill="#ffe08a" stroke="#1b120a" stroke-width="2"/></g></svg></div>';let j=null,rc={};const ee=5,Q=[];let uc=!1,lc=!1;const pt="beadPuzzle.guideSeen",Wc="dui",H=[{title:"\u70B9\u6700\u524D\u6392\u7684\u9488",text:"\u8DDF\u7740\u5C0F\u624B\u70B9\u6700\u524D\u9762\u90A3\u4E00\u6392\u3002\u540C\u8272\u8C46\u4F1A\u81EA\u52A8\u843D\u5230\u73B0\u5728\u80FD\u62FC\u7684\u683C\u5B50\u91CC\u3002",spot:"queue",tap:!0},{title:"\u4ECE\u4E0B\u5F80\u4E0A\u62FC",text:"\u5148\u586B\u6700\u5E95\u4E0B\u4E00\u884C\u3002\u4E0A\u9762\u7684\u683C\u5B50\u8981\u6328\u7740\u5DF2\u7ECF\u62FC\u597D\u7684\u8C46\uFF0C\u624D\u80FD\u7EE7\u7EED\u5F80\u4E0A\u957F\u3002",spot:"board",tap:!1},{title:"\u5403\u4E0D\u5B8C\u5C31\u6302\u9488\u67B6",text:"\u9488\u4E0A\u8FD8\u5269\u8C46\u5B50\u3001\u753B\u4E0A\u6682\u65F6\u843D\u4E0D\u4E0B\u65F6\uFF0C\u4F1A\u4E32\u5230\u9488\u67B6\u4E0A\uFF0C\u4E4B\u540E\u8FD8\u80FD\u518D\u70B9\u4E0B\u6765\u3002",spot:"rack",tap:!1},{title:"\u586B\u6EE1\u518D\u70EB\u753B",text:"\u6574\u5E45\u62FC\u6EE1\u540E\u76D6\u6CB9\u7EB8\u3001\u7528\u71A8\u6597\u70EB\u4E00\u70EB\uFF0C\u6210\u54C1\u4F1A\u6536\u8FDB\u56FE\u9274\u3002",spot:"gallery",tap:!1}];let z=-1,Cc="",Y="",O=null,kc=null,cc=32;const gt=16,yt=80;let tc=ft(s.cells);const bc={},Fc={},xc={};let zc=null,Bc=null,mt=180,Et=180;const N=128,ec=new Image;ec.src=V+"bead-token.webp?v=alpha1",ec.onload=function(){zc=null,jc(bc),jc(Fc),L()};const q=new Image;q.src=V+"bead-token-top.webp",q.onload=function(){Bc=null,jc(xc),L()};function jc(n){for(const i in n)Object.prototype.hasOwnProperty.call(n,i)&&delete n[i]}function ne(){if(zc)return zc;const n=document.createElement("canvas"),i=ec.complete&&ec.naturalWidth>0,r=N,u=N;n.width=r,n.height=u;const a=n.getContext("2d");if(i){a.drawImage(ec,0,0,r,u);const g=a.getImageData(0,0,r,u);re(g,r,u);const v=g.data,h=[];for(let d=3;d<v.length;d+=4)v[d]<16?(v[d]=0,v[d-1]=0,v[d-2]=0,v[d-3]=0):h.push(.299*v[d-3]+.587*v[d-2]+.114*v[d-1]);h.sort(function(d,f){return d-f}),mt=h.length?h[h.length>>1]:180,a.putImageData(g,0,0)}return zc=n,n}function ie(){if(Bc)return Bc;const n=document.createElement("canvas"),i=q.complete&&q.naturalWidth>0;n.width=N,n.height=N;const r=n.getContext("2d");if(i){r.drawImage(q,0,0,N,N);const u=r.getImageData(0,0,N,N),a=oe(u);if(r.clearRect(0,0,N,N),a){const d=q.naturalWidth,f=q.naturalHeight,y=a.minx/N*d,E=a.miny/N*f,k=(a.maxx-a.minx+1)/N*d,D=(a.maxy-a.miny+1)/N*f;r.drawImage(q,y,E,k,D,0,0,N,N)}else r.drawImage(q,0,0,N,N);const v=r.getImageData(0,0,N,N).data,h=[];for(let d=3;d<v.length;d+=4)v[d]>=16&&h.push(.299*v[d-3]+.587*v[d-2]+.114*v[d-1]);h.sort(function(d,f){return d-f}),Et=h.length?h[h.length>>1]:180}return Bc=n,n}function oe(n){const i=n.width,r=n.height,u=n.data;let a=i,g=r,v=0,h=0,d=!1;for(let f=0;f<r;f++)for(let y=0;y<i;y++)u[(f*i+y)*4+3]>=16&&(d=!0,y<a&&(a=y),f<g&&(g=f),y>v&&(v=y),f>h&&(h=f));return d?{minx:a,miny:g,maxx:v,maxy:h}:null}function se(n,i,r,u){if(u<8)return!0;const a=Math.max(n,i,r)-Math.min(n,i,r),g=.299*n+.587*i+.114*r;return a<=12&&g>=225||a<=4&&g>=210}function re(n,i,r){const u=n.data;if(u[3]<8)return;const a=new Uint8Array(i*r),g=[],v=[];function h(f,y){if(f<0||y<0||f>=i||y>=r)return;const E=y*i+f;if(a[E])return;const k=E*4;se(u[k],u[k+1],u[k+2],u[k+3])&&(a[E]=1,g.push(f),v.push(y))}for(let f=0;f<i;f++)h(f,0),h(f,r-1);for(let f=0;f<r;f++)h(0,f),h(i-1,f);let d=0;for(;d<g.length;){const f=g[d],y=v[d];d++,h(f+1,y),h(f-1,y),h(f,y+1),h(f,y-1)}for(let f=0;f<a.length;f++)if(a[f]){const y=f*4;u[y]=0,u[y+1]=0,u[y+2]=0,u[y+3]=0}}function ue(n){const i=(n||"#888888").replace("#","");return{r:parseInt(i.slice(0,2),16),g:parseInt(i.slice(2,4),16),b:parseInt(i.slice(4,6),16)}}function qc(n,i){const r=n/255,u=i/255,a=u<.5?2*r*u:1-2*(1-r)*(1-u);return Math.round(Math.max(0,Math.min(255,a*255)))}function Ct(n,i,r,u){const a=document.createElement("canvas");a.width=n.width,a.height=n.height;const g=a.getContext("2d");if(u){const h=n.getContext("2d").getImageData(0,0,n.width,n.height).data,d=ue(i),f=g.createImageData(n.width,n.height),y=f.data;for(let E=0;E<h.length;E+=4){const k=h[E+3];if(k<8)continue;let b=128+(.299*h[E]+.587*h[E+1]+.114*h[E+2]-r)*1.2;b<16&&(b=16),b>250&&(b=250),y[E]=qc(d.r,b),y[E+1]=qc(d.g,b),y[E+2]=qc(d.b,b),y[E+3]=k}g.putImageData(f,0,0)}else g.fillStyle=i,g.beginPath(),g.arc(a.width/2,a.height/2,a.width*.42,0,Math.PI*2),g.fill();return a}function le(n){if(bc[n])return bc[n];const i=Ct(ne(),n,mt,ec.complete&&ec.naturalWidth>0);return bc[n]=i,i}function ae(n){if(xc[n])return xc[n];const i=Ct(ie(),n,Et,q.complete&&q.naturalWidth>0);return xc[n]=i,i}function Qc(n){return Fc[n]||(Fc[n]=le(n).toDataURL("image/png")),Fc[n]}function kt(){return[rt,Pe,De,Ne,Re]}function Xc(){return kt().concat(o.list())}function bt(n){const i=Xc();for(let r=0;r<i.length;r++)if(i[r].id===n)return i[r];return null}function Vc(n){const i=bt(n);return i&&i.name?i.name:n==="dui"?"\u5C0F\u5806":n==="cat"?"\u54ED\u732B":n==="banana"?"\u9999\u8549\u732B":n==="white"?"\u5C0F\u767D":n==="daodun"?"\u5200\u76FE":n||"\u62FC\u8C46"}function K(n){if(n&&n.palette)return n.palette;if(n){const i=bt(n.levelId);if(i&&i.palette)return i.palette}return t.def&&t.def.palette}function L(){p.textContent=Vc(t.def&&t.def.id)+"  \u5173\u5361",m.textContent="\u5269\u4F59 "+$c(),Mc(),de(),Yc(),Ft(),we(),ve(),xt(),At();const n=t.state==="Ironing";x.classList.toggle("hidden",!n),c.classList.toggle("ironing",n),Z.classList.toggle("hidden",!n),n?oc.classList.remove("hidden"):oc.classList.add("hidden")}function he(){const n=S.getBoundingClientRect(),i=window.getComputedStyle(S),r=(parseFloat(i.paddingLeft)||0)+(parseFloat(i.paddingRight)||0),u=n.width-r,a=window.visualViewport,g=a&&a.height||window.innerHeight,h=t.state==="Ironing"?150:220,d=Math.max(180,g-h),f=Math.min(520,u>40?u:520,d);return Math.max(180,Math.floor(f))}function Ac(n){const i=window.visualViewport,r=i&&i.width||window.innerWidth;return Math.max(140,Math.min(n,r-56))}function Mc(){wc(B,t.def.cells,be,me,!1,he(),Cc,!1,K())}function wc(n,i,r,u,a,g,v,h,d){const f=i.length,y=i[0].length,E=Math.min(g/y,g/f),k=h?a?Math.max(28,Math.round(g*.14)):Math.max(10,Math.round(g*.04)):0,D=y*E+k*2,b=f*E+k*2,G=Math.max(1,Math.min(2.5,window.devicePixelRatio||1));n.width=Math.max(1,Math.round(D*G)),n.height=Math.max(1,Math.round(b*G));const F=n.getContext("2d");F.setTransform(G,0,0,G,0,0),F.clearRect(0,0,D,b),h&&(F.fillStyle=a?"#1a1208":"#f4ead8",F.fillRect(0,0,D,b));const Pc=Math.max(4,Math.min(Math.floor(E*.82),E-.5));for(let P=0;P<f;P++)for(let T=0;T<y;T++){const ac=i[P][T],J=k+T*E,X=k+(f-1-P)*E,Rc=k+(T+1)*E,Le=k+(f-P)*E,st=r(P,T),Nc=ic(ac,d);if(st&&u(P,T))F.fillStyle=Nc,F.fillRect(J,X,Rc-J+.6,Le-X+.6);else{if(F.fillStyle=un(ac,d),te(F,J+.6,X+.6,E-1.2,E-1.2,Math.max(1.5,E*.16)),F.fill(),st){const nc=-E*.02;F.drawImage(ae(Nc),J+nc,X+nc,E-nc*2,E-nc*2)}else if(lc){const nc=String(tc[ac]||"");F.font="700 "+Pc+"px sans-serif",F.textAlign="center",F.textBaseline="middle",F.lineWidth=Math.max(.5,E*.06),F.strokeStyle=Oc(Nc)==="#fffdf8"?"rgba(0,0,0,0.55)":"rgba(255,255,255,0.8)",F.fillStyle=Oc(Nc),F.strokeText(nc,J+E/2,X+E/2+.5),F.fillText(nc,J+E/2,X+E/2+.5)}!st&&v&&ac===v&&(F.strokeStyle="#fff45c",F.lineWidth=Math.max(1.5,E*.12),te(F,J+1.2,X+1.2,E-2.4,E-2.4,Math.max(1,E*.14)),F.stroke())}}if(a){const P=Math.max(14,k*.48);F.strokeStyle="#c4921a",F.lineWidth=P,F.strokeRect(P/2,P/2,D-P,b-P),F.strokeStyle="#ffe08a",F.lineWidth=Math.max(3,P*.22);const T=P+3;F.strokeRect(T,T,D-T*2,b-T*2)}}function de(){if(vt.innerHTML="",!lc)return;const n=Object.keys(tc).sort(function(i,r){return tc[i]-tc[r]});for(let i=0;i<n.length;i++){const r=n[i],u=C(vt,"button","chip");u.style.background=ic(r,K()),u.style.color=Oc(ic(r,K())),u.textContent=String(tc[r]),Rt(u,r)}}function Yc(){U.innerHTML="";for(let i=0;i<t.rackCap;i++){const r=C(U,"div","peg"),u=t.rack[i];u&&!rc[String(i)]?r.appendChild(it(u,function(a,g){ct(function(){return t.activateRack(i)},a)},!0)):r.classList.add("empty")}const n=C(U,"div","cap");n.textContent=fe()+"/"+t.rackCap}function fe(){let n=0;for(let i=0;i<t.rack.length;i++)t.rack[i]&&n++;return n}function Ft(){sc.innerHTML="";const n=t.columns;let i=0;for(let r=0;r<n.length;r++)n[r].length>i&&(i=n[r].length);i=Math.max(i,1);for(let r=0;r<Math.min(i,6);r++){const u=C(sc,"div","qrow");for(let a=0;a<n.length;a++){const g=n[a][r];if(!g){C(u,"div","needle ghost-slot");continue}const v=r===0,h=it(g,function(d,f){v&&ct(function(){return t.activateFront(a)},d)});v||h.classList.add("buried"),u.appendChild(h)}}}function we(){W.innerHTML="";const n=Ec(W,V+"bead-btn-speed.webp","\u901F\u5EA6 x"+t.speedScale,function(){t.speedScale>=_c||$("speed")}),i=Ec(W,V+"bead-btn-rack.webp","\u52A0\u9488\u67B6",function(){$("rack")}),r=Ec(W,V+"bead-btn-any.webp","\u4EFB\u610F\u9488",function(){It()}),u=Ec(W,V+"bead-btn-shuffle.webp","\u968F\u673A\u6392",function(){$("shuffle")});t.highlightAnyOrShuffle&&(r.classList.add("hot"),u.classList.add("hot")),t.speedScale>=_c&&n.classList.add("dim"),t.rackCap>=yc&&i.classList.add("dim");const a=M(W,"GM \u4E00\u952E\u62FC\u82B1",function(){Zc()||t.state==="Ironing"||(t.debugFillAll(),et(!1))});a.className="btn ghost";const g=M(W,lc?"\u8272\u53F7\u5F00":"\u8272\u53F7\u5173",function(){lc=!lc,L()});g.className="btn ghost";const v=M(W,"\u6362\u5173",function(){const d=Xc();let f=0;for(;f<d.length&&d[f].id!==s.id;f++);s=d[(f+1)%d.length],pc(s,!1)});v.className="btn ghost";const h=M(W,"\u4E0A\u4F20\u51FA\u5173",function(){ke()});if(h.className="btn ghost",s.id===Wc){const d=M(W,"\u5F15\u5BFC",function(){z=0,L()});d.className="btn ghost"}if(s.custom){const d=M(W,"\u5220\u672C\u5173",function(){window.confirm("\u5220\u9664\u8FD9\u4E2A\u81EA\u5236\u5173\uFF1F\u56FE\u9274\u91CC\u5DF2\u70EB\u597D\u7684\u6210\u54C1\u8FD8\u4F1A\u7559\u7740\u3002")&&(o.remove(s.id),pc(rt,!1))});d.className="btn ghost"}}function ve(){Hc.innerHTML="";const n=t.placeMode==="stack",i=t.canSwitchPlaceMode()&&!Zc(),r=M(Hc,n?"\u62FC\u6CD5\uFF1A\u4E0A\u645E":"\u62FC\u6CD5\uFF1A\u90BB\u63A5",function(){i&&(t.togglePlaceMode(),L())});r.className="btn ghost mode-btn"+(i?"":" dim"),r.title=i?"\u5F00\u62FC\u524D\u53EF\u5207\u6362":"\u5F00\u62FC\u540E\u4E0D\u80FD\u6362\u62FC\u6CD5";const u=C(Hc,"div","mode-hint");u.textContent=n?"\u5E95\u884C\u80FD\u62FC\uFF0C\u53EA\u80FD\u5F80\u4E0A\u53E0":"\u5E95\u884C\u80FD\u62FC\uFF0C\u518D\u62FC\u6328\u7740\u7684\u8C46"}function xt(){if(R.className="overlay hidden",R.innerHTML="",O){let n=function(){r.textContent=O.width+"\xD7"+O.height+" \xB7 "+Object.keys(O.palette||{}).length+" \u8272 \xB7 \u6700\u957F\u8FB9 "+cc+" \u683C",wc(a,O.cells,vc,vc,!1,Ac(320),"",!0,O.palette)};R.classList.remove("hidden");const i=C(R,"div","card piece");C(i,"h2","").textContent=O.name||"\u81EA\u5236\u5173";const r=C(i,"p","res-hint"),u=C(i,"div","art-well"),a=document.createElement("canvas");a.className="gallery-art",u.appendChild(a);const g=C(i,"div","res-row");C(g,"span","res-end").textContent="\u7C97";const v=document.createElement("input");v.type="range",v.min=String(gt),v.max=String(yt),v.step="1",v.value=String(cc),v.className="res-slider",v.setAttribute("aria-label","\u5206\u8FA8\u7387"),g.appendChild(v),C(g,"span","res-end").textContent="\u7EC6",n(),v.oninput=function(){cc=Math.max(gt,Math.min(yt,Number(v.value)||cc)),O=Ce(),n()},v.onpointerdown=function(h){h.stopPropagation()},M(i,"\u5F00\u59CB\u62FC",function(){const h=o.save(O);St(),pc(h)}).className="btn primary",M(i,"\u53D6\u6D88",function(){St(),L()}).className="btn ghost";return}if(t.state==="Result"){R.classList.remove("hidden");const n=C(R,"div","card piece");if(C(n,"h2","").textContent=t.lastGalleryWrite==="update"?"\u5DF2\u66F4\u65B0\u56FE\u9274":"\u5DF2\u6536\u5165\u56FE\u9274",C(n,"p","").textContent=t.ironQuality==="fine"?"\u7CBE\u70EB\u6210\u54C1":"\u666E\u901A\u6210\u54C1",t.savedEntry){const i=C(n,"div","art-well"),r=document.createElement("canvas");r.className="gallery-art",i.appendChild(r),wc(r,t.savedEntry.pixels,vc,Jc(t.savedEntry),t.savedEntry.frameId==="gold",Ac(320),"",!0,K(t.savedEntry))}hc(t.savedEntry)&&(M(n,"\u7EE7\u7EED\u70EB\u753B",function(){Mt(t.savedEntry)}).className="btn primary"),M(n,"\u6362\u91D1\u6846\uFF08\u5E7F\u544A\uFF09",function(){$("frame")}),M(n,"\u6253\u5F00\u56FE\u9274",function(){Y="",t.openGallery(),L()}),M(n,"\u518D\u62FC\u4E00\u6B21",function(){Y="",t.loadLevel(s,Date.now()%9999),L()}).className=hc(t.savedEntry)?"btn":"btn primary"}else if(t.state==="Gallery")if(R.classList.remove("hidden"),Y)Ee(Y);else{const n=C(R,"div","card gallery");C(n,"h2","").textContent="\u62FC\u8C46\u56FE\u9274\u5899";const i={},r=[];kt().forEach(function(u){i[u.id]=!0,r.push(u)}),o.list().forEach(function(u){i[u.id]=!0,t.gallery.listByLevel(u.id).length&&r.push(u)}),t.gallery.list().forEach(function(u){i[u.levelId]||(i[u.levelId]=!0,r.push({id:u.levelId,name:"\u81EA\u5236",width:u.pixels[0]?u.pixels[0].length:1,height:u.pixels.length,cells:u.pixels}))}),r.forEach(function(u){const a=C(n,"div","ggroup");C(a,"div","ggroup-title").textContent=u.name||Vc(u.id);const g=C(a,"div","grow"),v=t.gallery.listByLevel(u.id);if(!v.length){const h=C(g,"div","gslot empty");C(h,"div","").textContent="\u672A\u6536\u5F55";return}v.forEach(function(h){const d=C(g,"button","gslot");d.setAttribute("type","button");const f=C(d,"div","");f.textContent=(h.ironQuality==="fine"?"\u7CBE\u70EB":"\u666E\u901A")+(h.frameId==="gold"?" \xB7 \u91D1\u6846":"")+(hc(h)?" \xB7 \u672A\u70EB\u5B8C":"");const y=document.createElement("canvas");y.className="gallery-thumb",d.appendChild(y),wc(y,h.pixels,vc,Jc(h),h.frameId==="gold",Ac(160),"",!0,K(h)),d.onclick=function(){Y=h.id,L()}})}),M(n,"\u8FD4\u56DE",function(){Y="",t.closeGalleryToPlay(),L()})}else if(t.state==="SoftBlocked"){R.classList.remove("hidden");const n=C(R,"div","card");t.pendingPark?(C(n,"h2","").textContent="\u6E38\u620F\u5931\u8D25",C(n,"p","").textContent="\u9488\u67B6\u6EE1\u4E86\uFF0C\u8FD8\u6709\u8C46\u5B50\u6CA1\u5730\u65B9\u6302\u3002\u53EF\u4EE5\u770B\u5E7F\u544A\u52A0\u4E00\u683C\u9488\u67B6\uFF0C\u6216\u91CD\u65B0\u5F00\u59CB\u672C\u5173\u3002",t.rackCap<yc&&(M(n,"\u770B\u5E7F\u544A\u52A0\u9488\u67B6",function(){$("rack")}).className="btn primary"),M(n,"\u91CD\u65B0\u5F00\u59CB",function(){pc(s,!1)}).className=t.rackCap<yc?"btn ghost":"btn primary"):(C(n,"h2","").textContent="\u9488\u67B6\u6EE1\u4E86",C(n,"p","").textContent="\u770B\u5E7F\u544A\u52A0\u4E00\u683C\uFF0C\u6216\u7528\u4EFB\u610F\u9488 / \u968F\u673A\u6392\u3002",M(n,"\u52A0\u9488\u67B6\uFF08\u5E7F\u544A\uFF09",function(){$("rack")}).className="btn primary",M(n,"\u4EFB\u610F\u9488",function(){R.classList.add("hidden"),It()}),M(n,"\u968F\u673A\u6392",function(){$("shuffle")}),M(n,"\u5148\u4E0D\u770B",function(){R.classList.add("hidden")}).className="btn ghost")}else if(z>=0){const n=H[z];R.className="overlay guide";const i=C(R,"div","guide-tip");C(i,"div","guide-step").textContent=z+1+" / "+H.length,C(i,"h2","").textContent=n.title,C(i,"p","").textContent=n.text;const r=C(i,"div","guide-actions"),u=z>=H.length-1;n.tap||(M(r,u?"\u5F00\u59CB\u62FC":"\u4E0B\u4E00\u6B65",function(){Sc()}).className="btn primary"),M(r,"\u8DF3\u8FC7",function(){Kc(!0)}).className="btn ghost"}}function pe(){try{return window.localStorage.getItem(pt)==="1"}catch{return!1}}function ge(){try{window.localStorage.setItem(pt,"1")}catch{}}function zt(){s.id===Wc&&!pe()?z=0:s.id!==Wc&&(z=-1)}function Kc(n){z=-1,n&&ge(),Ic(),L()}function Sc(){if(!(z<0)){if(z>=H.length-1){Kc(!0);return}z+=1,xt(),At()}}function Ic(){Gc.classList.add("hidden");const n=c.querySelectorAll(".guide-target");for(let i=0;i<n.length;i++)n[i].classList.remove("guide-target")}function ye(){if(z<0||!H[z])return null;const n=H[z].spot;return n==="queue"?sc.querySelector(".qrow .needle:not(.buried)")||sc:n==="board"?S:n==="rack"?U.querySelector(".peg")||U:n==="gallery"?I:null}function Bt(){if(!(z>=0&&R.classList.contains("guide")&&!R.classList.contains("hidden"))){Ic();return}const i=ye();if(!i){Ic();return}const r=c.querySelectorAll(".guide-target");for(let v=0;v<r.length;v++)r[v].classList.remove("guide-target");i.classList.contains("needle")&&i.classList.add("guide-target"),Gc.classList.remove("hidden");const u=i.getBoundingClientRect(),a=u.left+u.width*.62,g=u.top+u.height*.55;Uc.style.left=a-18+"px",Uc.style.top=g-14+"px"}function At(){if(S.classList.remove("guide-spot"),sc.classList.remove("guide-spot"),U.classList.remove("guide-spot"),I.classList.remove("guide-spot"),z<0||!H[z]||!R.classList.contains("guide")){Ic();return}const n=H[z].spot;n==="queue"?sc.classList.add("guide-spot"):n==="board"?S.classList.add("guide-spot"):n==="rack"?U.classList.add("guide-spot"):n==="gallery"&&I.classList.add("guide-spot"),window.requestAnimationFrame(function(){Bt()})}function vc(){return!0}function me(n,i){return!!(t.ironed&&t.ironed[n]&&t.ironed[n][i])}function Jc(n){return function(i,r){return!n||!n.ironed||!n.ironed[i]?!0:!!n.ironed[i][r]}}function Ee(n){const i=t.gallery.get(n),r=i?i.levelId:n,u=C(R,"div","card piece");if(C(u,"h2","").textContent=Vc(r),C(u,"p","").textContent=(i&&i.ironQuality==="fine"?"\u7CBE\u70EB\u6210\u54C1":"\u666E\u901A\u6210\u54C1")+(i&&i.frameId==="gold"?" \xB7 \u91D1\u6846":"")+(hc(i)?" \xB7 \u8FD8\u6709\u672A\u70EB\u7684\u8C46\u5B50":""),i){const a=C(u,"div","art-well"),g=document.createElement("canvas");g.className="gallery-art",a.appendChild(g),wc(g,i.pixels,vc,Jc(i),i.frameId==="gold",Ac(360),"",!0,K(i))}hc(i)&&(M(u,"\u7EE7\u7EED\u70EB\u753B",function(){Mt(i)}).className="btn primary"),M(u,"\u5206\u4EAB",function(){Ie(r,i&&i.frameId)}).className="btn ghost",M(u,"\u8FD4\u56DE\u56FE\u9274",function(){Y="",L()}).className=hc(i)?"btn":"btn primary"}function Mt(n){if(!n)return;const i=Xc().filter(function(r){return r.id===n.levelId})[0];if(i){if(pc(i,!0),!t.resumeIroning(n)){L();return}et(!0)}}function pc(n,i){Q.length=0,uc=!1,fc.innerHTML="",j=null,rc={},s=n,tc=ft(s.cells),Cc="",Y="",t.loadLevel(s,Date.now()%9999),zt(),i||L()}function St(){O=null,kc=null}function Ce(){return Xt(kc,{id:O&&O.id?O.id:"custom-"+Date.now(),name:O&&O.name?O.name:"\u81EA\u5236\u5173",maxSide:cc,maxColors:10,crop:!0,custom:!0})}function ke(){if(o.list().length>=24){window.alert("\u81EA\u5236\u5173\u6700\u591A 24 \u4E2A\uFF0C\u5148\u5220\u4E00\u4E2A\u518D\u4F20\u3002");return}const n=document.createElement("input");n.type="file",n.accept="image/*",n.onchange=function(){const i=n.files&&n.files[0];if(!i)return;const r=URL.createObjectURL(i),u=new Image;u.onload=function(){try{const a=u.naturalWidth||u.width,g=u.naturalHeight||u.height;if(a<8||g<8){window.alert("\u56FE\u7247\u592A\u5C0F\u4E86"),URL.revokeObjectURL(r);return}const h=Math.min(1,640/Math.max(a,g)),d=document.createElement("canvas");d.width=Math.max(8,Math.round(a*h)),d.height=Math.max(8,Math.round(g*h));const f=d.getContext("2d");f.drawImage(u,0,0,d.width,d.height);const y=f.getImageData(0,0,d.width,d.height);kc={width:y.width,height:y.height,data:new Uint8ClampedArray(y.data)},cc=32;const E=(i.name||"\u81EA\u5236\u5173").replace(/\.[^.]+$/,"");O=Xt(kc,{id:"custom-"+Date.now(),name:E,maxSide:cc,maxColors:10,crop:!0,custom:!0}),L()}catch{window.alert("\u8FD9\u5F20\u56FE\u6CA1\u6CD5\u751F\u6210\u5173\u5361")}URL.revokeObjectURL(r)},u.onerror=function(){URL.revokeObjectURL(r),window.alert("\u8BFB\u4E0D\u51FA\u8FD9\u5F20\u56FE")},u.src=r},n.click()}function It(){const n=t.buriedColorChoices();if(!n.length){window.alert("\u6CA1\u6709\u8FD8\u80FD\u7528\u7684\u88AB\u538B\u4F4F\u9488");return}R.classList.remove("hidden"),R.innerHTML="";const i=C(R,"div","card pick");C(i,"h2","").textContent="\u9009\u4E00\u4E2A\u8FD8\u9700\u8981\u7684\u989C\u8272";const r=C(i,"div","pick-grid"),u=ft(t.def.cells);n.sort(function(a,g){return(u[a.needle.color]||0)-(u[g.needle.color]||0)}),n.forEach(function(a){const g=it(a.needle,function(v,h){$("any-needle").then(function(d){if(!d){L();return}ct(function(){return t.activateBuried(a.col,a.depth)},v)})});r.appendChild(g)}),M(i,"\u53D6\u6D88",function(){L()}).className="btn ghost"}async function $(n){const i=await t.tryAd(n);return n!=="any-needle"&&L(),i}function $c(){let n=0;return j&&(n=Object.keys(j).length),t.remainingEmpty()+n}function be(n,i){return t.filled[n][i]?!(j&&j[n+","+i]):!1}function Fe(n,i){const r=t.def.width,u=t.def.height,a=B.getBoundingClientRect(),g=Math.min(a.width/r,a.height/u);return{x:a.left+i*g,y:a.top+(u-1-n)*g,size:g}}function Zc(){return uc||Q.length>0}function ct(n,i){if(Q.length>=ee||t.pendingPark||t.state==="Ironing"||t.state==="Complete"||t.state==="Result"||t.state==="Gallery")return;const r=n();r&&(xe(r,i),z===0&&H[0].spot==="queue"&&window.setTimeout(function(){z===0&&Sc()},480))}function xe(n,i){const r=n.steps.slice(),u=n.needle.count,a=r.length+u;j||(j={});for(let y=0;y<r.length;y++)j[r[y].row+","+r[y].col]=!0;n.parkedIndex>=0&&!n.parkMerged&&(rc[String(n.parkedIndex)]=!0);const g=i||B.getBoundingClientRect(),v=ic(n.needle.color,K()),h=Qc(v),d=Math.max(36,g.width||48),f={result:n,steps:r,leftover:u,beads:[]};for(let y=0;y<a;y++){const E=document.createElement("img");E.className="fly-bead",E.src=h,E.alt="",E.style.transition="none",Lt(E,g.left,g.top,d),fc.appendChild(E),f.beads.push(E)}Q.push(f),m.textContent="\u5269\u4F59 "+$c(),Mc(),Ft(),Yc(),Bt(),fc.offsetHeight,Lc(),uc||Be()}function ze(){const n=[];for(let i=0;i<Q.length;i++){const r=Q[i].beads;for(let u=0;u<r.length;u++)n.push(r[u])}return n}function Lc(){const n=ze(),i=Math.max(n.length,1),r=B.getBoundingClientRect(),a=U.getBoundingClientRect().top-r.bottom,g=r.bottom+Math.max(6,a*.28),v=Math.min(42,Math.max(26,(Math.min(r.width,window.innerWidth-24)-12)/i-4)),h=3,d=n.length*(v+h)-h;let f=r.left+(r.width-d)/2;f<8&&(f=8);const E=220/(t.speedScale||1);for(let k=0;k<n.length;k++){const D=f+k*(v+h),b=g+Math.sin((k+.5)/i*Math.PI)*-10;tt(n[k],D,b,v,E)}return{beadSize:v,sx:f,stringY:g,gap:h}}async function Be(){for(uc=!0;Q.length;){const n=Q[0],i=t.speedScale||1,r=240/i,u=320/i;for(Lc(),await Dc(260/i);n.steps.length&&n.beads.length;){const v=n.steps.shift(),h=n.beads.shift(),d=Fe(v.row,v.col);h.style.zIndex="8",await tt(h,d.x,d.y,Math.max(d.size,8),r),delete j[v.row+","+v.col],m.textContent="\u5269\u4F59 "+$c(),Mc(),h.style.transition="opacity "+70/i+"ms linear",h.style.opacity="0",Lc(),await Dc(70/i)}const a=n.beads.slice();if(n.beads=[],a.length){const v=Ae(n.result),h=Math.min(34,Math.max(26,v.width-10)),d=Math.max(12,Math.round(h*.42)),f=v.bottom-h-Math.max(6,v.height*.08),y=v.left+v.width/2-h/2,E=Math.min(a.length,5),k=u*.72;let D=0;if(n.result.parkMerged&&n.result.parkedIndex>=0){const b=t.rack[n.result.parkedIndex],G=b?b.count-n.result.needle.count:0;D=Math.max(0,Math.min(G,4))}for(let b=E;b<a.length;b++)a[b].style.opacity="0";for(let b=0;b<E;b++)b>0&&await Dc(40/i),a[b].style.zIndex=String(12+D+b),await tt(a[b],y,f-(D+b)*d,h,k);n.result.parkedIndex>=0&&(delete rc[String(n.result.parkedIndex)],Yc()),Lc()}if(Q.shift(),t.onPlacePlaybackDone()==="Complete"&&!Q.length){fc.innerHTML="",j=null,rc={},uc=!1,et(!1);return}}fc.innerHTML="",j=null,rc={},uc=!1,L()}function Ae(n){const i=U.querySelectorAll(".peg");return n.parkedIndex>=0&&i[n.parkedIndex]?i[n.parkedIndex].getBoundingClientRect():U.getBoundingClientRect()}function Lt(n,i,r,u){n.style.left=i+"px",n.style.top=r+"px",n.style.width=u+"px",n.style.height=u+"px"}function tt(n,i,r,u,a){return n.style.transition="left "+a+"ms cubic-bezier(.22,.8,.28,1), top "+a+"ms cubic-bezier(.22,.8,.28,1), width "+a+"ms ease, height "+a+"ms ease",Lt(n,i,r,u),Dc(a)}function Dc(n){return new Promise(function(i){setTimeout(i,Math.max(0,n))})}function et(n){n||t.beginIroning(),L(),_.classList.remove("run"),_.style.left="12%",_.style.top="18%";let i=!1;const r=.33,u=.79;function a(){const h=_.getBoundingClientRect();return{x:h.left+h.width*r,y:h.top+h.height*u}}function g(h){const d=x.getBoundingClientRect();let f=_.offsetWidth,y=_.offsetHeight;f<8&&(f=d.width*.28,y=f),_.style.left=h.clientX-d.left-f*r+"px",_.style.top=h.clientY-d.top-y*u+"px"}function v(){const h=a(),d=B.getBoundingClientRect();if(d.width<1||d.height<1)return;const f=t.def.width,y=t.def.height,E=(h.x-d.left)/d.width*f,k=(h.y-d.top)/d.height*y,D=Math.max(1.15,Math.min(f,y)/16),b=B.getContext("2d"),G=B.width/f,F=B.height/y;let Pc=!1;b.save(),b.setTransform(1,0,0,1,0,0);for(let P=0;P<y;P++)for(let T=0;T<f;T++){const ac=T+.5,J=y-1-P+.5,X=E-ac,Rc=k-J;X*X+Rc*Rc>D*D||t.ironCell(P,T)&&(Pc=!0,b.fillStyle=ic(t.def.cells[P][T],K()),b.fillRect(T*G,(y-1-P)*F,G,F))}b.restore(),Pc&&(m.textContent="\u5DF2\u70EB "+Me()+"/"+f*y)}x.onpointerdown=function(h){h.target!==x&&h.target!==A||(h.preventDefault(),i=!0,x.setPointerCapture(h.pointerId),g(h),v())},x.onpointermove=function(h){g(h),i&&v()},x.onpointerup=function(){i=!1},x.onpointercancel=function(){i=!1}}function Me(){let n=0;for(let i=0;i<t.ironed.length;i++)for(let r=0;r<t.ironed[i].length;r++)t.ironed[i][r]&&n++;return n}let nt=!1;function Dt(){nt||t.state!=="Ironing"||(nt=!0,Se(t.allIroned()?"fine":"normal"),nt=!1)}function Se(n){x.onpointerdown=null,x.onpointermove=null,x.onpointerup=null,x.onpointercancel=null,_.classList.remove("run"),t.finishIroning(n),L()}function Ie(n,i){const r="\u6211\u70EB\u597D\u4E86\u62FC\u8C46\uFF1A"+n+(i?"\uFF08\u91D1\u6846\uFF09":"");navigator.share?navigator.share({title:"\u62FC\u8C46\u56FE\u9274",text:r}).catch(function(){window.alert(r)}):navigator.clipboard?navigator.clipboard.writeText(r).then(function(){window.alert("\u5DF2\u590D\u5236\u5206\u4EAB\u6587\u6848")}):window.alert(r)}function it(n,i,r){const u=document.createElement("button");u.className=r?"needle skewer":"needle";const a=ic(n.color,K());if(u.style.backgroundColor="transparent",u.style.backgroundBlendMode="normal",u.style.color=Oc(a),r){const d=Math.max(1,Math.min(n.count,4));for(let f=0;f<d;f++){const y=document.createElement("i");y.className="skewer-bead",y.style.backgroundImage="url("+Qc(a)+")",y.style.bottom=6+f*15+"px",y.style.zIndex=String(f+1),u.appendChild(y)}}else u.style.backgroundImage="url("+Qc(a)+")",u.style.backgroundSize="contain",u.style.backgroundRepeat="no-repeat",u.style.backgroundPosition="center";const g=document.createElement("b");g.className="code",g.textContent=String(tc[n.color]||""),lc||(g.style.display="none"),u.appendChild(g);const v=document.createElement("span");v.textContent=String(n.count),u.appendChild(v);const h=Rt(u,n.color);return u.onclick=function(d){d.stopPropagation(),!h()&&t.state!=="Ironing"&&i(u.getBoundingClientRect(),u)},u}function Pt(){return!!(window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches)}function Rt(n,i){n.setAttribute("data-bead-color",i);let r=0,u=!1,a=!1,g=0,v=0;function h(k){Cc!==k&&(Cc=k,Mc())}function d(k,D){const b=c.querySelectorAll("[data-bead-color]");for(let G=0;G<b.length;G++){const F=b[G].getBoundingClientRect();if(k>=F.left&&k<=F.right&&D>=F.top&&D<=F.bottom)return b[G].getAttribute("data-bead-color")||""}return""}function f(){h(d(g,v))}function y(){r&&(window.clearTimeout(r),r=0)}function E(k){if(y(),u=!1,h(""),k)try{n.releasePointerCapture(k.pointerId)}catch{}}return n.onmouseenter=function(){Pt()&&h(i)},n.onmouseleave=function(){Pt()&&!u&&h("")},n.onpointerdown=function(k){if(k.pointerType!=="mouse"){g=k.clientX,v=k.clientY,u=!1,a=!1,y();try{n.setPointerCapture(k.pointerId)}catch{}r=window.setTimeout(function(){r=0,u=!0,a=!0,f()},280)}},n.onpointermove=function(k){g=k.clientX,v=k.clientY,u&&f()},n.onpointerup=function(k){E(k)},n.onpointercancel=function(k){a=!1,E(k)},n.oncontextmenu=function(k){k.preventDefault()},function(){return a?(a=!1,!0):!1}}let Nt=0;function ot(){window.clearTimeout(Nt),Nt=window.setTimeout(function(){Zc()||L()},80)}return S.addEventListener("click",function(){z>=0&&H[z]&&H[z].spot==="board"&&Sc()}),U.addEventListener("click",function(){z>=0&&H[z]&&H[z].spot==="rack"&&Sc()}),window.addEventListener("resize",ot),window.addEventListener("orientationchange",ot),window.visualViewport&&window.visualViewport.addEventListener("resize",ot),zt(),L(),t}function C(c,e,t){const o=document.createElement(e);return t&&(o.className=t),c.appendChild(o),o}function Ec(c,e,t,o){const s=document.createElement("button");s.className="icon-btn",s.title=t;const l=document.createElement("img");l.src=e,l.alt=t,s.appendChild(l);const w=document.createElement("span");return w.textContent=t,s.appendChild(w),s.onclick=o,c.appendChild(s),s}function M(c,e,t){const o=document.createElement("button");return o.className="btn",o.textContent=e,o.onclick=t,c.appendChild(o),o}function te(c,e,t,o,s,l){c.beginPath(),c.moveTo(e+l,t),c.arcTo(e+o,t,e+o,t+s,l),c.arcTo(e+o,t+s,e,t+s,l),c.arcTo(e,t+s,e,t,l),c.arcTo(e,t,e+o,t,l),c.closePath()}export{Cn as startHtmlPlayer};
+// ../../assets/Script/beadPuzzle/levels/banana.ts
+var BANANA_LEVEL = {
+  "id": "banana",
+  "width": 21,
+  "height": 40,
+  "needleSizeMin": 6,
+  "needleSizeMax": 12,
+  "frontRowSize": 5,
+  "cells": [
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "p",
+      "p",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "v",
+      "h",
+      "h",
+      "v",
+      "w",
+      "w",
+      "w",
+      "e",
+      "e",
+      "e",
+      "z",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "h",
+      "p",
+      "w",
+      "w",
+      "w",
+      "e",
+      "e",
+      "e",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "h",
+      "n",
+      "z",
+      "z",
+      "z",
+      "e",
+      "e",
+      "e",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "d",
+      "d",
+      "n",
+      "y",
+      "h",
+      "t",
+      "t",
+      "o",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "d",
+      "d",
+      "n",
+      "y",
+      "y",
+      "y",
+      "o",
+      "v",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "k",
+      "d",
+      "d",
+      "n",
+      "y",
+      "y",
+      "y",
+      "h",
+      "v",
+      "k",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "k",
+      "w",
+      "w",
+      "v",
+      "h",
+      "n",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "v",
+      "v",
+      "k",
+      "w",
+      "h",
+      "h",
+      "h",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "v",
+      "w",
+      "n",
+      "y",
+      "n",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "v",
+      "v",
+      "k",
+      "p",
+      "o",
+      "v",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "p",
+      "v",
+      "n",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "o",
+      "p",
+      "p",
+      "p",
+      "o",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "p",
+      "v",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "y",
+      "y",
+      "y",
+      "o",
+      "p",
+      "o",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "t",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "o",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "h",
+      "y",
+      "v",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "o",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "o",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "o",
+      "o",
+      "h",
+      "v",
+      "h",
+      "z",
+      "z",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "p",
+      "p",
+      "p",
+      "p",
+      "p",
+      "z",
+      "z",
+      "z",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "p",
+      "p",
+      "z",
+      "p",
+      "p",
+      "p",
+      "p",
+      "z",
+      "z",
+      "p",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "v",
+      "k",
+      "v",
+      "z",
+      "z",
+      "z",
+      "z",
+      "n",
+      "k",
+      "k",
+      "p",
+      "h",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "h",
+      "k",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z",
+      "k",
+      "v",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "o",
+      "p",
+      "p",
+      "p",
+      "z",
+      "z",
+      "p",
+      "p",
+      "o",
+      "h",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "h",
+      "o",
+      "o",
+      "o",
+      "o",
+      "p",
+      "p",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "t",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "h",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "h",
+      "y",
+      "h",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "o",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "h",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "y",
+      "h",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "o",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "v",
+      "n",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "t",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "d",
+      "y",
+      "y",
+      "y",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "d",
+      "k",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "d",
+      "d",
+      "k",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "k",
+      "n",
+      "n",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "w",
+      "d",
+      "n",
+      "n",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "w",
+      "w",
+      "w",
+      "k",
+      "d",
+      "n",
+      "n",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w",
+      "w"
+    ]
+  ]
+};
+
+// ../../assets/Script/beadPuzzle/levels/cat.ts
+var CAT_LEVEL = {
+  "id": "cat",
+  "width": 40,
+  "height": 40,
+  "needleSizeMin": 6,
+  "needleSizeMax": 12,
+  "frontRowSize": 5,
+  "cells": [
+    [
+      "h",
+      "v",
+      "v",
+      "n",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "p",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "h",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "d",
+      "h",
+      "u",
+      "w",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "h",
+      "v",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "h",
+      "z",
+      "u",
+      "w",
+      "w",
+      "w"
+    ],
+    [
+      "h",
+      "n",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "h",
+      "z",
+      "a",
+      "u",
+      "w"
+    ],
+    [
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "z",
+      "a",
+      "u",
+      "w"
+    ],
+    [
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "o",
+      "a",
+      "u",
+      "w"
+    ],
+    [
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "n",
+      "v",
+      "n",
+      "v",
+      "h",
+      "z",
+      "e",
+      "u"
+    ],
+    [
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "z",
+      "a",
+      "u"
+    ],
+    [
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "h",
+      "z",
+      "a",
+      "u"
+    ],
+    [
+      "h",
+      "v",
+      "n",
+      "n",
+      "v",
+      "v",
+      "c",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "z",
+      "a",
+      "e"
+    ],
+    [
+      "o",
+      "h",
+      "v",
+      "n",
+      "v",
+      "v",
+      "c",
+      "c",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "v",
+      "o",
+      "z",
+      "a",
+      "a"
+    ],
+    [
+      "o",
+      "h",
+      "v",
+      "n",
+      "n",
+      "n",
+      "c",
+      "c",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "o",
+      "z",
+      "a",
+      "a"
+    ],
+    [
+      "o",
+      "o",
+      "h",
+      "v",
+      "v",
+      "n",
+      "c",
+      "c",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "c",
+      "c",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "o",
+      "z",
+      "a",
+      "a"
+    ],
+    [
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "c",
+      "c",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "n",
+      "n",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "o",
+      "z",
+      "a",
+      "a"
+    ],
+    [
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "n",
+      "c",
+      "c",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "n",
+      "n",
+      "n",
+      "d",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "o",
+      "a",
+      "a",
+      "z"
+    ],
+    [
+      "h",
+      "h",
+      "h",
+      "v",
+      "n",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "d",
+      "n",
+      "n",
+      "n",
+      "d",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "t",
+      "a",
+      "a",
+      "t"
+    ],
+    [
+      "o",
+      "o",
+      "h",
+      "v",
+      "n",
+      "n",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "n",
+      "c",
+      "c",
+      "c",
+      "c",
+      "c",
+      "n",
+      "n",
+      "v",
+      "v",
+      "z",
+      "a",
+      "a",
+      "o"
+    ],
+    [
+      "h",
+      "o",
+      "h",
+      "v",
+      "v",
+      "n",
+      "c",
+      "c",
+      "c",
+      "n",
+      "n",
+      "n",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "d",
+      "n",
+      "d",
+      "d",
+      "c",
+      "c",
+      "c",
+      "c",
+      "v",
+      "v",
+      "v",
+      "h",
+      "z",
+      "a",
+      "z",
+      "h"
+    ],
+    [
+      "h",
+      "o",
+      "h",
+      "h",
+      "v",
+      "v",
+      "c",
+      "c",
+      "c",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "d",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "d",
+      "d",
+      "d",
+      "d",
+      "c",
+      "c",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "o",
+      "a",
+      "a",
+      "z",
+      "v"
+    ],
+    [
+      "v",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "c",
+      "c",
+      "c",
+      "d",
+      "k",
+      "k",
+      "d",
+      "d",
+      "d",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "d",
+      "d",
+      "d",
+      "k",
+      "k",
+      "d",
+      "d",
+      "n",
+      "n",
+      "v",
+      "h",
+      "z",
+      "a",
+      "a",
+      "z",
+      "v"
+    ],
+    [
+      "n",
+      "v",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "n",
+      "d",
+      "k",
+      "k",
+      "k",
+      "k",
+      "d",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "d",
+      "d",
+      "k",
+      "k",
+      "k",
+      "d",
+      "n",
+      "n",
+      "n",
+      "v",
+      "h",
+      "z",
+      "a",
+      "a",
+      "z",
+      "v"
+    ],
+    [
+      "n",
+      "n",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "k",
+      "k",
+      "k",
+      "k",
+      "d",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "n",
+      "d",
+      "k",
+      "d",
+      "d",
+      "d",
+      "n",
+      "n",
+      "v",
+      "v",
+      "o",
+      "z",
+      "a",
+      "z",
+      "z",
+      "v"
+    ],
+    [
+      "n",
+      "n",
+      "v",
+      "h",
+      "h",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "d",
+      "k",
+      "d",
+      "n",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "h",
+      "v",
+      "n",
+      "d",
+      "d",
+      "d",
+      "n",
+      "v",
+      "v",
+      "v",
+      "h",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "v"
+    ],
+    [
+      "n",
+      "n",
+      "v",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "d",
+      "d",
+      "d",
+      "n",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "h",
+      "h",
+      "v",
+      "n",
+      "n",
+      "n",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "t"
+    ],
+    [
+      "n",
+      "n",
+      "n",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "t"
+    ],
+    [
+      "n",
+      "n",
+      "n",
+      "v",
+      "h",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "z",
+      "z",
+      "z",
+      "t",
+      "o",
+      "h",
+      "h",
+      "o",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "o",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "z",
+      "z",
+      "z",
+      "z",
+      "o",
+      "o",
+      "o",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "v",
+      "n",
+      "n",
+      "n",
+      "n",
+      "n",
+      "v",
+      "v",
+      "v",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "o",
+      "p",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "z",
+      "z",
+      "z",
+      "z",
+      "p",
+      "p",
+      "p",
+      "o",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "h",
+      "v",
+      "v",
+      "v",
+      "n",
+      "v",
+      "v",
+      "h",
+      "o",
+      "p",
+      "p",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "o",
+      "o",
+      "t",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "a",
+      "z",
+      "o",
+      "h",
+      "p",
+      "p",
+      "p",
+      "p",
+      "o",
+      "h",
+      "h",
+      "h",
+      "h",
+      "o",
+      "t",
+      "t",
+      "p",
+      "o",
+      "h",
+      "h",
+      "h",
+      "o",
+      "z",
+      "f",
+      "f",
+      "f",
+      "p",
+      "o",
+      "h",
+      "h",
+      "h",
+      "o",
+      "o",
+      "p",
+      "t",
+      "z",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "h",
+      "n",
+      "n",
+      "v",
+      "p",
+      "p",
+      "p",
+      "p",
+      "o",
+      "o",
+      "o",
+      "h",
+      "o",
+      "p",
+      "a",
+      "e",
+      "e",
+      "a",
+      "f",
+      "z",
+      "f",
+      "f",
+      "a",
+      "a",
+      "a",
+      "a",
+      "f",
+      "p",
+      "o",
+      "o",
+      "o",
+      "o",
+      "o",
+      "p",
+      "p",
+      "a",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "a",
+      "z",
+      "z",
+      "z",
+      "z",
+      "p",
+      "p",
+      "p",
+      "p",
+      "o",
+      "o",
+      "o",
+      "p",
+      "t",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "f",
+      "p",
+      "o",
+      "o",
+      "o",
+      "o",
+      "o",
+      "z",
+      "a",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "e",
+      "t",
+      "p",
+      "p",
+      "p",
+      "o",
+      "o",
+      "p",
+      "z",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "z",
+      "p",
+      "o",
+      "o",
+      "o",
+      "o",
+      "z",
+      "a",
+      "z",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "z",
+      "p",
+      "p",
+      "p",
+      "p",
+      "p",
+      "t",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "e",
+      "a",
+      "a",
+      "z",
+      "t",
+      "o",
+      "o",
+      "p",
+      "f",
+      "a",
+      "f",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "a",
+      "p",
+      "p",
+      "p",
+      "p",
+      "t",
+      "e",
+      "e",
+      "u",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "a",
+      "a",
+      "z",
+      "t",
+      "p",
+      "z",
+      "a",
+      "f",
+      "f",
+      "z",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "z",
+      "t",
+      "t",
+      "t",
+      "a",
+      "u",
+      "u",
+      "u",
+      "e",
+      "e",
+      "u",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "a",
+      "a",
+      "a",
+      "a",
+      "a",
+      "a",
+      "a",
+      "f",
+      "f",
+      "f",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "e",
+      "f",
+      "f",
+      "e",
+      "u",
+      "u",
+      "u",
+      "e",
+      "e",
+      "e",
+      "u",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "a",
+      "a",
+      "a",
+      "f",
+      "f",
+      "f",
+      "f",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "e",
+      "u",
+      "u",
+      "u",
+      "u",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "a",
+      "a",
+      "a",
+      "f",
+      "f",
+      "f",
+      "f",
+      "z",
+      "z"
+    ],
+    [
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "u",
+      "e",
+      "u",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "e",
+      "a",
+      "a",
+      "a",
+      "f",
+      "f",
+      "f",
+      "f",
+      "z",
+      "z"
+    ]
+  ]
+};
+
+// ../../assets/Script/beadPuzzle/levels/daodun.ts
+var DAODUN_LEVEL = {
+  "id": "daodun",
+  "name": "\u5200\u76FE",
+  "width": 40,
+  "height": 24,
+  "needleSizeMin": 6,
+  "needleSizeMax": 12,
+  "frontRowSize": 5,
+  "cells": [
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c3",
+      "c3",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c7",
+      "c6",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c9",
+      "c9",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c9",
+      "c9",
+      "c3",
+      "c2",
+      "c3",
+      "c9",
+      "c4",
+      "c2",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c3",
+      "c3",
+      "c7",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c8",
+      "c8",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c3",
+      "c2",
+      "c2",
+      "c3",
+      "c9",
+      "c4",
+      "c2",
+      "c2",
+      "c3",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c2",
+      "c1",
+      "c2",
+      "c4",
+      "c3",
+      "c1",
+      "c3",
+      "c7",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c6",
+      "c7",
+      "c7",
+      "c7",
+      "c3",
+      "c3",
+      "c3",
+      "c9",
+      "c2",
+      "c4",
+      "c2",
+      "c2",
+      "c3",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c6",
+      "c5",
+      "c0",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c5",
+      "c5",
+      "c5",
+      "c3",
+      "c7",
+      "c7",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c6",
+      "c7",
+      "c7",
+      "c6",
+      "c3",
+      "c9",
+      "c9",
+      "c2",
+      "c2",
+      "c2",
+      "c2",
+      "c3",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c0",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c4",
+      "c0",
+      "c0",
+      "c1",
+      "c5",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c8",
+      "c6",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c6",
+      "c6",
+      "c6",
+      "c9",
+      "c9",
+      "c9",
+      "c3",
+      "c2",
+      "c2",
+      "c2",
+      "c3",
+      "c4",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c0",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c7",
+      "c8",
+      "c2",
+      "c2",
+      "c2",
+      "c3",
+      "c5",
+      "c6",
+      "c8",
+      "c8",
+      "c8",
+      "c7",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c6",
+      "c3",
+      "c3",
+      "c3",
+      "c0",
+      "c3",
+      "c2",
+      "c2",
+      "c1",
+      "c3",
+      "c4",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c5",
+      "c9",
+      "c9",
+      "c5",
+      "c7",
+      "c8",
+      "c3",
+      "c2",
+      "c2",
+      "c2",
+      "c2",
+      "c6",
+      "c6",
+      "c6",
+      "c8",
+      "c7",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c0",
+      "c3",
+      "c1",
+      "c1",
+      "c3",
+      "c3",
+      "c3",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c4",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c7",
+      "c8",
+      "c0",
+      "c0",
+      "c5",
+      "c5",
+      "c5",
+      "c0",
+      "c0",
+      "c0",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c1",
+      "c3",
+      "c3",
+      "c2",
+      "c2",
+      "c2",
+      "c4",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c7",
+      "c4",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c0",
+      "c6",
+      "c6",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c6",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c1",
+      "c1",
+      "c1",
+      "c2",
+      "c3",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c7",
+      "c4",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c7",
+      "c6",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c6",
+      "c9",
+      "c9",
+      "c9",
+      "c3",
+      "c1",
+      "c1",
+      "c1",
+      "c2",
+      "c3",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c7",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c6",
+      "c6",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c2",
+      "c3",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c4",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c2",
+      "c3",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c4",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c2",
+      "c0",
+      "c1",
+      "c2",
+      "c3",
+      "c9"
+    ],
+    [
+      "c9",
+      "c6",
+      "c4",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c4",
+      "c2",
+      "c0",
+      "c2",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c6",
+      "c4",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c6",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c6",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c4",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c4",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ]
+  ],
+  "palette": {
+    "c0": "#20150a",
+    "c1": "#3c3225",
+    "c2": "#4d4135",
+    "c3": "#7c5b44",
+    "c4": "#726b65",
+    "c5": "#93735c",
+    "c6": "#a3856b",
+    "c7": "#ac9375",
+    "c8": "#b3a38b",
+    "c9": "#fefefe"
+  }
+};
+
+// ../../assets/Script/beadPuzzle/levels/dui.ts
+var DUI_LEVEL = {
+  "id": "dui",
+  "name": "\u5C0F\u5806",
+  "width": 28,
+  "height": 23,
+  "needleSizeMin": 3,
+  "needleSizeMax": 6,
+  "frontRowSize": 3,
+  "cells": [
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1"
+    ],
+    [
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0"
+    ],
+    [
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0"
+    ],
+    [
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1"
+    ],
+    [
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1"
+    ],
+    [
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1"
+    ],
+    [
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1"
+    ],
+    [
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ],
+    [
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c0",
+      "c0",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1",
+      "c1"
+    ]
+  ],
+  "palette": {
+    "c0": "#252422",
+    "c1": "#ffffff"
+  }
+};
+
+// ../../assets/Script/beadPuzzle/levels/white.ts
+var WHITE_LEVEL = {
+  "id": "white",
+  "name": "\u5C0F\u767D",
+  "width": 34,
+  "height": 40,
+  "needleSizeMin": 6,
+  "needleSizeMax": 12,
+  "frontRowSize": 5,
+  "cells": [
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c0",
+      "c4",
+      "c0",
+      "c4",
+      "c4",
+      "c3",
+      "c3",
+      "c6",
+      "c6",
+      "c8",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c4",
+      "c3",
+      "c0",
+      "c2",
+      "c0",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c3",
+      "c4",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c8",
+      "c3",
+      "c0",
+      "c0",
+      "c3",
+      "c4",
+      "c3",
+      "c3",
+      "c0",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c8",
+      "c8",
+      "c8",
+      "c3",
+      "c2",
+      "c0",
+      "c0",
+      "c2",
+      "c0",
+      "c2",
+      "c0",
+      "c1",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c1",
+      "c0",
+      "c8",
+      "c0",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c2",
+      "c8",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c2",
+      "c9",
+      "c2",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c3",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c2",
+      "c7",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c7",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c7",
+      "c0",
+      "c0",
+      "c2",
+      "c2",
+      "c8",
+      "c3",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c7",
+      "c6",
+      "c6",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c1",
+      "c0",
+      "c1",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c3",
+      "c8",
+      "c8",
+      "c7",
+      "c7",
+      "c7",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c6",
+      "c6",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c9",
+      "c6",
+      "c0",
+      "c8",
+      "c1",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c7",
+      "c1",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c7",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c6",
+      "c6",
+      "c6",
+      "c9",
+      "c9",
+      "c3",
+      "c3",
+      "c9",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c7",
+      "c8",
+      "c8",
+      "c7",
+      "c8",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c7",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c7",
+      "c6",
+      "c6",
+      "c6",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c6",
+      "c3",
+      "c0",
+      "c0",
+      "c6",
+      "c3",
+      "c3",
+      "c3",
+      "c0",
+      "c0",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c2",
+      "c0",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c4",
+      "c0",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c0",
+      "c8",
+      "c8",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c0",
+      "c0",
+      "c7",
+      "c0",
+      "c1",
+      "c7",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c8",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c8",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c8",
+      "c7",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c0",
+      "c1",
+      "c7",
+      "c0",
+      "c3",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c0",
+      "c7",
+      "c6",
+      "c6",
+      "c6",
+      "c7",
+      "c8",
+      "c8",
+      "c2",
+      "c2",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c8",
+      "c1",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c0",
+      "c7",
+      "c3",
+      "c0",
+      "c3",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c8",
+      "c7",
+      "c6",
+      "c0",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c1",
+      "c0",
+      "c2",
+      "c0",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c2",
+      "c3",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c7",
+      "c0",
+      "c3",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c4",
+      "c1",
+      "c1",
+      "c8",
+      "c8",
+      "c0",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c3",
+      "c0",
+      "c3",
+      "c0",
+      "c0",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c7",
+      "c0",
+      "c0",
+      "c7",
+      "c2",
+      "c0",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c0",
+      "c3",
+      "c0",
+      "c0",
+      "c3",
+      "c9",
+      "c8",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c3",
+      "c6",
+      "c6",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c3",
+      "c0",
+      "c7",
+      "c2",
+      "c0",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c0",
+      "c2",
+      "c2",
+      "c0",
+      "c3",
+      "c0",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c6",
+      "c0",
+      "c6",
+      "c7",
+      "c0",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c3",
+      "c6",
+      "c3",
+      "c0",
+      "c2",
+      "c0",
+      "c2",
+      "c3",
+      "c8",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c8",
+      "c7",
+      "c8",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c3",
+      "c0",
+      "c2",
+      "c7",
+      "c0",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c8",
+      "c6",
+      "c6",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c1",
+      "c8",
+      "c9",
+      "c9",
+      "c8",
+      "c2",
+      "c0",
+      "c0",
+      "c0",
+      "c3",
+      "c0",
+      "c2",
+      "c6",
+      "c0",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c7",
+      "c6",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c2",
+      "c0",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c6",
+      "c0",
+      "c6",
+      "c0",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c0",
+      "c3",
+      "c9",
+      "c8",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c3",
+      "c1",
+      "c0",
+      "c8",
+      "c0",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c5",
+      "c5",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c2",
+      "c0",
+      "c2",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c1",
+      "c1",
+      "c6",
+      "c3",
+      "c2",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c5",
+      "c5",
+      "c5",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c1",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c2",
+      "c0",
+      "c0",
+      "c6",
+      "c6",
+      "c0",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c7",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c2",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c4",
+      "c3",
+      "c0",
+      "c3",
+      "c0",
+      "c3",
+      "c7",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c6",
+      "c0",
+      "c0",
+      "c2",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c7",
+      "c7",
+      "c7",
+      "c3",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c0",
+      "c7",
+      "c5",
+      "c5",
+      "c7",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c2",
+      "c1",
+      "c3",
+      "c7",
+      "c6",
+      "c5",
+      "c6",
+      "c6",
+      "c6",
+      "c6",
+      "c3",
+      "c0",
+      "c0",
+      "c3",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c0",
+      "c2",
+      "c2",
+      "c0",
+      "c7",
+      "c9",
+      "c9",
+      "c9",
+      "c1",
+      "c0",
+      "c3",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c6",
+      "c7",
+      "c2",
+      "c2",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c9",
+      "c0",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c6",
+      "c2",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c5",
+      "c5",
+      "c5",
+      "c5",
+      "c0",
+      "c0",
+      "c8",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c0",
+      "c6",
+      "c6",
+      "c6",
+      "c7",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c8",
+      "c0",
+      "c0",
+      "c0",
+      "c0",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c3",
+      "c3",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ],
+    [
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9",
+      "c9"
+    ]
+  ],
+  "palette": {
+    "c0": "#10110e",
+    "c1": "#343433",
+    "c2": "#545453",
+    "c3": "#bbbcbc",
+    "c4": "#c4c4c4",
+    "c5": "#fbccdc",
+    "c6": "#dcdcdb",
+    "c7": "#ecebeb",
+    "c8": "#f4f4f4",
+    "c9": "#fefdfd"
+  }
+};
+
+// ../../assets/Script/beadPuzzle/logic/adPort.ts
+var MockAdPort = class {
+  constructor() {
+    this.mode = "auto-grant";
+    this.blocked = false;
+    this.lastPlacement = null;
+    this.prompt = null;
+  }
+  async showRewarded(placementId) {
+    this.lastPlacement = placementId;
+    if (this.blocked) {
+      return false;
+    }
+    if (this.mode === "auto-grant") {
+      return true;
+    }
+    if (this.mode === "auto-deny") {
+      return false;
+    }
+    if (this.prompt) {
+      return this.prompt(placementId);
+    }
+    return false;
+  }
+};
+
+// ../../assets/Script/beadPuzzle/logic/galleryStore.ts
+var KEY = "beadPuzzle.gallery";
+function defaultStorage() {
+  const mem = {};
+  const ls = typeof localStorage !== "undefined" ? localStorage : null;
+  if (ls) {
+    return ls;
+  }
+  return {
+    getItem(key) {
+      return Object.prototype.hasOwnProperty.call(mem, key) ? mem[key] : null;
+    },
+    setItem(key, value) {
+      mem[key] = value;
+    }
+  };
+}
+function entryHasUnironed(entry) {
+  if (!entry || !entry.ironed) {
+    return false;
+  }
+  for (let r = 0; r < entry.ironed.length; r++) {
+    const row = entry.ironed[r];
+    if (!row) {
+      continue;
+    }
+    for (let c = 0; c < row.length; c++) {
+      if (!row[c]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+var GalleryStore = class {
+  constructor(storage) {
+    this.storage = storage || defaultStorage();
+  }
+  loadAll() {
+    const parsed = this.readRaw();
+    const migrated = migrate(parsed);
+    if (migrated.dirty) {
+      this.writeAll(migrated.entries);
+    }
+    return migrated.entries;
+  }
+  list() {
+    return this.loadAll().slice().sort(byFreshness);
+  }
+  listByLevel(levelId) {
+    return this.list().filter(function(e) {
+      return e.levelId === levelId;
+    });
+  }
+  get(entryId) {
+    const all = this.loadAll();
+    for (let i = 0; i < all.length; i++) {
+      if (all[i].id === entryId) {
+        return all[i];
+      }
+    }
+    return null;
+  }
+  hasCleared(levelId) {
+    return this.listByLevel(levelId).length > 0;
+  }
+  save(levelId, pixels, ironQuality, frameId, ironed, palette) {
+    const all = this.loadAll();
+    const now = Date.now();
+    const entry = {
+      id: makeId(levelId, now),
+      levelId,
+      pixels: clonePixels(pixels),
+      ironed: ironed ? cloneBoolGrid(ironed) : null,
+      ironQuality,
+      frameId: frameId || "",
+      clearedAt: now,
+      updatedAt: now,
+      palette: clonePalette(palette)
+    };
+    all.push(entry);
+    this.writeAll(all);
+    return entry;
+  }
+  update(entryId, pixels, ironQuality, frameId, ironed, palette) {
+    const all = this.loadAll();
+    for (let i = 0; i < all.length; i++) {
+      if (all[i].id !== entryId) {
+        continue;
+      }
+      const prev = all[i];
+      const next = {
+        id: prev.id,
+        levelId: prev.levelId,
+        pixels: clonePixels(pixels),
+        ironed: ironed ? cloneBoolGrid(ironed) : null,
+        ironQuality,
+        frameId: frameId || "",
+        clearedAt: prev.clearedAt,
+        updatedAt: Date.now(),
+        palette: clonePalette(palette || prev.palette)
+      };
+      all[i] = next;
+      this.writeAll(all);
+      return next;
+    }
+    return null;
+  }
+  applyFrame(entryId, frameId) {
+    const all = this.loadAll();
+    for (let i = 0; i < all.length; i++) {
+      if (all[i].id !== entryId) {
+        continue;
+      }
+      all[i].frameId = frameId || "";
+      all[i].updatedAt = Date.now();
+      this.writeAll(all);
+      return all[i];
+    }
+    return null;
+  }
+  readRaw() {
+    try {
+      const raw = this.storage.getItem(KEY);
+      if (!raw) {
+        return null;
+      }
+      const parsed = JSON.parse(raw);
+      return parsed && typeof parsed === "object" ? parsed : null;
+    } catch (e) {
+      return null;
+    }
+  }
+  writeAll(entries) {
+    this.storage.setItem(KEY, JSON.stringify({ version: 2, entries }));
+  }
+};
+function migrate(parsed) {
+  if (!parsed) {
+    return { entries: [], dirty: false };
+  }
+  if (parsed.version === 2 && Array.isArray(parsed.entries)) {
+    const entries2 = [];
+    for (let i = 0; i < parsed.entries.length; i++) {
+      const e = normalizeEntry(parsed.entries[i], parsed.entries[i] && parsed.entries[i].levelId);
+      if (e) {
+        entries2.push(e);
+      }
+    }
+    return { entries: entries2, dirty: false };
+  }
+  const entries = [];
+  const keys = Object.keys(parsed);
+  for (let i = 0; i < keys.length; i++) {
+    const levelId = keys[i];
+    if (levelId === "version" || levelId === "entries") {
+      continue;
+    }
+    const e = normalizeEntry(parsed[levelId], levelId);
+    if (e) {
+      entries.push(e);
+    }
+  }
+  return { entries, dirty: entries.length > 0 };
+}
+function normalizeEntry(raw, levelId) {
+  if (!raw || !raw.pixels) {
+    return null;
+  }
+  const id = raw.id || levelId + "-" + (raw.clearedAt || Date.now());
+  return {
+    id: String(id),
+    levelId: raw.levelId || levelId || "unknown",
+    pixels: clonePixels(raw.pixels),
+    ironed: raw.ironed ? cloneBoolGrid(raw.ironed) : null,
+    ironQuality: raw.ironQuality || "normal",
+    frameId: raw.frameId || "",
+    clearedAt: raw.clearedAt || Date.now(),
+    updatedAt: raw.updatedAt || raw.clearedAt || Date.now(),
+    palette: clonePalette(raw.palette)
+  };
+}
+function makeId(levelId, now) {
+  return levelId + "-" + now + "-" + Math.random().toString(36).slice(2, 8);
+}
+function byFreshness(a, b) {
+  return (b.updatedAt || b.clearedAt || 0) - (a.updatedAt || a.clearedAt || 0);
+}
+function clonePixels(pixels) {
+  const out = [];
+  for (let r = 0; r < pixels.length; r++) {
+    out.push(pixels[r].slice());
+  }
+  return out;
+}
+function cloneBoolGrid(grid) {
+  const out = [];
+  for (let r = 0; r < grid.length; r++) {
+    out.push(grid[r].slice());
+  }
+  return out;
+}
+function clonePalette(palette) {
+  if (!palette) {
+    return null;
+  }
+  const out = {};
+  const keys = Object.keys(palette);
+  for (let i = 0; i < keys.length; i++) {
+    out[keys[i]] = palette[keys[i]];
+  }
+  return out;
+}
+
+// ../../assets/Script/beadPuzzle/logic/customLevelStore.ts
+var KEY2 = "beadPuzzle.customLevels";
+var MAX_CUSTOM = 24;
+var CustomLevelStore = class {
+  constructor(storage) {
+    this.storage = storage || defaultStorage();
+  }
+  list() {
+    return this.readAll().slice();
+  }
+  get(id) {
+    const all = this.readAll();
+    for (let i = 0; i < all.length; i++) {
+      if (all[i].id === id) {
+        return all[i];
+      }
+    }
+    return null;
+  }
+  save(level) {
+    if (!level || !level.id || !level.cells) {
+      return null;
+    }
+    const copy = cloneLevel(level);
+    copy.custom = true;
+    const all = this.readAll().filter(function(x) {
+      return x.id !== copy.id;
+    });
+    all.unshift(copy);
+    this.writeAll(all.slice(0, MAX_CUSTOM));
+    return copy;
+  }
+  remove(id) {
+    const all = this.readAll();
+    const next = all.filter(function(x) {
+      return x.id !== id;
+    });
+    if (next.length === all.length) {
+      return false;
+    }
+    this.writeAll(next);
+    return true;
+  }
+  readAll() {
+    try {
+      const raw = this.storage.getItem(KEY2);
+      if (!raw) {
+        return [];
+      }
+      const parsed = JSON.parse(raw);
+      const list = parsed && parsed.levels;
+      if (!Array.isArray(list)) {
+        return [];
+      }
+      const out = [];
+      for (let i = 0; i < list.length; i++) {
+        const lv = normalizeLevel(list[i]);
+        if (lv) {
+          out.push(lv);
+        }
+      }
+      return out;
+    } catch (e) {
+      return [];
+    }
+  }
+  writeAll(levels) {
+    this.storage.setItem(KEY2, JSON.stringify({ version: 1, levels }));
+  }
+};
+function normalizeLevel(raw) {
+  if (!raw || !raw.id || !raw.cells || !raw.cells.length) {
+    return null;
+  }
+  return {
+    id: String(raw.id),
+    name: raw.name ? String(raw.name) : "",
+    width: raw.width || raw.cells[0].length,
+    height: raw.height || raw.cells.length,
+    cells: raw.cells,
+    palette: raw.palette || void 0,
+    custom: true,
+    needleSizeMin: raw.needleSizeMin,
+    needleSizeMax: raw.needleSizeMax,
+    frontRowSize: raw.frontRowSize
+  };
+}
+function cloneLevel(level) {
+  const cells = [];
+  for (let r = 0; r < level.cells.length; r++) {
+    cells.push(level.cells[r].slice());
+  }
+  const palette = level.palette ? JSON.parse(JSON.stringify(level.palette)) : void 0;
+  return {
+    id: level.id,
+    name: level.name || "",
+    width: level.width,
+    height: level.height,
+    cells,
+    palette,
+    custom: true,
+    needleSizeMin: level.needleSizeMin,
+    needleSizeMax: level.needleSizeMax,
+    frontRowSize: level.frontRowSize
+  };
+}
+
+// ../../assets/Script/beadPuzzle/logic/imageQuantize.ts
+var DEFAULT_MAX_SIDE = 40;
+var DEFAULT_MAX_COLORS = 10;
+var BLACK_LUMA = 42;
+var BLACK_CELL_RATIO = 0.26;
+var CROP_DIST = 2200;
+var MIN_SEP = 360;
+var SAMPLE_CAP = 28e3;
+function imageToLevel(image, options) {
+  const opts = options || {};
+  const rgb = flattenRgb(image);
+  const cropped = opts.crop === false ? rgb : cropBackground(rgb);
+  const twTh = fitSize(cropped.width, cropped.height, opts.maxSide || DEFAULT_MAX_SIDE);
+  const colors = pickPalette(cropped, opts.maxColors || DEFAULT_MAX_COLORS);
+  const grid = quantizeGrid(cropped, twTh.tw, twTh.th, colors);
+  const palette = {};
+  for (let i = 0; i < colors.length; i++) {
+    palette[colorId(i)] = rgbToHex(colors[i]);
+  }
+  const cells = toGameCells(grid);
+  return {
+    id: opts.id || "custom",
+    name: opts.name || "",
+    width: twTh.tw,
+    height: twTh.th,
+    cells,
+    palette,
+    custom: !!opts.custom,
+    needleSizeMin: opts.needleSizeMin || 6,
+    needleSizeMax: opts.needleSizeMax || 12,
+    frontRowSize: opts.frontRowSize || 5
+  };
+}
+function rgbToHex(c) {
+  return "#" + [c.r, c.g, c.b].map(toByte).join("");
+}
+function colorId(index) {
+  return "c" + index;
+}
+function flattenRgb(image) {
+  const w = image.width;
+  const h = image.height;
+  const src = image.data;
+  const px = [];
+  for (let i = 0; i < w * h; i++) {
+    const o = i * 4;
+    const a = src.length > o + 3 ? src[o + 3] : 255;
+    if (a < 12) {
+      px.push({ r: 255, g: 255, b: 255 });
+      continue;
+    }
+    const t = a / 255;
+    px.push({
+      r: clampByte(src[o] * t + 255 * (1 - t)),
+      g: clampByte(src[o + 1] * t + 255 * (1 - t)),
+      b: clampByte(src[o + 2] * t + 255 * (1 - t))
+    });
+  }
+  return { width: w, height: h, px };
+}
+function cropBackground(im) {
+  const bg = cornerBg(im);
+  const w = im.width;
+  const h = im.height;
+  let minx = w;
+  let miny = h;
+  let maxx = -1;
+  let maxy = -1;
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      if (dist2(im.px[y * w + x], bg) <= CROP_DIST) {
+        continue;
+      }
+      if (x < minx) {
+        minx = x;
+      }
+      if (y < miny) {
+        miny = y;
+      }
+      if (x > maxx) {
+        maxx = x;
+      }
+      if (y > maxy) {
+        maxy = y;
+      }
+    }
+  }
+  if (maxx < minx) {
+    return im;
+  }
+  const pad = Math.max(2, Math.round(Math.max(w, h) * 0.02));
+  minx = Math.max(0, minx - pad);
+  miny = Math.max(0, miny - pad);
+  maxx = Math.min(w - 1, maxx + pad);
+  maxy = Math.min(h - 1, maxy + pad);
+  const nw = maxx - minx + 1;
+  const nh = maxy - miny + 1;
+  const px = [];
+  for (let y = miny; y <= maxy; y++) {
+    for (let x = minx; x <= maxx; x++) {
+      px.push(im.px[y * w + x]);
+    }
+  }
+  return { width: nw, height: nh, px };
+}
+function cornerBg(im) {
+  const w = im.width;
+  const h = im.height;
+  const pts = [
+    [1, 1],
+    [w - 2, 1],
+    [1, h - 2],
+    [w - 2, h - 2],
+    [Math.floor(w / 2), 1],
+    [Math.floor(w / 2), h - 2]
+  ];
+  const samples = [];
+  for (let i = 0; i < pts.length; i++) {
+    const x = Math.max(0, Math.min(w - 1, pts[i][0]));
+    const y = Math.max(0, Math.min(h - 1, pts[i][1]));
+    samples.push(im.px[y * w + x]);
+  }
+  samples.sort(function(a, b) {
+    return luma(a) - luma(b);
+  });
+  return samples[Math.floor(samples.length / 2)];
+}
+function fitSize(w, h, maxSide) {
+  const side = Math.max(8, maxSide || DEFAULT_MAX_SIDE);
+  if (w >= h) {
+    return { tw: side, th: Math.max(8, Math.round(h * side / w)) };
+  }
+  return { tw: Math.max(8, Math.round(w * side / h)), th: side };
+}
+function pickPalette(im, maxColors) {
+  const n = Math.max(2, Math.min(16, maxColors || DEFAULT_MAX_COLORS));
+  const blackPix = [];
+  const rest = [];
+  for (let i = 0; i < im.px.length; i++) {
+    const c = im.px[i];
+    if (luma(c) < BLACK_LUMA) {
+      blackPix.push(c);
+    } else {
+      rest.push(c);
+    }
+  }
+  const picked = [];
+  if (blackPix.length > 0) {
+    picked.push(average(blackPix));
+  }
+  const buckets = bucketize(rest);
+  buckets.sort(function(a, b) {
+    return b.count - a.count;
+  });
+  for (let i = 0; i < buckets.length && picked.length < n; i++) {
+    const c = buckets[i].color;
+    if (tooClose(c, picked, MIN_SEP)) {
+      continue;
+    }
+    picked.push(c);
+  }
+  for (let i = 0; i < buckets.length && picked.length < n; i++) {
+    const c = buckets[i].color;
+    if (tooClose(c, picked, 40)) {
+      continue;
+    }
+    picked.push(c);
+  }
+  if (picked.length === 0) {
+    picked.push({ r: 252, g: 248, b: 240 });
+  }
+  picked.sort(function(a, b) {
+    return luma(a) - luma(b);
+  });
+  return picked;
+}
+function bucketize(pixels) {
+  const map = {};
+  const stride = pixels.length > SAMPLE_CAP ? Math.ceil(pixels.length / SAMPLE_CAP) : 1;
+  for (let i = 0; i < pixels.length; i += stride) {
+    const c = pixels[i];
+    const key = (c.r >> 3) + "," + (c.g >> 3) + "," + (c.b >> 3);
+    const cur = map[key];
+    if (cur) {
+      cur.r += c.r;
+      cur.g += c.g;
+      cur.b += c.b;
+      cur.count += 1;
+    } else {
+      map[key] = { r: c.r, g: c.g, b: c.b, count: 1 };
+    }
+  }
+  const out = [];
+  const keys = Object.keys(map);
+  for (let i = 0; i < keys.length; i++) {
+    const b = map[keys[i]];
+    out.push({
+      count: b.count,
+      color: {
+        r: Math.round(b.r / b.count),
+        g: Math.round(b.g / b.count),
+        b: Math.round(b.b / b.count)
+      }
+    });
+  }
+  return out;
+}
+function quantizeGrid(im, tw, th, colors) {
+  const sw = im.width;
+  const sh = im.height;
+  const grid = [];
+  for (let gy = 0; gy < th; gy++) {
+    const y0 = Math.floor(gy * sh / th);
+    const y1 = Math.max(y0 + 1, Math.floor((gy + 1) * sh / th));
+    const row = [];
+    for (let gx = 0; gx < tw; gx++) {
+      const x0 = Math.floor(gx * sw / tw);
+      const x1 = Math.max(x0 + 1, Math.floor((gx + 1) * sw / tw));
+      row.push(cellColor(im, x0, y0, x1, y1, colors));
+    }
+    grid.push(row);
+  }
+  return grid;
+}
+function cellColor(im, x0, y0, x1, y1, colors) {
+  const w = im.width;
+  let n = 0;
+  let black = 0;
+  const votes = {};
+  for (let y = y0; y < y1; y++) {
+    for (let x = x0; x < x1; x++) {
+      const c = im.px[y * w + x];
+      n += 1;
+      if (luma(c) < BLACK_LUMA) {
+        black += 1;
+      }
+      const id = nearestId(c, colors);
+      votes[id] = (votes[id] || 0) + 1;
+    }
+  }
+  if (n <= 0) {
+    return colorId(colors.length - 1);
+  }
+  if (black / n >= BLACK_CELL_RATIO) {
+    return colorId(0);
+  }
+  let best = colorId(0);
+  let bestN = -1;
+  const keys = Object.keys(votes);
+  for (let i = 0; i < keys.length; i++) {
+    if (votes[keys[i]] > bestN) {
+      bestN = votes[keys[i]];
+      best = keys[i];
+    }
+  }
+  return best;
+}
+function nearestId(c, colors) {
+  let best = 0;
+  let bestD = 1e12;
+  for (let i = 0; i < colors.length; i++) {
+    const d = dist2(c, colors[i]);
+    if (d < bestD) {
+      bestD = d;
+      best = i;
+    }
+  }
+  return colorId(best);
+}
+function toGameCells(grid) {
+  const out = [];
+  for (let i = grid.length - 1; i >= 0; i--) {
+    out.push(grid[i].slice());
+  }
+  return out;
+}
+function tooClose(c, picked, sep) {
+  for (let i = 0; i < picked.length; i++) {
+    if (dist2(c, picked[i]) < sep) {
+      return true;
+    }
+  }
+  return false;
+}
+function average(list) {
+  let r = 0;
+  let g = 0;
+  let b = 0;
+  for (let i = 0; i < list.length; i++) {
+    r += list[i].r;
+    g += list[i].g;
+    b += list[i].b;
+  }
+  const n = list.length || 1;
+  return { r: Math.round(r / n), g: Math.round(g / n), b: Math.round(b / n) };
+}
+function dist2(a, b) {
+  const dr = a.r - b.r;
+  const dg = a.g - b.g;
+  const db = a.b - b.b;
+  const y = 0.299 * dr + 0.587 * dg + 0.114 * db;
+  return 2.2 * y * y + dr * dr + dg * dg + db * db;
+}
+function luma(c) {
+  return 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+}
+function clampByte(n) {
+  return Math.max(0, Math.min(255, Math.round(n)));
+}
+function toByte(n) {
+  const s = clampByte(n).toString(16);
+  return s.length === 1 ? "0" + s : s;
+}
+
+// ../../assets/Script/beadPuzzle/logic/palette.ts
+var COLOR_HEX = {
+  g: "#5cb85c",
+  s: "#7ec8e3",
+  o: "#bc7032",
+  w: "#fcf8f0",
+  k: "#18120e",
+  y: "#f7d154",
+  b: "#3d6fb8",
+  p: "#d88076",
+  n: "#603c22",
+  r: "#9e202a",
+  a: "#d0c6b6",
+  z: "#bab09f",
+  u: "#f7e8d0",
+  e: "#e8d0ac",
+  f: "#d6b084",
+  t: "#d29a5c",
+  h: "#966034",
+  v: "#785238",
+  d: "#342216",
+  m: "#e4b09e",
+  c: "#34b0e0"
+};
+function colorHex(id, palette) {
+  if (palette && palette[id]) {
+    return palette[id];
+  }
+  return COLOR_HEX[id] || "#888888";
+}
+function ghostHex(id, palette) {
+  const hex = colorHex(id, palette);
+  return mixHex(hex, "#ffffff", 0.42);
+}
+var COLOR_ORDER = ["c", "r", "k", "d", "n", "v", "h", "o", "t", "f", "e", "u", "w", "p", "m", "a", "z", "g", "s", "y", "b"];
+function colorCodesInLevel(cells) {
+  const used = {};
+  for (let r = 0; r < cells.length; r++) {
+    for (let c = 0; c < cells[r].length; c++) {
+      used[cells[r][c]] = true;
+    }
+  }
+  const ids = [];
+  for (let i = 0; i < COLOR_ORDER.length; i++) {
+    if (used[COLOR_ORDER[i]]) {
+      ids.push(COLOR_ORDER[i]);
+    }
+  }
+  const keys = Object.keys(used);
+  keys.sort(sortColorIds);
+  for (let i = 0; i < keys.length; i++) {
+    if (ids.indexOf(keys[i]) < 0) {
+      ids.push(keys[i]);
+    }
+  }
+  const map = {};
+  for (let i = 0; i < ids.length; i++) {
+    map[ids[i]] = i + 1;
+  }
+  return map;
+}
+function sortColorIds(a, b) {
+  const na = extractedIndex(a);
+  const nb = extractedIndex(b);
+  if (na >= 0 && nb >= 0) {
+    return na - nb;
+  }
+  if (na >= 0) {
+    return 1;
+  }
+  if (nb >= 0) {
+    return -1;
+  }
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+function extractedIndex(id) {
+  if (!id || !/^c\d+$/.test(id)) {
+    return -1;
+  }
+  return Number(id.slice(1));
+}
+function inkOn(hex) {
+  const n = hex.replace("#", "");
+  const r = parseInt(n.slice(0, 2), 16);
+  const g = parseInt(n.slice(2, 4), 16);
+  const b = parseInt(n.slice(4, 6), 16);
+  const y = 0.299 * r + 0.587 * g + 0.114 * b;
+  return y > 150 ? "#1b120a" : "#fffdf8";
+}
+function mixHex(a, b, t) {
+  const ar = parseInt(a.slice(1, 3), 16);
+  const ag = parseInt(a.slice(3, 5), 16);
+  const ab = parseInt(a.slice(5, 7), 16);
+  const br = parseInt(b.slice(1, 3), 16);
+  const bg = parseInt(b.slice(3, 5), 16);
+  const bb = parseInt(b.slice(5, 7), 16);
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const bl = Math.round(ab + (bb - ab) * t);
+  return "#" + [r, g, bl].map(toByte2).join("");
+}
+function toByte2(n) {
+  const s = n.toString(16);
+  return s.length === 1 ? "0" + s : s;
+}
+
+// ../../assets/Script/beadPuzzle/logic/types.ts
+var DEFAULT_RACK_CAP = 5;
+var MAX_RACK_CAP = 8;
+var MAX_SPEED_SCALE = 5;
+var DEFAULT_FRONT_ROW = 5;
+var DEFAULT_NEEDLE_MIN = 3;
+var DEFAULT_NEEDLE_MAX = 8;
+
+// ../../assets/Script/beadPuzzle/logic/levelLoader.ts
+var LevelError = class extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "LevelError";
+  }
+};
+function mulberry32(seed) {
+  let t = seed >>> 0;
+  return {
+    next() {
+      t += 1831565813;
+      let r = Math.imul(t ^ t >>> 15, 1 | t);
+      r ^= r + Math.imul(r ^ r >>> 7, 61 | r);
+      return ((r ^ r >>> 14) >>> 0) / 4294967296;
+    }
+  };
+}
+function validateLevelDef(def) {
+  if (!def || !def.id || def.width < 1 || def.height < 1) {
+    throw new LevelError("\u5173\u5361\u7F3A\u5C11 id \u6216\u5BBD\u9AD8");
+  }
+  if (!def.cells || def.cells.length !== def.height) {
+    throw new LevelError("cells \u884C\u6570\u5FC5\u987B\u7B49\u4E8E height\uFF0C\u4E14\u7B2C 0 \u884C\u4E3A\u5E95\u884C");
+  }
+  for (let r = 0; r < def.height; r++) {
+    const row = def.cells[r];
+    if (!row || row.length !== def.width) {
+      throw new LevelError("\u6BCF\u4E00\u884C\u957F\u5EA6\u5FC5\u987B\u7B49\u4E8E width\uFF0C\u7981\u6B62\u7F3A\u683C");
+    }
+    for (let c = 0; c < def.width; c++) {
+      const color = row[c];
+      if (color == null || String(color).length === 0) {
+        throw new LevelError("\u6BCF\u4E2A\u683C\u5B50\u5FC5\u987B\u6709\u76EE\u6807\u8272\uFF0C\u7981\u6B62\u7A7A\u683C\u6216\u900F\u660E\u683C");
+      }
+    }
+  }
+}
+function countColors(def) {
+  const counts = {};
+  for (let r = 0; r < def.height; r++) {
+    for (let c = 0; c < def.width; c++) {
+      const color = def.cells[r][c];
+      counts[color] = (counts[color] || 0) + 1;
+    }
+  }
+  return counts;
+}
+function splitCount(total, min, max, rng) {
+  if (total <= 0) {
+    return [];
+  }
+  const lo = Math.max(1, Math.min(min, total));
+  const hi = Math.max(lo, max);
+  const parts = [];
+  let remain = total;
+  while (remain > 0) {
+    if (remain <= hi) {
+      if (remain < lo && parts.length > 0) {
+        parts[parts.length - 1] += remain;
+      } else {
+        parts.push(remain);
+      }
+      break;
+    }
+    let take = lo + Math.floor(rng.next() * (hi - lo + 1));
+    if (take > remain) {
+      take = remain;
+    }
+    if (remain - take > 0 && remain - take < lo) {
+      take = remain - lo;
+      if (take < 1) {
+        take = remain;
+      }
+    }
+    parts.push(take);
+    remain -= take;
+  }
+  return parts;
+}
+var nextNeedleId = 1;
+function makeNeedles(def, rng) {
+  const min = def.needleSizeMin != null ? def.needleSizeMin : DEFAULT_NEEDLE_MIN;
+  const max = def.needleSizeMax != null ? def.needleSizeMax : DEFAULT_NEEDLE_MAX;
+  const counts = countColors(def);
+  const needles = [];
+  const colors = Object.keys(counts);
+  for (let i = 0; i < colors.length; i++) {
+    const color = colors[i];
+    const parts = splitCount(counts[color], min, max, rng);
+    let sum = 0;
+    for (let p = 0; p < parts.length; p++) {
+      sum += parts[p];
+      needles.push({
+        id: nextNeedleId++,
+        color,
+        count: parts[p]
+      });
+    }
+    if (sum !== counts[color]) {
+      throw new LevelError("\u9488\u6570\u91CF\u603B\u548C\u5FC5\u987B\u7B49\u4E8E\u8BE5\u8272\u683C\u5B50\u6570: " + color);
+    }
+  }
+  shuffleInPlace(needles, rng);
+  return needles;
+}
+function shuffleInPlace(arr, rng) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng.next() * (i + 1));
+    const tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
+}
+function arrangeColumns(needles, frontRowSize) {
+  const size = Math.max(1, frontRowSize || DEFAULT_FRONT_ROW);
+  const columns = [];
+  for (let i = 0; i < size; i++) {
+    columns.push([]);
+  }
+  for (let i = 0; i < needles.length; i++) {
+    columns[i % size].push(needles[i]);
+  }
+  return columns;
+}
+function flattenColumns(columns) {
+  const out = [];
+  let depth = 0;
+  let maxDepth = 0;
+  for (let c = 0; c < columns.length; c++) {
+    if (columns[c].length > maxDepth) {
+      maxDepth = columns[c].length;
+    }
+  }
+  for (depth = 0; depth < maxDepth; depth++) {
+    for (let c = 0; c < columns.length; c++) {
+      if (depth < columns[c].length) {
+        out.push(columns[c][depth]);
+      }
+    }
+  }
+  return out;
+}
+
+// ../../assets/Script/beadPuzzle/logic/session.ts
+var ORTHO = [
+  [1, 0],
+  [-1, 0],
+  [0, 1],
+  [0, -1]
+];
+var BeadPuzzleSession = class {
+  constructor(gallery, adPort) {
+    this.def = null;
+    this.filled = [];
+    this.ironed = [];
+    this.columns = [];
+    this.rack = [];
+    this.rackCap = DEFAULT_RACK_CAP;
+    this.pendingPark = null;
+    this.state = "IdleSelect";
+    this.speedScale = 1;
+    this.highlightAnyOrShuffle = false;
+    this.lastActivate = null;
+    this.placingBusy = 0;
+    this.ironQuality = "normal";
+    this.frameId = "";
+    this.savedEntry = null;
+    this.editingEntryId = "";
+    this.lastGalleryWrite = "add";
+    this.galleryReturnState = "IdleSelect";
+    this.placeMode = "adjacent";
+    this.gallery = gallery || new GalleryStore();
+    this.adPort = adPort || new MockAdPort();
+    this.rng = mulberry32(1);
+  }
+  loadLevel(def, seed = 1) {
+    validateLevelDef(def);
+    this.def = def;
+    this.rng = mulberry32(seed);
+    this.filled = [];
+    this.ironed = [];
+    for (let r = 0; r < def.height; r++) {
+      const row = [];
+      const ironRow = [];
+      for (let c = 0; c < def.width; c++) {
+        row.push(false);
+        ironRow.push(false);
+      }
+      this.filled.push(row);
+      this.ironed.push(ironRow);
+    }
+    const front = def.frontRowSize != null ? def.frontRowSize : DEFAULT_FRONT_ROW;
+    this.columns = arrangeColumns(makeNeedles(def, this.rng), front);
+    this.rackCap = DEFAULT_RACK_CAP;
+    this.rack = [];
+    for (let i = 0; i < this.rackCap; i++) {
+      this.rack.push(null);
+    }
+    this.pendingPark = null;
+    this.state = "IdleSelect";
+    this.speedScale = 1;
+    this.highlightAnyOrShuffle = false;
+    this.lastActivate = null;
+    this.placingBusy = 0;
+    this.ironQuality = "normal";
+    this.frameId = "";
+    this.savedEntry = null;
+    this.editingEntryId = "";
+    this.lastGalleryWrite = "add";
+    this.galleryReturnState = "IdleSelect";
+    this.syncAdBlock();
+    this.refreshSoftBlock();
+  }
+  remainingEmpty() {
+    let n = 0;
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        if (!this.filled[r][c]) {
+          n++;
+        }
+      }
+    }
+    return n;
+  }
+  isLegal(row, col, color) {
+    if (!this.inBounds(row, col) || this.filled[row][col]) {
+      return false;
+    }
+    if (this.def.cells[row][col] !== color) {
+      return false;
+    }
+    if (row === 0) {
+      return true;
+    }
+    if (this.placeMode === "stack") {
+      return !!this.filled[row - 1][col];
+    }
+    for (let i = 0; i < ORTHO.length; i++) {
+      const nr = row + ORTHO[i][0];
+      const nc = col + ORTHO[i][1];
+      if (this.inBounds(nr, nc) && this.filled[nr][nc]) {
+        return true;
+      }
+    }
+    return false;
+  }
+  hasPlaced() {
+    if (!this.def) {
+      return false;
+    }
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        if (this.filled[r][c]) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+  canSwitchPlaceMode() {
+    return this.state === "IdleSelect" && !this.hasPlaced();
+  }
+  setPlaceMode(mode) {
+    if (!this.canSwitchPlaceMode()) {
+      return false;
+    }
+    this.placeMode = mode === "stack" ? "stack" : "adjacent";
+    return true;
+  }
+  togglePlaceMode() {
+    return this.setPlaceMode(this.placeMode === "stack" ? "adjacent" : "stack");
+  }
+  pickLegalCell(color) {
+    for (let row = 0; row < this.def.height; row++) {
+      for (let col = 0; col < this.def.width; col++) {
+        if (this.isLegal(row, col, color)) {
+          return { row, col };
+        }
+      }
+    }
+    return null;
+  }
+  canPlace(needle) {
+    return !!needle && needle.count > 0 && !!this.pickLegalCell(needle.color);
+  }
+  frontNeedles() {
+    const out = [];
+    for (let c = 0; c < this.columns.length; c++) {
+      if (this.columns[c].length > 0) {
+        out.push({ col: c, needle: this.columns[c][0] });
+      }
+    }
+    return out;
+  }
+  buriedNeedles() {
+    const out = [];
+    for (let c = 0; c < this.columns.length; c++) {
+      for (let d = 1; d < this.columns[c].length; d++) {
+        out.push({ col: c, depth: d, needle: this.columns[c][d] });
+      }
+    }
+    return out;
+  }
+  remainingColorSet() {
+    const used = {};
+    if (!this.def) {
+      return used;
+    }
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        if (!this.filled[r][c]) {
+          used[this.def.cells[r][c]] = true;
+        }
+      }
+    }
+    return used;
+  }
+  /** 被压住的针按图上还缺的颜色去重，每种色只留一根。 */
+  buriedColorChoices() {
+    const remain = this.remainingColorSet();
+    const seen = {};
+    const out = [];
+    const buried = this.buriedNeedles();
+    for (let i = 0; i < buried.length; i++) {
+      const color = buried[i].needle.color;
+      if (!remain[color] || seen[color]) {
+        continue;
+      }
+      seen[color] = true;
+      out.push(buried[i]);
+    }
+    return out;
+  }
+  canTapFront(col) {
+    if (!this.canTapWhilePlaying()) {
+      return false;
+    }
+    return !!this.columns[col] && this.columns[col].length > 0;
+  }
+  canTapRack(index) {
+    if (!this.canTapWhilePlaying()) {
+      return false;
+    }
+    return !!this.rack[index];
+  }
+  canTapWhilePlaying() {
+    if (!this.def || this.remainingEmpty() <= 0) {
+      return false;
+    }
+    if (this.pendingPark) {
+      return false;
+    }
+    return this.state === "IdleSelect" || this.state === "SoftBlocked" || this.state === "Placing";
+  }
+  activateFront(col) {
+    if (!this.canTapFront(col)) {
+      return null;
+    }
+    const needle = this.columns[col].shift();
+    return this.runActivate(needle);
+  }
+  activateRack(index) {
+    if (!this.canTapRack(index)) {
+      return null;
+    }
+    const needle = this.rack[index];
+    this.rack[index] = null;
+    return this.runActivate(needle);
+  }
+  activateBuried(col, depth) {
+    if (this.pendingPark) {
+      return null;
+    }
+    if (this.state !== "IdleSelect" && this.state !== "SoftBlocked") {
+      return null;
+    }
+    const column = this.columns[col];
+    if (!column || depth < 1 || depth >= column.length) {
+      return null;
+    }
+    const needle = column.splice(depth, 1)[0];
+    return this.runActivate(needle);
+  }
+  onPlacePlaybackDone() {
+    if (this.placingBusy > 0) {
+      this.placingBusy -= 1;
+    }
+    if (this.placingBusy > 0) {
+      return this.state;
+    }
+    if (this.state !== "Placing") {
+      return this.state;
+    }
+    if (this.remainingEmpty() === 0) {
+      this.state = "Complete";
+      this.syncAdBlock();
+      return this.state;
+    }
+    this.refreshSoftBlock();
+    this.syncAdBlock();
+    return this.state;
+  }
+  debugFillAll() {
+    if (!this.def) {
+      return this.state;
+    }
+    if (this.state === "Ironing" || this.state === "Placing") {
+      return this.state;
+    }
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        this.filled[r][c] = true;
+      }
+    }
+    this.pendingPark = null;
+    this.state = "Complete";
+    this.syncAdBlock();
+    return this.state;
+  }
+  beginIroning() {
+    if (this.state !== "Complete") {
+      return;
+    }
+    this.editingEntryId = "";
+    this.savedEntry = null;
+    this.lastGalleryWrite = "add";
+    this.state = "Ironing";
+    this.ironed = [];
+    for (let r = 0; r < this.def.height; r++) {
+      const ironRow = [];
+      for (let c = 0; c < this.def.width; c++) {
+        ironRow.push(false);
+      }
+      this.ironed.push(ironRow);
+    }
+    this.syncAdBlock();
+  }
+  resumeIroning(entry) {
+    if (!entry || !this.def || this.def.id !== entry.levelId) {
+      return false;
+    }
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        this.filled[r][c] = true;
+      }
+    }
+    this.ironed = [];
+    for (let r = 0; r < this.def.height; r++) {
+      const ironRow = [];
+      for (let c = 0; c < this.def.width; c++) {
+        ironRow.push(!!(entry.ironed && entry.ironed[r] && entry.ironed[r][c]));
+      }
+      this.ironed.push(ironRow);
+    }
+    this.pendingPark = null;
+    this.editingEntryId = entry.id;
+    this.savedEntry = entry;
+    this.frameId = entry.frameId || "";
+    this.ironQuality = entry.ironQuality || "normal";
+    this.lastGalleryWrite = "update";
+    this.state = "Ironing";
+    this.syncAdBlock();
+    return true;
+  }
+  canSkipIroning() {
+    return this.gallery.hasCleared(this.def.id);
+  }
+  finishIroning(quality) {
+    this.ironQuality = quality || "normal";
+    const pixels = this.snapshotPixels();
+    const ironed = this.snapshotIroned();
+    if (this.editingEntryId) {
+      const updated = this.gallery.update(
+        this.editingEntryId,
+        pixels,
+        this.ironQuality,
+        this.frameId || "",
+        ironed,
+        this.def.palette
+      );
+      if (updated) {
+        this.savedEntry = updated;
+        this.lastGalleryWrite = "update";
+      } else {
+        this.savedEntry = this.gallery.save(
+          this.def.id,
+          pixels,
+          this.ironQuality,
+          this.frameId || "",
+          ironed,
+          this.def.palette
+        );
+        this.editingEntryId = this.savedEntry.id;
+        this.lastGalleryWrite = "add";
+      }
+    } else {
+      this.savedEntry = this.gallery.save(
+        this.def.id,
+        pixels,
+        this.ironQuality,
+        this.frameId || "",
+        ironed,
+        this.def.palette
+      );
+      this.editingEntryId = this.savedEntry.id;
+      this.lastGalleryWrite = "add";
+    }
+    this.state = "Result";
+    this.syncAdBlock();
+  }
+  applyFrame(frameId) {
+    this.frameId = frameId || "";
+    if (this.savedEntry && this.savedEntry.id) {
+      const updated = this.gallery.applyFrame(this.savedEntry.id, this.frameId);
+      if (updated) {
+        this.savedEntry = updated;
+      }
+    }
+  }
+  openGallery() {
+    this.galleryReturnState = this.state;
+    this.state = "Gallery";
+    this.syncAdBlock();
+  }
+  closeGalleryToPlay() {
+    const back = this.galleryReturnState;
+    this.galleryReturnState = "IdleSelect";
+    if (back === "Ironing" || back === "Result") {
+      this.state = back;
+    } else if (this.remainingEmpty() === 0 && this.savedEntry) {
+      this.state = "Result";
+    } else if (this.isSoftBlockedNow()) {
+      this.state = "SoftBlocked";
+    } else {
+      this.state = "IdleSelect";
+    }
+    this.syncAdBlock();
+  }
+  async tryAd(placement) {
+    if (!this.isAdAllowed(placement)) {
+      return false;
+    }
+    const granted = await this.adPort.showRewarded(placement);
+    if (!granted) {
+      return false;
+    }
+    if (placement === "rack") {
+      this.expandRack();
+    } else if (placement === "shuffle") {
+      this.shuffleQueue();
+    } else if (placement === "speed") {
+      if (this.speedScale < MAX_SPEED_SCALE) {
+        this.speedScale += 1;
+      }
+    } else if (placement === "frame") {
+      this.applyFrame("gold");
+    }
+    return true;
+  }
+  isAdAllowed(placement) {
+    if (this.state === "Ironing" || this.state === "Placing") {
+      return false;
+    }
+    if (placement === "frame") {
+      return this.state === "Result" && !!this.savedEntry;
+    }
+    if (placement === "speed") {
+      return this.speedScale < MAX_SPEED_SCALE;
+    }
+    return true;
+  }
+  expandRack() {
+    if (this.rackCap >= MAX_RACK_CAP) {
+      this.highlightAnyOrShuffle = true;
+      return false;
+    }
+    this.rackCap += 1;
+    this.rack.push(null);
+    if (this.pendingPark) {
+      this.parkNeedle(this.pendingPark);
+      this.pendingPark = null;
+    }
+    this.refreshSoftBlock();
+    return true;
+  }
+  shuffleQueue() {
+    const waiting = flattenColumns(this.columns);
+    shuffleInPlace(waiting, this.rng);
+    this.columns = arrangeColumns(waiting, this.columns.length);
+    this.refreshSoftBlock();
+  }
+  isSoftBlockedNow() {
+    if (this.pendingPark) {
+      return true;
+    }
+    if (this.emptyRackSlots() > 0) {
+      return false;
+    }
+    const fronts = this.frontNeedles();
+    for (let i = 0; i < fronts.length; i++) {
+      if (this.canPlace(fronts[i].needle)) {
+        return false;
+      }
+    }
+    for (let i = 0; i < this.rack.length; i++) {
+      if (this.canPlace(this.rack[i])) {
+        return false;
+      }
+    }
+    const stillNeedles = fronts.length > 0 || this.rack.some(function(n) {
+      return !!n;
+    }) || this.buriedNeedles().length > 0;
+    return stillNeedles && this.remainingEmpty() > 0;
+  }
+  emptyRackSlots() {
+    let n = 0;
+    for (let i = 0; i < this.rack.length; i++) {
+      if (!this.rack[i]) {
+        n++;
+      }
+    }
+    return n;
+  }
+  ironCell(row, col) {
+    if (!this.inBounds(row, col) || this.ironed[row][col]) {
+      return false;
+    }
+    this.ironed[row][col] = true;
+    return true;
+  }
+  allIroned() {
+    if (!this.def) {
+      return false;
+    }
+    for (let r = 0; r < this.def.height; r++) {
+      for (let c = 0; c < this.def.width; c++) {
+        if (!this.ironed[r][c]) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  snapshotIroned() {
+    const out = [];
+    for (let r = 0; r < this.ironed.length; r++) {
+      out.push(this.ironed[r].slice());
+    }
+    return out;
+  }
+  snapshotPixels() {
+    const out = [];
+    for (let r = 0; r < this.def.height; r++) {
+      const row = [];
+      for (let c = 0; c < this.def.width; c++) {
+        row.push(this.def.cells[r][c]);
+      }
+      out.push(row);
+    }
+    return out;
+  }
+  runActivate(needle) {
+    this.placingBusy += 1;
+    this.state = "Placing";
+    this.syncAdBlock();
+    const steps = [];
+    while (needle.count > 0) {
+      const cell = this.pickLegalCell(needle.color);
+      if (!cell) {
+        break;
+      }
+      this.filled[cell.row][cell.col] = true;
+      needle.count -= 1;
+      steps.push({
+        row: cell.row,
+        col: cell.col,
+        color: needle.color,
+        needleId: needle.id
+      });
+    }
+    let outcome = "exhausted";
+    let parkedIndex = -1;
+    let pendingPark = false;
+    let parkMerged = false;
+    if (needle.count > 0) {
+      outcome = "parked";
+      const parked = this.parkNeedle(needle);
+      parkedIndex = parked.index;
+      parkMerged = parked.merged;
+      if (parkedIndex < 0) {
+        if (!this.pendingPark) {
+          this.pendingPark = needle;
+        }
+        pendingPark = true;
+      }
+    }
+    const result = {
+      needle,
+      steps,
+      outcome,
+      parkedIndex,
+      pendingPark,
+      parkMerged
+    };
+    this.lastActivate = result;
+    return result;
+  }
+  parkNeedle(needle) {
+    for (let i = 0; i < this.rack.length; i++) {
+      if (this.rack[i] && this.rack[i].color === needle.color) {
+        this.rack[i].count += needle.count;
+        return { index: i, merged: true };
+      }
+    }
+    for (let i = 0; i < this.rack.length; i++) {
+      if (!this.rack[i]) {
+        this.rack[i] = needle;
+        return { index: i, merged: false };
+      }
+    }
+    return { index: -1, merged: false };
+  }
+  refreshSoftBlock() {
+    if (this.remainingEmpty() === 0) {
+      this.state = "Complete";
+      return;
+    }
+    if (this.rackCap >= MAX_RACK_CAP && this.isSoftBlockedNow()) {
+      this.highlightAnyOrShuffle = true;
+    }
+    this.state = this.isSoftBlockedNow() ? "SoftBlocked" : "IdleSelect";
+  }
+  inBounds(row, col) {
+    return row >= 0 && col >= 0 && row < this.def.height && col < this.def.width;
+  }
+  syncAdBlock() {
+    this.adPort.blocked = this.state === "Ironing" || this.state === "Placing";
+  }
+};
+
+// htmlPlayer.ts
+var ART = "./art/";
+function startHtmlPlayer(root) {
+  const ad = new MockAdPort();
+  ad.mode = "prompt";
+  ad.prompt = function(id) {
+    return Promise.resolve(window.confirm("\u89C2\u770B\u5E7F\u544A\u53EF\u83B7\u5F97\u5956\u52B1\uFF0C\u786E\u8BA4\u89C2\u770B\u5417\uFF1F"));
+  };
+  const session = new BeadPuzzleSession(new GalleryStore(), ad);
+  const customStore = new CustomLevelStore();
+  let level = DUI_LEVEL;
+  session.loadLevel(level, 7);
+  root.innerHTML = "";
+  root.className = "bead-root";
+  const bar = el(root, "div", "topbar");
+  const mascot = document.createElement("img");
+  mascot.className = "mascot";
+  mascot.src = ART + "bead-mascot.webp";
+  mascot.alt = "\u62FC\u8C46";
+  bar.appendChild(mascot);
+  let mascotHoldTimer = null;
+  mascot.onpointerdown = function(ev) {
+    ev.preventDefault();
+    mascotHoldTimer = window.setTimeout(function() {
+      mascotHoldTimer = null;
+      pickUpload();
+    }, 800);
+  };
+  mascot.onpointerup = function() {
+    if (mascotHoldTimer !== null) {
+      clearTimeout(mascotHoldTimer);
+      mascotHoldTimer = null;
+    }
+  };
+  mascot.onpointercancel = function() {
+    if (mascotHoldTimer !== null) {
+      clearTimeout(mascotHoldTimer);
+      mascotHoldTimer = null;
+    }
+  };
+  const title = el(bar, "div", "title");
+  const remain = el(bar, "div", "remain");
+  const levelSelectBtn = iconBtn(bar, ART + "bead-btn-gallery.webp", "\u9009\u5173", function() {
+    showingLevelSelect = true;
+    render();
+  });
+  const galleryBtn = iconBtn(bar, ART + "bead-btn-gallery.webp", "\u56FE\u9274", function() {
+    if (guideStep >= 0 && GUIDE_STEPS[guideStep] && GUIDE_STEPS[guideStep].spot === "gallery") {
+      closeGuide(true);
+    }
+    viewingPiece = "";
+    session.openGallery();
+    render();
+  });
+  const boardWrap = el(root, "div", "board-wrap");
+  const canvas = document.createElement("canvas");
+  canvas.className = "board";
+  boardWrap.appendChild(canvas);
+  const ironLayer = el(boardWrap, "div", "iron-layer hidden");
+  const paper = document.createElement("img");
+  paper.className = "paper-sheet";
+  paper.src = ART + "bead-paper.webp";
+  ironLayer.appendChild(paper);
+  const ironSprite = document.createElement("img");
+  ironSprite.className = "iron-sprite";
+  ironSprite.src = ART + "bead-iron.webp";
+  ironLayer.appendChild(ironSprite);
+  const holdHint = el(ironLayer, "div", "hold-hint hidden");
+  holdHint.textContent = "\u6309\u4F4F\u62D6\u52A8\u71A8\u6597\uFF0C\u7ECF\u8FC7\u7684\u8C46\u5B50\u4F1A\u70EB\u6210\u50CF\u7D20\u5757\u3002\u53EF\u4E0D\u70EB\u6216\u53EA\u70EB\u4E00\u90E8\u5206\uFF0C\u518D\u70B9\u5B8C\u6210\u3002";
+  const skipBtn = button(root, "\u5B8C\u6210", function() {
+    submitIron();
+  });
+  skipBtn.type = "button";
+  skipBtn.className = "btn skip hidden";
+  skipBtn.onpointerdown = function(ev) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    submitIron();
+  };
+  const legend = el(root, "div", "legend");
+  const rackRow = el(root, "div", "rack-row");
+  const queue = el(root, "div", "queue");
+  const tools = el(root, "div", "tools");
+  const modeRow = el(root, "div", "mode-row");
+  const overlay = el(root, "div", "overlay hidden");
+  const flyLayer = el(root, "div", "fly-layer");
+  const guideLayer = el(document.body, "div", "guide-layer hidden");
+  const guideFinger = el(guideLayer, "div", "guide-finger");
+  guideFinger.innerHTML = '<div class="poke"><svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g transform="rotate(-42 48 48)"><path fill="#fffdf8" stroke="#1b120a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" d="M40 8c-5 0-9 4-9 9v37.5h-3.5V28c0-4.2-3.4-7.6-7.6-7.6S12.3 23.8 12.3 28v32c0 2 1 4 2.6 5.2L28 76v12h32V74l11 6c4.6 2.6 10.4.6 12.4-4.2 2-5-1-10.6-6-12.8L66 57V17c0-5-4-9-9-9s-9 4-9 9v28h-3V17c0-5-4-9-9-9z"/><circle cx="31" cy="10" r="6" fill="#ffe08a" stroke="#1b120a" stroke-width="2"/></g></svg></div>';
+  let pendingFill = null;
+  let hideParked = {};
+  const MAX_PLACE_QUEUE = 5;
+  const placeJobs = [];
+  let animRunning = false;
+  let showCodes = false;
+  const GUIDE_KEY = "beadPuzzle.guideSeen";
+  const GUIDE_LEVEL_ID = "dui";
+  const GUIDE_STEPS = [
+    {
+      title: "\u70B9\u6700\u524D\u6392\u7684\u9488",
+      text: "\u8DDF\u7740\u5C0F\u624B\u70B9\u6700\u524D\u9762\u90A3\u4E00\u6392\u3002\u540C\u8272\u8C46\u4F1A\u81EA\u52A8\u843D\u5230\u73B0\u5728\u80FD\u62FC\u7684\u683C\u5B50\u91CC\u3002",
+      spot: "queue",
+      tap: true
+    },
+    {
+      title: "\u4ECE\u4E0B\u5F80\u4E0A\u62FC",
+      text: "\u5148\u586B\u6700\u5E95\u4E0B\u4E00\u884C\u3002\u4E0A\u9762\u7684\u683C\u5B50\u8981\u6328\u7740\u5DF2\u7ECF\u62FC\u597D\u7684\u8C46\uFF0C\u624D\u80FD\u7EE7\u7EED\u5F80\u4E0A\u957F\u3002",
+      spot: "board",
+      tap: false
+    },
+    {
+      title: "\u5403\u4E0D\u5B8C\u5C31\u6302\u9488\u67B6",
+      text: "\u9488\u4E0A\u8FD8\u5269\u8C46\u5B50\u3001\u753B\u4E0A\u6682\u65F6\u843D\u4E0D\u4E0B\u65F6\uFF0C\u4F1A\u4E32\u5230\u9488\u67B6\u4E0A\uFF0C\u4E4B\u540E\u8FD8\u80FD\u518D\u70B9\u4E0B\u6765\u3002",
+      spot: "rack",
+      tap: false
+    },
+    {
+      title: "\u586B\u6EE1\u518D\u70EB\u753B",
+      text: "\u6574\u5E45\u62FC\u6EE1\u540E\u76D6\u6CB9\u7EB8\u3001\u7528\u71A8\u6597\u70EB\u4E00\u70EB\uFF0C\u6210\u54C1\u4F1A\u6536\u8FDB\u56FE\u9274\u3002",
+      spot: "gallery",
+      tap: false
+    }
+  ];
+  let guideStep = -1;
+  let hoverColor = "";
+  let viewingPiece = "";
+  let showingLevelSelect = false;
+  let pendingUpload = null;
+  let pendingSource = null;
+  let pendingMaxSide = 32;
+  const RES_MIN = 16;
+  const RES_MAX = 80;
+  let codes = colorCodesInLevel(level.cells);
+  const beadCache = {};
+  const beadUrlCache = {};
+  const topCache = {};
+  let cleanToken = null;
+  let cleanTop = null;
+  let tokenMedian = 180;
+  let topMedian = 180;
+  const TOKEN_SIZE = 128;
+  const tokenImg = new Image();
+  tokenImg.src = ART + "bead-token.webp?v=alpha1";
+  tokenImg.onload = function() {
+    cleanToken = null;
+    clearCache(beadCache);
+    clearCache(beadUrlCache);
+    render();
+  };
+  const topImg = new Image();
+  topImg.src = ART + "bead-token-top.webp";
+  topImg.onload = function() {
+    cleanTop = null;
+    clearCache(topCache);
+    render();
+  };
+  function clearCache(map) {
+    for (const k in map) {
+      if (Object.prototype.hasOwnProperty.call(map, k)) {
+        delete map[k];
+      }
+    }
+  }
+  function cleanedToken() {
+    if (cleanToken) {
+      return cleanToken;
+    }
+    const cnv = document.createElement("canvas");
+    const ready = tokenImg.complete && tokenImg.naturalWidth > 0;
+    const w = TOKEN_SIZE;
+    const h = TOKEN_SIZE;
+    cnv.width = w;
+    cnv.height = h;
+    const g = cnv.getContext("2d");
+    if (ready) {
+      g.drawImage(tokenImg, 0, 0, w, h);
+      const data = g.getImageData(0, 0, w, h);
+      knockoutCheckerboard(data, w, h);
+      const px = data.data;
+      const lum = [];
+      for (let i = 3; i < px.length; i += 4) {
+        if (px[i] < 16) {
+          px[i] = 0;
+          px[i - 1] = 0;
+          px[i - 2] = 0;
+          px[i - 3] = 0;
+        } else {
+          lum.push(0.299 * px[i - 3] + 0.587 * px[i - 2] + 0.114 * px[i - 1]);
+        }
+      }
+      lum.sort(function(a, b) {
+        return a - b;
+      });
+      tokenMedian = lum.length ? lum[lum.length >> 1] : 180;
+      g.putImageData(data, 0, 0);
+    }
+    cleanToken = cnv;
+    return cnv;
+  }
+  function cleanedTop() {
+    if (cleanTop) {
+      return cleanTop;
+    }
+    const cnv = document.createElement("canvas");
+    const ready = topImg.complete && topImg.naturalWidth > 0;
+    cnv.width = TOKEN_SIZE;
+    cnv.height = TOKEN_SIZE;
+    const g = cnv.getContext("2d");
+    if (ready) {
+      g.drawImage(topImg, 0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      const probe = g.getImageData(0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      const box = opaqueBox(probe);
+      g.clearRect(0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      if (box) {
+        const nw = topImg.naturalWidth;
+        const nh = topImg.naturalHeight;
+        const sx = box.minx / TOKEN_SIZE * nw;
+        const sy = box.miny / TOKEN_SIZE * nh;
+        const sw = (box.maxx - box.minx + 1) / TOKEN_SIZE * nw;
+        const sh = (box.maxy - box.miny + 1) / TOKEN_SIZE * nh;
+        g.drawImage(topImg, sx, sy, sw, sh, 0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      } else {
+        g.drawImage(topImg, 0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      }
+      const data = g.getImageData(0, 0, TOKEN_SIZE, TOKEN_SIZE);
+      const px = data.data;
+      const lum = [];
+      for (let i = 3; i < px.length; i += 4) {
+        if (px[i] >= 16) {
+          lum.push(0.299 * px[i - 3] + 0.587 * px[i - 2] + 0.114 * px[i - 1]);
+        }
+      }
+      lum.sort(function(a, b) {
+        return a - b;
+      });
+      topMedian = lum.length ? lum[lum.length >> 1] : 180;
+    }
+    cleanTop = cnv;
+    return cnv;
+  }
+  function opaqueBox(data) {
+    const w = data.width;
+    const h = data.height;
+    const px = data.data;
+    let minx = w;
+    let miny = h;
+    let maxx = 0;
+    let maxy = 0;
+    let found = false;
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        if (px[(y * w + x) * 4 + 3] >= 16) {
+          found = true;
+          if (x < minx) {
+            minx = x;
+          }
+          if (y < miny) {
+            miny = y;
+          }
+          if (x > maxx) {
+            maxx = x;
+          }
+          if (y > maxy) {
+            maxy = y;
+          }
+        }
+      }
+    }
+    if (!found) {
+      return null;
+    }
+    return { minx, miny, maxx, maxy };
+  }
+  function isCheckerBg(r, g, b, a) {
+    if (a < 8) {
+      return true;
+    }
+    const sat = Math.max(r, g, b) - Math.min(r, g, b);
+    const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+    return sat <= 12 && lum >= 225 || sat <= 4 && lum >= 210;
+  }
+  function knockoutCheckerboard(data, w, h) {
+    const px = data.data;
+    if (px[3] < 8) {
+      return;
+    }
+    const seen = new Uint8Array(w * h);
+    const qx = [];
+    const qy = [];
+    function push(x, y) {
+      if (x < 0 || y < 0 || x >= w || y >= h) {
+        return;
+      }
+      const p = y * w + x;
+      if (seen[p]) {
+        return;
+      }
+      const i = p * 4;
+      if (!isCheckerBg(px[i], px[i + 1], px[i + 2], px[i + 3])) {
+        return;
+      }
+      seen[p] = 1;
+      qx.push(x);
+      qy.push(y);
+    }
+    for (let x = 0; x < w; x++) {
+      push(x, 0);
+      push(x, h - 1);
+    }
+    for (let y = 0; y < h; y++) {
+      push(0, y);
+      push(w - 1, y);
+    }
+    let n = 0;
+    while (n < qx.length) {
+      const x = qx[n];
+      const y = qy[n];
+      n++;
+      push(x + 1, y);
+      push(x - 1, y);
+      push(x, y + 1);
+      push(x, y - 1);
+    }
+    for (let p = 0; p < seen.length; p++) {
+      if (seen[p]) {
+        const i = p * 4;
+        px[i] = 0;
+        px[i + 1] = 0;
+        px[i + 2] = 0;
+        px[i + 3] = 0;
+      }
+    }
+  }
+  function parseHex(hex) {
+    const n = (hex || "#888888").replace("#", "");
+    return {
+      r: parseInt(n.slice(0, 2), 16),
+      g: parseInt(n.slice(2, 4), 16),
+      b: parseInt(n.slice(4, 6), 16)
+    };
+  }
+  function overlayChannel(base, light) {
+    const b = base / 255;
+    const l = light / 255;
+    const v = l < 0.5 ? 2 * b * l : 1 - 2 * (1 - b) * (1 - l);
+    return Math.round(Math.max(0, Math.min(255, v * 255)));
+  }
+  function paintTinted(tok, hex, median, ready) {
+    const cnv = document.createElement("canvas");
+    cnv.width = tok.width;
+    cnv.height = tok.height;
+    const g = cnv.getContext("2d");
+    if (ready) {
+      const src = tok.getContext("2d").getImageData(0, 0, tok.width, tok.height);
+      const px = src.data;
+      const rgb = parseHex(hex);
+      const out = g.createImageData(tok.width, tok.height);
+      const d = out.data;
+      for (let i = 0; i < px.length; i += 4) {
+        const a = px[i + 3];
+        if (a < 8) {
+          continue;
+        }
+        const L = 0.299 * px[i] + 0.587 * px[i + 1] + 0.114 * px[i + 2];
+        let light = 128 + (L - median) * 1.2;
+        if (light < 16) {
+          light = 16;
+        }
+        if (light > 250) {
+          light = 250;
+        }
+        d[i] = overlayChannel(rgb.r, light);
+        d[i + 1] = overlayChannel(rgb.g, light);
+        d[i + 2] = overlayChannel(rgb.b, light);
+        d[i + 3] = a;
+      }
+      g.putImageData(out, 0, 0);
+    } else {
+      g.fillStyle = hex;
+      g.beginPath();
+      g.arc(cnv.width / 2, cnv.height / 2, cnv.width * 0.42, 0, Math.PI * 2);
+      g.fill();
+    }
+    return cnv;
+  }
+  function tintedBead(hex) {
+    if (beadCache[hex]) {
+      return beadCache[hex];
+    }
+    const cnv = paintTinted(
+      cleanedToken(),
+      hex,
+      tokenMedian,
+      tokenImg.complete && tokenImg.naturalWidth > 0
+    );
+    beadCache[hex] = cnv;
+    return cnv;
+  }
+  function tintedTopBead(hex) {
+    if (topCache[hex]) {
+      return topCache[hex];
+    }
+    const cnv = paintTinted(
+      cleanedTop(),
+      hex,
+      topMedian,
+      topImg.complete && topImg.naturalWidth > 0
+    );
+    topCache[hex] = cnv;
+    return cnv;
+  }
+  function beadUrl(hex) {
+    if (!beadUrlCache[hex]) {
+      beadUrlCache[hex] = tintedBead(hex).toDataURL("image/png");
+    }
+    return beadUrlCache[hex];
+  }
+  function officialLevels() {
+    return [DUI_LEVEL, BANANA_LEVEL, WHITE_LEVEL, DAODUN_LEVEL, CAT_LEVEL];
+  }
+  function allLevels() {
+    return officialLevels().concat(customStore.list());
+  }
+  function findLevel(id) {
+    const list = allLevels();
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].id === id) {
+        return list[i];
+      }
+    }
+    return null;
+  }
+  function levelTitle(id) {
+    const stages = {
+      dui: "\u5F15\u5BFC",
+      banana: "\u9999\u8549\u732B",
+      white: "\u5C0F\u767D",
+      daodun: "\u5200\u76FE",
+      cat: "\u54ED\u732B"
+    };
+    if (stages[id]) {
+      return stages[id];
+    }
+    const lv = findLevel(id);
+    if (lv && lv.name) {
+      return lv.name;
+    }
+    return id || "\u62FC\u8C46";
+  }
+  function activePal(entry) {
+    if (entry && entry.palette) {
+      return entry.palette;
+    }
+    if (entry) {
+      const lv = findLevel(entry.levelId);
+      if (lv && lv.palette) {
+        return lv.palette;
+      }
+    }
+    return session.def && session.def.palette;
+  }
+  function render() {
+    title.textContent = levelTitle(session.def && session.def.id);
+    remain.textContent = "\u5269\u4F59 " + visualRemaining();
+    drawBoard();
+    drawLegend();
+    drawRack();
+    drawQueue();
+    drawTools();
+    drawMode();
+    drawOverlay();
+    applyGuideSpot();
+    const ironing = session.state === "Ironing";
+    ironLayer.classList.toggle("hidden", !ironing);
+    root.classList.toggle("ironing", ironing);
+    skipBtn.classList.toggle("hidden", !ironing);
+    if (ironing) {
+      holdHint.classList.remove("hidden");
+    } else {
+      holdHint.classList.add("hidden");
+    }
+  }
+  function layoutBoardPx() {
+    const rect = boardWrap.getBoundingClientRect();
+    const styles = window.getComputedStyle(boardWrap);
+    const padX = (parseFloat(styles.paddingLeft) || 0) + (parseFloat(styles.paddingRight) || 0);
+    const innerW = rect.width - padX;
+    const vv = window.visualViewport;
+    const vh = vv && vv.height || window.innerHeight;
+    const ironing = session.state === "Ironing";
+    const chrome = ironing ? 150 : 220;
+    const innerH = Math.max(180, vh - chrome);
+    const cap = Math.min(520, innerW > 40 ? innerW : 520, innerH);
+    return Math.max(180, Math.floor(cap));
+  }
+  function overlayArtPx(fallback) {
+    const vv = window.visualViewport;
+    const vw = vv && vv.width || window.innerWidth;
+    return Math.max(140, Math.min(fallback, vw - 56));
+  }
+  function drawBoard() {
+    paintGrid(
+      canvas,
+      session.def.cells,
+      isVisuallyFilled,
+      isCellIroned,
+      false,
+      layoutBoardPx(),
+      hoverColor,
+      false,
+      activePal()
+    );
+  }
+  function paintGrid(target, cells, filledAt, fusedAt, gold, maxPx, hoverId, asPiece, pal) {
+    const h = cells.length;
+    const w = cells[0].length;
+    const size = Math.min(maxPx / w, maxPx / h);
+    const framePad = !asPiece ? 0 : gold ? Math.max(28, Math.round(maxPx * 0.14)) : Math.max(10, Math.round(maxPx * 0.04));
+    const cssW = w * size + framePad * 2;
+    const cssH = h * size + framePad * 2;
+    const dpr = Math.max(1, Math.min(2.5, window.devicePixelRatio || 1));
+    target.width = Math.max(1, Math.round(cssW * dpr));
+    target.height = Math.max(1, Math.round(cssH * dpr));
+    const ctx = target.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, cssW, cssH);
+    if (asPiece) {
+      ctx.fillStyle = gold ? "#1a1208" : "#f4ead8";
+      ctx.fillRect(0, 0, cssW, cssH);
+    }
+    const fontPx = Math.max(4, Math.min(Math.floor(size * 0.82), size - 0.5));
+    for (let r = 0; r < h; r++) {
+      for (let c = 0; c < w; c++) {
+        const color = cells[r][c];
+        const x = framePad + c * size;
+        const y = framePad + (h - 1 - r) * size;
+        const x1 = framePad + (c + 1) * size;
+        const y1 = framePad + (h - r) * size;
+        const filled = filledAt(r, c);
+        const hex = colorHex(color, pal);
+        if (filled && fusedAt(r, c)) {
+          ctx.fillStyle = hex;
+          ctx.fillRect(x, y, x1 - x + 0.6, y1 - y + 0.6);
+        } else {
+          ctx.fillStyle = ghostHex(color, pal);
+          roundRect(ctx, x + 0.6, y + 0.6, size - 1.2, size - 1.2, Math.max(1.5, size * 0.16));
+          ctx.fill();
+          if (filled) {
+            const pad = -size * 0.02;
+            ctx.drawImage(tintedTopBead(hex), x + pad, y + pad, size - pad * 2, size - pad * 2);
+          } else if (showCodes) {
+            const code = String(codes[color] || "");
+            ctx.font = "700 " + fontPx + "px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.lineWidth = Math.max(0.5, size * 0.06);
+            ctx.strokeStyle = inkOn(hex) === "#fffdf8" ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,0.8)";
+            ctx.fillStyle = inkOn(hex);
+            ctx.strokeText(code, x + size / 2, y + size / 2 + 0.5);
+            ctx.fillText(code, x + size / 2, y + size / 2 + 0.5);
+          }
+          if (!filled && hoverId && color === hoverId) {
+            ctx.strokeStyle = "#fff45c";
+            ctx.lineWidth = Math.max(1.5, size * 0.12);
+            roundRect(ctx, x + 1.2, y + 1.2, size - 2.4, size - 2.4, Math.max(1, size * 0.14));
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    if (gold) {
+      const thick = Math.max(14, framePad * 0.48);
+      ctx.strokeStyle = "#c4921a";
+      ctx.lineWidth = thick;
+      ctx.strokeRect(thick / 2, thick / 2, cssW - thick, cssH - thick);
+      ctx.strokeStyle = "#ffe08a";
+      ctx.lineWidth = Math.max(3, thick * 0.22);
+      const inner = thick + 3;
+      ctx.strokeRect(inner, inner, cssW - inner * 2, cssH - inner * 2);
+    }
+  }
+  function drawLegend() {
+    legend.innerHTML = "";
+    if (!showCodes) {
+      return;
+    }
+    const ids = Object.keys(codes).sort(function(a, b) {
+      return codes[a] - codes[b];
+    });
+    for (let i = 0; i < ids.length; i++) {
+      const id = ids[i];
+      const chip = el(legend, "button", "chip");
+      chip.style.background = colorHex(id, activePal());
+      chip.style.color = inkOn(colorHex(id, activePal()));
+      chip.textContent = String(codes[id]);
+      bindColorPreview(chip, id);
+    }
+  }
+  function drawRack() {
+    rackRow.innerHTML = "";
+    for (let i = 0; i < session.rackCap; i++) {
+      const slot = el(rackRow, "div", "peg");
+      const n = session.rack[i];
+      if (n && !hideParked[String(i)]) {
+        slot.appendChild(needleEl(n, function(origin, source) {
+          requestPlace(function() {
+            return session.activateRack(i);
+          }, origin);
+        }, true));
+      } else {
+        slot.classList.add("empty");
+      }
+    }
+    const cap = el(rackRow, "div", "cap");
+    cap.textContent = occupiedRack() + "/" + session.rackCap;
+  }
+  function occupiedRack() {
+    let n = 0;
+    for (let i = 0; i < session.rack.length; i++) {
+      if (session.rack[i]) {
+        n++;
+      }
+    }
+    return n;
+  }
+  function drawQueue() {
+    queue.innerHTML = "";
+    const cols = session.columns;
+    let maxD = 0;
+    for (let c = 0; c < cols.length; c++) {
+      if (cols[c].length > maxD) {
+        maxD = cols[c].length;
+      }
+    }
+    maxD = Math.max(maxD, 1);
+    for (let d = 0; d < Math.min(maxD, 6); d++) {
+      const row = el(queue, "div", "qrow");
+      for (let c = 0; c < cols.length; c++) {
+        const n = cols[c][d];
+        if (!n) {
+          el(row, "div", "needle ghost-slot");
+          continue;
+        }
+        const front = d === 0;
+        const node = needleEl(n, function(origin, source) {
+          if (!front) {
+            return;
+          }
+          requestPlace(function() {
+            return session.activateFront(c);
+          }, origin);
+        });
+        if (!front) {
+          node.classList.add("buried");
+        }
+        row.appendChild(node);
+      }
+    }
+  }
+  function drawTools() {
+    tools.innerHTML = "";
+    const speed = iconBtn(tools, ART + "bead-btn-speed.webp", "\u901F\u5EA6 x" + session.speedScale, function() {
+      if (session.speedScale >= MAX_SPEED_SCALE) {
+        return;
+      }
+      reward("speed");
+    });
+    const rack = iconBtn(tools, ART + "bead-btn-rack.webp", "\u52A0\u9488\u67B6", function() {
+      reward("rack");
+    });
+    const any = iconBtn(tools, ART + "bead-btn-any.webp", "\u4EFB\u610F\u9488", function() {
+      pickBuried();
+    });
+    const shuf = iconBtn(tools, ART + "bead-btn-shuffle.webp", "\u968F\u673A\u6392", function() {
+      reward("shuffle");
+    });
+    if (session.highlightAnyOrShuffle) {
+      any.classList.add("hot");
+      shuf.classList.add("hot");
+    }
+    if (session.speedScale >= MAX_SPEED_SCALE) {
+      speed.classList.add("dim");
+    }
+    if (session.rackCap >= MAX_RACK_CAP) {
+      rack.classList.add("dim");
+    }
+    const codeBtn = button(tools, showCodes ? "\u8272\u53F7\u5F00" : "\u8272\u53F7\u5173", function() {
+      showCodes = !showCodes;
+      render();
+    });
+    codeBtn.className = "btn ghost";
+  }
+  function drawMode() {
+    modeRow.innerHTML = "";
+  }
+  function drawOverlay() {
+    overlay.className = "overlay hidden";
+    overlay.innerHTML = "";
+    if (showingLevelSelect) {
+      overlay.classList.remove("hidden");
+      const card = el(overlay, "div", "card gallery");
+      el(card, "h2", "").textContent = "\u9009\u62E9\u5173\u5361";
+      const officials = officialLevels();
+      const customs = customStore.list();
+      if (officials.length) {
+        const group = el(card, "div", "ggroup");
+        el(group, "div", "ggroup-title").textContent = "\u5B98\u65B9\u5173\u5361";
+        const row = el(group, "div", "grow");
+        officials.forEach(function(lv) {
+          const slot = el(row, "button", "gslot");
+          slot.setAttribute("type", "button");
+          const thumb = document.createElement("canvas");
+          thumb.className = "gallery-thumb";
+          slot.appendChild(thumb);
+          paintGrid(thumb, lv.cells, alwaysFilled, alwaysFilled, false, overlayArtPx(160), "", true, lv.palette);
+          const cap = el(slot, "div", "");
+          cap.textContent = levelTitle(lv.id);
+          slot.onclick = function() {
+            showingLevelSelect = false;
+            applyLevel(lv, false);
+          };
+        });
+      }
+      if (customs.length) {
+        const group = el(card, "div", "ggroup");
+        el(group, "div", "ggroup-title").textContent = "\u81EA\u5236\u5173\u5361";
+        const row = el(group, "div", "grow");
+        customs.forEach(function(lv) {
+          const slot = el(row, "button", "gslot");
+          slot.setAttribute("type", "button");
+          const thumb = document.createElement("canvas");
+          thumb.className = "gallery-thumb";
+          slot.appendChild(thumb);
+          paintGrid(thumb, lv.cells, alwaysFilled, alwaysFilled, false, overlayArtPx(160), "", true, lv.palette);
+          const cap = el(slot, "div", "");
+          cap.textContent = lv.name || "\u81EA\u5236\u5173";
+          slot.onclick = function() {
+            showingLevelSelect = false;
+            applyLevel(lv, false);
+          };
+        });
+      }
+      button(card, "\u8FD4\u56DE", function() {
+        showingLevelSelect = false;
+        render();
+      }).className = "btn primary";
+      return;
+    }
+    if (pendingUpload) {
+      let paintPending = function() {
+        hint.textContent = pendingUpload.width + "\xD7" + pendingUpload.height + " \xB7 " + Object.keys(pendingUpload.palette || {}).length + " \u8272 \xB7 \u6700\u957F\u8FB9 " + pendingMaxSide + " \u683C";
+        paintGrid(
+          art,
+          pendingUpload.cells,
+          alwaysFilled,
+          alwaysFilled,
+          false,
+          overlayArtPx(320),
+          "",
+          true,
+          pendingUpload.palette
+        );
+      };
+      overlay.classList.remove("hidden");
+      const card = el(overlay, "div", "card piece");
+      el(card, "h2", "").textContent = pendingUpload.name || "\u81EA\u5236\u5173";
+      const hint = el(card, "p", "res-hint");
+      const well = el(card, "div", "art-well");
+      const art = document.createElement("canvas");
+      art.className = "gallery-art";
+      well.appendChild(art);
+      const row = el(card, "div", "res-row");
+      el(row, "span", "res-end").textContent = "\u7C97";
+      const slider = document.createElement("input");
+      slider.type = "range";
+      slider.min = String(RES_MIN);
+      slider.max = String(RES_MAX);
+      slider.step = "1";
+      slider.value = String(pendingMaxSide);
+      slider.className = "res-slider";
+      slider.setAttribute("aria-label", "\u5206\u8FA8\u7387");
+      row.appendChild(slider);
+      el(row, "span", "res-end").textContent = "\u7EC6";
+      paintPending();
+      slider.oninput = function() {
+        pendingMaxSide = Math.max(RES_MIN, Math.min(RES_MAX, Number(slider.value) || pendingMaxSide));
+        pendingUpload = makePendingLevel();
+        paintPending();
+      };
+      slider.onpointerdown = function(ev) {
+        ev.stopPropagation();
+      };
+      button(card, "\u5F00\u59CB\u62FC", function() {
+        const saved = customStore.save(pendingUpload);
+        clearPendingUpload();
+        applyLevel(saved);
+      }).className = "btn primary";
+      button(card, "\u53D6\u6D88", function() {
+        clearPendingUpload();
+        render();
+      }).className = "btn ghost";
+      return;
+    }
+    if (session.state === "Result") {
+      overlay.classList.remove("hidden");
+      const card = el(overlay, "div", "card piece");
+      el(card, "h2", "").textContent = session.lastGalleryWrite === "update" ? "\u5DF2\u66F4\u65B0\u56FE\u9274" : "\u5DF2\u6536\u5165\u56FE\u9274";
+      el(card, "p", "").textContent = session.ironQuality === "fine" ? "\u7CBE\u70EB\u6210\u54C1" : "\u666E\u901A\u6210\u54C1";
+      if (session.savedEntry) {
+        const well = el(card, "div", "art-well");
+        const art = document.createElement("canvas");
+        art.className = "gallery-art";
+        well.appendChild(art);
+        paintGrid(
+          art,
+          session.savedEntry.pixels,
+          alwaysFilled,
+          entryFusedAt(session.savedEntry),
+          session.savedEntry.frameId === "gold",
+          overlayArtPx(320),
+          "",
+          true,
+          activePal(session.savedEntry)
+        );
+      }
+      if (entryHasUnironed(session.savedEntry)) {
+        button(card, "\u7EE7\u7EED\u70EB\u753B", function() {
+          continueIroning(session.savedEntry);
+        }).className = "btn primary";
+      }
+      button(card, "\u6362\u91D1\u6846\uFF08\u5E7F\u544A\uFF09", function() {
+        reward("frame");
+      });
+      button(card, "\u6253\u5F00\u56FE\u9274", function() {
+        viewingPiece = "";
+        session.openGallery();
+        render();
+      });
+      button(card, "\u9009\u5173", function() {
+        showingLevelSelect = true;
+        render();
+      });
+      button(card, "\u518D\u62FC\u4E00\u6B21", function() {
+        viewingPiece = "";
+        session.loadLevel(level, Date.now() % 9999);
+        render();
+      }).className = entryHasUnironed(session.savedEntry) ? "btn" : "btn primary";
+    } else if (session.state === "Gallery") {
+      overlay.classList.remove("hidden");
+      if (viewingPiece) {
+        drawGalleryPiece(viewingPiece);
+      } else {
+        const card = el(overlay, "div", "card gallery");
+        el(card, "h2", "").textContent = "\u62FC\u8C46\u56FE\u9274\u5899";
+        const seen = {};
+        const groups = [];
+        officialLevels().forEach(function(lv) {
+          seen[lv.id] = true;
+          groups.push(lv);
+        });
+        customStore.list().forEach(function(lv) {
+          seen[lv.id] = true;
+          if (session.gallery.listByLevel(lv.id).length) {
+            groups.push(lv);
+          }
+        });
+        session.gallery.list().forEach(function(entry) {
+          if (seen[entry.levelId]) {
+            return;
+          }
+          seen[entry.levelId] = true;
+          groups.push({
+            id: entry.levelId,
+            name: "\u81EA\u5236",
+            width: entry.pixels[0] ? entry.pixels[0].length : 1,
+            height: entry.pixels.length,
+            cells: entry.pixels
+          });
+        });
+        groups.forEach(function(lv) {
+          const group = el(card, "div", "ggroup");
+          el(group, "div", "ggroup-title").textContent = lv.name || levelTitle(lv.id);
+          const row = el(group, "div", "grow");
+          const entries = session.gallery.listByLevel(lv.id);
+          if (!entries.length) {
+            const slot = el(row, "div", "gslot empty");
+            el(slot, "div", "").textContent = "\u672A\u6536\u5F55";
+            return;
+          }
+          entries.forEach(function(entry) {
+            const slot = el(row, "button", "gslot");
+            slot.setAttribute("type", "button");
+            const cap = el(slot, "div", "");
+            cap.textContent = (entry.ironQuality === "fine" ? "\u7CBE\u70EB" : "\u666E\u901A") + (entry.frameId === "gold" ? " \xB7 \u91D1\u6846" : "") + (entryHasUnironed(entry) ? " \xB7 \u672A\u70EB\u5B8C" : "");
+            const thumb = document.createElement("canvas");
+            thumb.className = "gallery-thumb";
+            slot.appendChild(thumb);
+            paintGrid(thumb, entry.pixels, alwaysFilled, entryFusedAt(entry), entry.frameId === "gold", overlayArtPx(160), "", true, activePal(entry));
+            slot.onclick = function() {
+              viewingPiece = entry.id;
+              render();
+            };
+          });
+        });
+        button(card, "\u8FD4\u56DE", function() {
+          viewingPiece = "";
+          session.closeGalleryToPlay();
+          render();
+        });
+      }
+    } else if (session.state === "SoftBlocked") {
+      overlay.classList.remove("hidden");
+      const card = el(overlay, "div", "card");
+      if (session.pendingPark) {
+        el(card, "h2", "").textContent = "\u9488\u67B6\u6EE1\u4E86";
+        el(card, "p", "").textContent = "\u9488\u67B6\u6EE1\u4E86\uFF0C\u8FD8\u6709\u8C46\u5B50\u6CA1\u5730\u65B9\u6302\u3002\u53EF\u4EE5\u770B\u5E7F\u544A\u52A0\u4E00\u683C\u9488\u67B6\uFF0C\u6216\u91CD\u65B0\u5F00\u59CB\u672C\u5173\u3002";
+        if (session.rackCap < MAX_RACK_CAP) {
+          button(card, "\u770B\u5E7F\u544A\u52A0\u9488\u67B6", function() {
+            reward("rack");
+          }).className = "btn primary";
+        }
+        button(card, "\u91CD\u65B0\u5F00\u59CB", function() {
+          applyLevel(level, false);
+        }).className = session.rackCap < MAX_RACK_CAP ? "btn ghost" : "btn primary";
+        button(card, "\u9009\u5173", function() {
+          showingLevelSelect = true;
+          render();
+        }).className = "btn ghost";
+      } else {
+        el(card, "h2", "").textContent = "\u9488\u67B6\u6EE1\u4E86";
+        el(card, "p", "").textContent = "\u770B\u5E7F\u544A\u52A0\u4E00\u683C\uFF0C\u6216\u7528\u4EFB\u610F\u9488 / \u968F\u673A\u6392\u3002";
+        button(card, "\u52A0\u9488\u67B6\uFF08\u5E7F\u544A\uFF09", function() {
+          reward("rack");
+        }).className = "btn primary";
+        button(card, "\u4EFB\u610F\u9488", function() {
+          overlay.classList.add("hidden");
+          pickBuried();
+        });
+        button(card, "\u968F\u673A\u6392", function() {
+          reward("shuffle");
+        });
+        button(card, "\u5148\u4E0D\u770B", function() {
+          overlay.classList.add("hidden");
+        }).className = "btn ghost";
+      }
+    } else if (guideStep >= 0) {
+      const step = GUIDE_STEPS[guideStep];
+      overlay.className = "overlay guide";
+      const tip = el(overlay, "div", "guide-tip");
+      el(tip, "div", "guide-step").textContent = guideStep + 1 + " / " + GUIDE_STEPS.length;
+      el(tip, "h2", "").textContent = step.title;
+      el(tip, "p", "").textContent = step.text;
+      const actions = el(tip, "div", "guide-actions");
+      const last = guideStep >= GUIDE_STEPS.length - 1;
+      if (!step.tap) {
+        button(actions, last ? "\u5F00\u59CB\u62FC" : "\u4E0B\u4E00\u6B65", function() {
+          advanceGuide();
+        }).className = "btn primary";
+      }
+      button(actions, "\u8DF3\u8FC7", function() {
+        closeGuide(true);
+      }).className = "btn ghost";
+    }
+  }
+  function readGuideSeen() {
+    try {
+      return window.localStorage.getItem(GUIDE_KEY) === "1";
+    } catch (err) {
+      return false;
+    }
+  }
+  function writeGuideSeen() {
+    try {
+      window.localStorage.setItem(GUIDE_KEY, "1");
+    } catch (err) {
+    }
+  }
+  function maybeStartGuide() {
+    if (level.id === GUIDE_LEVEL_ID && !readGuideSeen()) {
+      guideStep = 0;
+    } else if (level.id !== GUIDE_LEVEL_ID) {
+      guideStep = -1;
+    }
+  }
+  function closeGuide(save) {
+    guideStep = -1;
+    if (save) {
+      writeGuideSeen();
+    }
+    hideGuideFinger();
+    render();
+  }
+  function advanceGuide() {
+    if (guideStep < 0) {
+      return;
+    }
+    if (guideStep >= GUIDE_STEPS.length - 1) {
+      closeGuide(true);
+      return;
+    }
+    guideStep += 1;
+    drawOverlay();
+    applyGuideSpot();
+  }
+  function hideGuideFinger() {
+    guideLayer.classList.add("hidden");
+    const marked = root.querySelectorAll(".guide-target");
+    for (let i = 0; i < marked.length; i++) {
+      marked[i].classList.remove("guide-target");
+    }
+  }
+  function guideTargetEl() {
+    if (guideStep < 0 || !GUIDE_STEPS[guideStep]) {
+      return null;
+    }
+    const spot = GUIDE_STEPS[guideStep].spot;
+    if (spot === "queue") {
+      const first = queue.querySelector(".qrow .needle:not(.buried)");
+      return first || queue;
+    }
+    if (spot === "board") {
+      return boardWrap;
+    }
+    if (spot === "rack") {
+      const peg = rackRow.querySelector(".peg");
+      return peg || rackRow;
+    }
+    if (spot === "gallery") {
+      return galleryBtn;
+    }
+    return null;
+  }
+  function placeGuideFinger() {
+    const guiding = guideStep >= 0 && overlay.classList.contains("guide") && !overlay.classList.contains("hidden");
+    if (!guiding) {
+      hideGuideFinger();
+      return;
+    }
+    const target = guideTargetEl();
+    if (!target) {
+      hideGuideFinger();
+      return;
+    }
+    const marked = root.querySelectorAll(".guide-target");
+    for (let i = 0; i < marked.length; i++) {
+      marked[i].classList.remove("guide-target");
+    }
+    if (target.classList.contains("needle")) {
+      target.classList.add("guide-target");
+    }
+    guideLayer.classList.remove("hidden");
+    const box = target.getBoundingClientRect();
+    const tipX = box.left + box.width * 0.62;
+    const tipY = box.top + box.height * 0.55;
+    guideFinger.style.left = tipX - 18 + "px";
+    guideFinger.style.top = tipY - 14 + "px";
+  }
+  function applyGuideSpot() {
+    boardWrap.classList.remove("guide-spot");
+    queue.classList.remove("guide-spot");
+    rackRow.classList.remove("guide-spot");
+    galleryBtn.classList.remove("guide-spot");
+    if (guideStep < 0 || !GUIDE_STEPS[guideStep] || !overlay.classList.contains("guide")) {
+      hideGuideFinger();
+      return;
+    }
+    const spot = GUIDE_STEPS[guideStep].spot;
+    if (spot === "queue") {
+      queue.classList.add("guide-spot");
+    } else if (spot === "board") {
+      boardWrap.classList.add("guide-spot");
+    } else if (spot === "rack") {
+      rackRow.classList.add("guide-spot");
+    } else if (spot === "gallery") {
+      galleryBtn.classList.add("guide-spot");
+    }
+    window.requestAnimationFrame(function() {
+      placeGuideFinger();
+    });
+  }
+  function alwaysFilled() {
+    return true;
+  }
+  function isCellIroned(row, col) {
+    return !!(session.ironed && session.ironed[row] && session.ironed[row][col]);
+  }
+  function entryFusedAt(entry) {
+    return function(row, col) {
+      if (!entry || !entry.ironed || !entry.ironed[row]) {
+        return true;
+      }
+      return !!entry.ironed[row][col];
+    };
+  }
+  function drawGalleryPiece(id) {
+    const entry = session.gallery.get(id);
+    const levelId = entry ? entry.levelId : id;
+    const card = el(overlay, "div", "card piece");
+    el(card, "h2", "").textContent = levelTitle(levelId);
+    el(card, "p", "").textContent = (entry && entry.ironQuality === "fine" ? "\u7CBE\u70EB\u6210\u54C1" : "\u666E\u901A\u6210\u54C1") + (entry && entry.frameId === "gold" ? " \xB7 \u91D1\u6846" : "") + (entryHasUnironed(entry) ? " \xB7 \u8FD8\u6709\u672A\u70EB\u7684\u8C46\u5B50" : "");
+    if (entry) {
+      const well = el(card, "div", "art-well");
+      const art = document.createElement("canvas");
+      art.className = "gallery-art";
+      well.appendChild(art);
+      paintGrid(art, entry.pixels, alwaysFilled, entryFusedAt(entry), entry.frameId === "gold", overlayArtPx(360), "", true, activePal(entry));
+    }
+    if (entryHasUnironed(entry)) {
+      button(card, "\u7EE7\u7EED\u70EB\u753B", function() {
+        continueIroning(entry);
+      }).className = "btn primary";
+    }
+    button(card, "\u5206\u4EAB", function() {
+      shareEntry(levelId, entry && entry.frameId);
+    }).className = "btn ghost";
+    button(card, "\u8FD4\u56DE\u56FE\u9274", function() {
+      viewingPiece = "";
+      render();
+    }).className = entryHasUnironed(entry) ? "btn" : "btn primary";
+  }
+  function continueIroning(entry) {
+    if (!entry) {
+      return;
+    }
+    const lv = allLevels().filter(function(x) {
+      return x.id === entry.levelId;
+    })[0];
+    if (!lv) {
+      return;
+    }
+    applyLevel(lv, true);
+    if (!session.resumeIroning(entry)) {
+      render();
+      return;
+    }
+    startIron(true);
+  }
+  function applyLevel(next, keepRender) {
+    placeJobs.length = 0;
+    animRunning = false;
+    flyLayer.innerHTML = "";
+    pendingFill = null;
+    hideParked = {};
+    level = next;
+    codes = colorCodesInLevel(level.cells);
+    hoverColor = "";
+    viewingPiece = "";
+    session.loadLevel(level, Date.now() % 9999);
+    maybeStartGuide();
+    if (!keepRender) {
+      render();
+    }
+  }
+  function clearPendingUpload() {
+    pendingUpload = null;
+    pendingSource = null;
+  }
+  function makePendingLevel() {
+    return imageToLevel(pendingSource, {
+      id: pendingUpload && pendingUpload.id ? pendingUpload.id : "custom-" + Date.now(),
+      name: pendingUpload && pendingUpload.name ? pendingUpload.name : "\u81EA\u5236\u5173",
+      maxSide: pendingMaxSide,
+      maxColors: 10,
+      crop: true,
+      custom: true
+    });
+  }
+  function pickUpload() {
+    if (customStore.list().length >= 24) {
+      window.alert("\u81EA\u5236\u5173\u6700\u591A 24 \u4E2A\uFF0C\u5148\u5220\u4E00\u4E2A\u518D\u4F20\u3002");
+      return;
+    }
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.onchange = function() {
+      const file = input.files && input.files[0];
+      if (!file) {
+        return;
+      }
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = function() {
+        try {
+          const srcW = img.naturalWidth || img.width;
+          const srcH = img.naturalHeight || img.height;
+          if (srcW < 8 || srcH < 8) {
+            window.alert("\u56FE\u7247\u592A\u5C0F\u4E86");
+            URL.revokeObjectURL(url);
+            return;
+          }
+          const cap = 640;
+          const scale = Math.min(1, cap / Math.max(srcW, srcH));
+          const cnv = document.createElement("canvas");
+          cnv.width = Math.max(8, Math.round(srcW * scale));
+          cnv.height = Math.max(8, Math.round(srcH * scale));
+          const ctx = cnv.getContext("2d");
+          ctx.drawImage(img, 0, 0, cnv.width, cnv.height);
+          const data = ctx.getImageData(0, 0, cnv.width, cnv.height);
+          pendingSource = {
+            width: data.width,
+            height: data.height,
+            data: new Uint8ClampedArray(data.data)
+          };
+          pendingMaxSide = 32;
+          const name = (file.name || "\u81EA\u5236\u5173").replace(/\.[^.]+$/, "");
+          pendingUpload = imageToLevel(pendingSource, {
+            id: "custom-" + Date.now(),
+            name,
+            maxSide: pendingMaxSide,
+            maxColors: 10,
+            crop: true,
+            custom: true
+          });
+          render();
+        } catch (e) {
+          window.alert("\u8FD9\u5F20\u56FE\u6CA1\u6CD5\u751F\u6210\u5173\u5361");
+        }
+        URL.revokeObjectURL(url);
+      };
+      img.onerror = function() {
+        URL.revokeObjectURL(url);
+        window.alert("\u8BFB\u4E0D\u51FA\u8FD9\u5F20\u56FE");
+      };
+      img.src = url;
+    };
+    input.click();
+  }
+  function pickBuried() {
+    const buried = session.buriedColorChoices();
+    if (!buried.length) {
+      window.alert("\u6CA1\u6709\u8FD8\u80FD\u7528\u7684\u88AB\u538B\u4F4F\u9488");
+      return;
+    }
+    overlay.classList.remove("hidden");
+    overlay.innerHTML = "";
+    const card = el(overlay, "div", "card pick");
+    el(card, "h2", "").textContent = "\u9009\u4E00\u4E2A\u8FD8\u9700\u8981\u7684\u989C\u8272";
+    const grid = el(card, "div", "pick-grid");
+    const codesNow = colorCodesInLevel(session.def.cells);
+    buried.sort(function(a, b) {
+      return (codesNow[a.needle.color] || 0) - (codesNow[b.needle.color] || 0);
+    });
+    buried.forEach(function(b) {
+      const n = needleEl(b.needle, function(origin, source) {
+        reward("any-needle").then(function(ok) {
+          if (!ok) {
+            render();
+            return;
+          }
+          requestPlace(function() {
+            return session.activateBuried(b.col, b.depth);
+          }, origin);
+        });
+      });
+      grid.appendChild(n);
+    });
+    button(card, "\u53D6\u6D88", function() {
+      render();
+    }).className = "btn ghost";
+  }
+  async function reward(kind) {
+    const ok = await session.tryAd(kind);
+    if (kind !== "any-needle") {
+      render();
+    }
+    return ok;
+  }
+  function visualRemaining() {
+    let extra = 0;
+    if (pendingFill) {
+      extra = Object.keys(pendingFill).length;
+    }
+    return session.remainingEmpty() + extra;
+  }
+  function isVisuallyFilled(row, col) {
+    if (!session.filled[row][col]) {
+      return false;
+    }
+    return !(pendingFill && pendingFill[row + "," + col]);
+  }
+  function cellBox(row, col) {
+    const w = session.def.width;
+    const h = session.def.height;
+    const box = canvas.getBoundingClientRect();
+    const size = Math.min(box.width / w, box.height / h);
+    return {
+      x: box.left + col * size,
+      y: box.top + (h - 1 - row) * size,
+      size
+    };
+  }
+  function isBusy() {
+    return animRunning || placeJobs.length > 0;
+  }
+  function requestPlace(fn, origin) {
+    if (placeJobs.length >= MAX_PLACE_QUEUE) {
+      return;
+    }
+    if (session.pendingPark) {
+      return;
+    }
+    if (session.state === "Ironing" || session.state === "Complete" || session.state === "Result" || session.state === "Gallery") {
+      return;
+    }
+    const result = fn();
+    if (!result) {
+      return;
+    }
+    enqueuePlace(result, origin);
+    if (guideStep === 0 && GUIDE_STEPS[0].spot === "queue") {
+      window.setTimeout(function() {
+        if (guideStep === 0) {
+          advanceGuide();
+        }
+      }, 480);
+    }
+  }
+  function enqueuePlace(result, origin) {
+    const steps = result.steps.slice();
+    const leftover = result.needle.count;
+    const total = steps.length + leftover;
+    if (!pendingFill) {
+      pendingFill = {};
+    }
+    for (let i = 0; i < steps.length; i++) {
+      pendingFill[steps[i].row + "," + steps[i].col] = true;
+    }
+    if (result.parkedIndex >= 0 && !result.parkMerged) {
+      hideParked[String(result.parkedIndex)] = true;
+    }
+    const src = origin || canvas.getBoundingClientRect();
+    const hex = colorHex(result.needle.color, activePal());
+    const sprite = beadUrl(hex);
+    const startSize = Math.max(36, src.width || 48);
+    const job = {
+      result,
+      steps,
+      leftover,
+      beads: []
+    };
+    for (let i = 0; i < total; i++) {
+      const b = document.createElement("img");
+      b.className = "fly-bead";
+      b.src = sprite;
+      b.alt = "";
+      b.style.transition = "none";
+      placeFlyBead(b, src.left, src.top, startSize);
+      flyLayer.appendChild(b);
+      job.beads.push(b);
+    }
+    placeJobs.push(job);
+    remain.textContent = "\u5269\u4F59 " + visualRemaining();
+    drawBoard();
+    drawQueue();
+    drawRack();
+    placeGuideFinger();
+    void flyLayer.offsetHeight;
+    layoutString();
+    if (!animRunning) {
+      runPlaceQueue();
+    }
+  }
+  function queuedBeads() {
+    const out = [];
+    for (let i = 0; i < placeJobs.length; i++) {
+      const beads = placeJobs[i].beads;
+      for (let j = 0; j < beads.length; j++) {
+        out.push(beads[j]);
+      }
+    }
+    return out;
+  }
+  function layoutString() {
+    const beads = queuedBeads();
+    const n = Math.max(beads.length, 1);
+    const boardRect = canvas.getBoundingClientRect();
+    const rackRect = rackRow.getBoundingClientRect();
+    const gapY = rackRect.top - boardRect.bottom;
+    const stringY = boardRect.bottom + Math.max(6, gapY * 0.28);
+    const beadSize = Math.min(42, Math.max(26, (Math.min(boardRect.width, window.innerWidth - 24) - 12) / n - 4));
+    const gap = 3;
+    const totalW = beads.length * (beadSize + gap) - gap;
+    let sx = boardRect.left + (boardRect.width - totalW) / 2;
+    if (sx < 8) {
+      sx = 8;
+    }
+    const scale = session.speedScale || 1;
+    const ms = 220 / scale;
+    for (let i = 0; i < beads.length; i++) {
+      const x = sx + i * (beadSize + gap);
+      const y = stringY + Math.sin((i + 0.5) / n * Math.PI) * -10;
+      flyBeadTo(beads[i], x, y, beadSize, ms);
+    }
+    return { beadSize, sx, stringY, gap };
+  }
+  async function runPlaceQueue() {
+    animRunning = true;
+    while (placeJobs.length) {
+      const job = placeJobs[0];
+      const scale = session.speedScale || 1;
+      const fillMs = 240 / scale;
+      const dropMs = 320 / scale;
+      layoutString();
+      await wait(260 / scale);
+      while (job.steps.length && job.beads.length) {
+        const step = job.steps.shift();
+        const bead = job.beads.shift();
+        const box = cellBox(step.row, step.col);
+        bead.style.zIndex = "8";
+        await flyBeadTo(bead, box.x, box.y, Math.max(box.size, 8), fillMs);
+        delete pendingFill[step.row + "," + step.col];
+        remain.textContent = "\u5269\u4F59 " + visualRemaining();
+        drawBoard();
+        bead.style.transition = "opacity " + 70 / scale + "ms linear";
+        bead.style.opacity = "0";
+        layoutString();
+        await wait(70 / scale);
+      }
+      const rest = job.beads.slice();
+      job.beads = [];
+      if (rest.length) {
+        const dest = leftoverDest(job.result);
+        const land = Math.min(34, Math.max(26, dest.width - 10));
+        const step = Math.max(12, Math.round(land * 0.42));
+        const baseY = dest.bottom - land - Math.max(6, dest.height * 0.08);
+        const cx = dest.left + dest.width / 2 - land / 2;
+        const vis = Math.min(rest.length, 5);
+        const threadMs = dropMs * 0.72;
+        let stackFrom = 0;
+        if (job.result.parkMerged && job.result.parkedIndex >= 0) {
+          const hung = session.rack[job.result.parkedIndex];
+          const already = hung ? hung.count - job.result.needle.count : 0;
+          stackFrom = Math.max(0, Math.min(already, 4));
+        }
+        for (let i = vis; i < rest.length; i++) {
+          rest[i].style.opacity = "0";
+        }
+        for (let i = 0; i < vis; i++) {
+          if (i > 0) {
+            await wait(40 / scale);
+          }
+          rest[i].style.zIndex = String(12 + stackFrom + i);
+          await flyBeadTo(rest[i], cx, baseY - (stackFrom + i) * step, land, threadMs);
+        }
+        if (job.result.parkedIndex >= 0) {
+          delete hideParked[String(job.result.parkedIndex)];
+          drawRack();
+        }
+        layoutString();
+      }
+      placeJobs.shift();
+      const st = session.onPlacePlaybackDone();
+      if (st === "Complete" && !placeJobs.length) {
+        flyLayer.innerHTML = "";
+        pendingFill = null;
+        hideParked = {};
+        animRunning = false;
+        startIron(false);
+        return;
+      }
+    }
+    flyLayer.innerHTML = "";
+    pendingFill = null;
+    hideParked = {};
+    animRunning = false;
+    render();
+  }
+  function leftoverDest(result) {
+    const pegs = rackRow.querySelectorAll(".peg");
+    if (result.parkedIndex >= 0 && pegs[result.parkedIndex]) {
+      return pegs[result.parkedIndex].getBoundingClientRect();
+    }
+    return rackRow.getBoundingClientRect();
+  }
+  function placeFlyBead(el2, x, y, size) {
+    el2.style.left = x + "px";
+    el2.style.top = y + "px";
+    el2.style.width = size + "px";
+    el2.style.height = size + "px";
+  }
+  function flyBeadTo(el2, x, y, size, ms) {
+    el2.style.transition = "left " + ms + "ms cubic-bezier(.22,.8,.28,1), top " + ms + "ms cubic-bezier(.22,.8,.28,1), width " + ms + "ms ease, height " + ms + "ms ease";
+    placeFlyBead(el2, x, y, size);
+    return wait(ms);
+  }
+  function wait(ms) {
+    return new Promise(function(resolve) {
+      setTimeout(resolve, Math.max(0, ms));
+    });
+  }
+  function startIron(resume) {
+    if (!resume) {
+      session.beginIroning();
+    }
+    render();
+    ironSprite.classList.remove("run");
+    ironSprite.style.left = "12%";
+    ironSprite.style.top = "18%";
+    let dragging = false;
+    const IRON_HOT_X = 0.33;
+    const IRON_HOT_Y = 0.79;
+    function ironHotspot() {
+      const box = ironSprite.getBoundingClientRect();
+      return {
+        x: box.left + box.width * IRON_HOT_X,
+        y: box.top + box.height * IRON_HOT_Y
+      };
+    }
+    function moveIron(ev) {
+      const box = ironLayer.getBoundingClientRect();
+      let iw = ironSprite.offsetWidth;
+      let ih = ironSprite.offsetHeight;
+      if (iw < 8) {
+        iw = box.width * 0.28;
+        ih = iw;
+      }
+      ironSprite.style.left = ev.clientX - box.left - iw * IRON_HOT_X + "px";
+      ironSprite.style.top = ev.clientY - box.top - ih * IRON_HOT_Y + "px";
+    }
+    function fuseUnder() {
+      const hot = ironHotspot();
+      const box = canvas.getBoundingClientRect();
+      if (box.width < 1 || box.height < 1) {
+        return;
+      }
+      const w = session.def.width;
+      const h = session.def.height;
+      const px = (hot.x - box.left) / box.width * w;
+      const py = (hot.y - box.top) / box.height * h;
+      const radius = Math.max(1.15, Math.min(w, h) / 16);
+      const ctx = canvas.getContext("2d");
+      const cellW = canvas.width / w;
+      const cellH = canvas.height / h;
+      let changed = false;
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      for (let r = 0; r < h; r++) {
+        for (let c = 0; c < w; c++) {
+          const cx = c + 0.5;
+          const cy = h - 1 - r + 0.5;
+          const dx = px - cx;
+          const dy = py - cy;
+          if (dx * dx + dy * dy > radius * radius) {
+            continue;
+          }
+          if (!session.ironCell(r, c)) {
+            continue;
+          }
+          changed = true;
+          ctx.fillStyle = colorHex(session.def.cells[r][c], activePal());
+          ctx.fillRect(c * cellW, (h - 1 - r) * cellH, cellW, cellH);
+        }
+      }
+      ctx.restore();
+      if (changed) {
+        remain.textContent = "\u5DF2\u70EB " + ironedCount() + "/" + w * h;
+      }
+    }
+    ironLayer.onpointerdown = function(ev) {
+      if (ev.target !== ironLayer && ev.target !== paper) {
+        return;
+      }
+      ev.preventDefault();
+      dragging = true;
+      ironLayer.setPointerCapture(ev.pointerId);
+      moveIron(ev);
+      fuseUnder();
+    };
+    ironLayer.onpointermove = function(ev) {
+      moveIron(ev);
+      if (dragging) {
+        fuseUnder();
+      }
+    };
+    ironLayer.onpointerup = function() {
+      dragging = false;
+    };
+    ironLayer.onpointercancel = function() {
+      dragging = false;
+    };
+  }
+  function ironedCount() {
+    let n = 0;
+    for (let r = 0; r < session.ironed.length; r++) {
+      for (let c = 0; c < session.ironed[r].length; c++) {
+        if (session.ironed[r][c]) {
+          n++;
+        }
+      }
+    }
+    return n;
+  }
+  let submittingIron = false;
+  function submitIron() {
+    if (submittingIron || session.state !== "Ironing") {
+      return;
+    }
+    submittingIron = true;
+    finishIron(session.allIroned() ? "fine" : "normal");
+    submittingIron = false;
+  }
+  function finishIron(q) {
+    ironLayer.onpointerdown = null;
+    ironLayer.onpointermove = null;
+    ironLayer.onpointerup = null;
+    ironLayer.onpointercancel = null;
+    ironSprite.classList.remove("run");
+    session.finishIroning(q);
+    render();
+  }
+  function shareEntry(id, frameId) {
+    const text = "\u6211\u70EB\u597D\u4E86\u62FC\u8C46\uFF1A" + id + (frameId ? "\uFF08\u91D1\u6846\uFF09" : "");
+    if (navigator.share) {
+      navigator.share({ title: "\u62FC\u8C46\u56FE\u9274", text }).catch(function() {
+        window.alert(text);
+      });
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function() {
+        window.alert("\u5DF2\u590D\u5236\u5206\u4EAB\u6587\u6848");
+      });
+    } else {
+      window.alert(text);
+    }
+  }
+  function needleEl(n, onClick, asSkewer) {
+    const node = document.createElement("button");
+    node.className = asSkewer ? "needle skewer" : "needle";
+    const hex = colorHex(n.color, activePal());
+    node.style.backgroundColor = "transparent";
+    node.style.backgroundBlendMode = "normal";
+    node.style.color = inkOn(hex);
+    if (asSkewer) {
+      const shown = Math.max(1, Math.min(n.count, 4));
+      for (let i = 0; i < shown; i++) {
+        const bead = document.createElement("i");
+        bead.className = "skewer-bead";
+        bead.style.backgroundImage = "url(" + beadUrl(hex) + ")";
+        bead.style.bottom = 6 + i * 15 + "px";
+        bead.style.zIndex = String(i + 1);
+        node.appendChild(bead);
+      }
+    } else {
+      node.style.backgroundImage = "url(" + beadUrl(hex) + ")";
+      node.style.backgroundSize = "contain";
+      node.style.backgroundRepeat = "no-repeat";
+      node.style.backgroundPosition = "center";
+    }
+    const code = document.createElement("b");
+    code.className = "code";
+    code.textContent = String(codes[n.color] || "");
+    if (!showCodes) {
+      code.style.display = "none";
+    }
+    node.appendChild(code);
+    const count = document.createElement("span");
+    count.textContent = String(n.count);
+    node.appendChild(count);
+    const previewConsumed = bindColorPreview(node, n.color);
+    node.onclick = function(ev) {
+      ev.stopPropagation();
+      if (previewConsumed()) {
+        return;
+      }
+      if (session.state === "Ironing") {
+        return;
+      }
+      onClick(node.getBoundingClientRect(), node);
+    };
+    return node;
+  }
+  function canHover() {
+    return !!(window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+  }
+  function bindColorPreview(node, color) {
+    node.setAttribute("data-bead-color", color);
+    let timer = 0;
+    let previewing = false;
+    let skipClick = false;
+    let lastX = 0;
+    let lastY = 0;
+    function setHover(next) {
+      if (hoverColor === next) {
+        return;
+      }
+      hoverColor = next;
+      drawBoard();
+    }
+    function colorAtPoint(x, y) {
+      const nodes = root.querySelectorAll("[data-bead-color]");
+      for (let i = 0; i < nodes.length; i++) {
+        const box = nodes[i].getBoundingClientRect();
+        if (x >= box.left && x <= box.right && y >= box.top && y <= box.bottom) {
+          return nodes[i].getAttribute("data-bead-color") || "";
+        }
+      }
+      return "";
+    }
+    function applyAtPointer() {
+      setHover(colorAtPoint(lastX, lastY));
+    }
+    function clearTimer() {
+      if (timer) {
+        window.clearTimeout(timer);
+        timer = 0;
+      }
+    }
+    function endPress(ev) {
+      clearTimer();
+      previewing = false;
+      setHover("");
+      if (ev) {
+        try {
+          node.releasePointerCapture(ev.pointerId);
+        } catch (e) {
+        }
+      }
+    }
+    node.onmouseenter = function() {
+      if (canHover()) {
+        setHover(color);
+      }
+    };
+    node.onmouseleave = function() {
+      if (canHover() && !previewing) {
+        setHover("");
+      }
+    };
+    node.onpointerdown = function(ev) {
+      if (ev.pointerType === "mouse") {
+        return;
+      }
+      lastX = ev.clientX;
+      lastY = ev.clientY;
+      previewing = false;
+      skipClick = false;
+      clearTimer();
+      try {
+        node.setPointerCapture(ev.pointerId);
+      } catch (e) {
+      }
+      timer = window.setTimeout(function() {
+        timer = 0;
+        previewing = true;
+        skipClick = true;
+        applyAtPointer();
+      }, 280);
+    };
+    node.onpointermove = function(ev) {
+      lastX = ev.clientX;
+      lastY = ev.clientY;
+      if (previewing) {
+        applyAtPointer();
+      }
+    };
+    node.onpointerup = function(ev) {
+      endPress(ev);
+    };
+    node.onpointercancel = function(ev) {
+      skipClick = false;
+      endPress(ev);
+    };
+    node.oncontextmenu = function(ev) {
+      ev.preventDefault();
+    };
+    return function() {
+      if (skipClick) {
+        skipClick = false;
+        return true;
+      }
+      return false;
+    };
+  }
+  let resizeTimer = 0;
+  function scheduleLayout() {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(function() {
+      if (isBusy()) {
+        return;
+      }
+      render();
+    }, 80);
+  }
+  boardWrap.addEventListener("click", function() {
+    if (guideStep >= 0 && GUIDE_STEPS[guideStep] && GUIDE_STEPS[guideStep].spot === "board") {
+      advanceGuide();
+    }
+  });
+  rackRow.addEventListener("click", function() {
+    if (guideStep >= 0 && GUIDE_STEPS[guideStep] && GUIDE_STEPS[guideStep].spot === "rack") {
+      advanceGuide();
+    }
+  });
+  window.addEventListener("resize", scheduleLayout);
+  window.addEventListener("orientationchange", scheduleLayout);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", scheduleLayout);
+  }
+  maybeStartGuide();
+  render();
+  return session;
+}
+function el(parent, tag, cls) {
+  const n = document.createElement(tag);
+  if (cls) {
+    n.className = cls;
+  }
+  parent.appendChild(n);
+  return n;
+}
+function iconBtn(parent, src, label, fn) {
+  const b = document.createElement("button");
+  b.className = "icon-btn";
+  b.title = label;
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = label;
+  b.appendChild(img);
+  const cap = document.createElement("span");
+  cap.textContent = label;
+  b.appendChild(cap);
+  b.onclick = fn;
+  parent.appendChild(b);
+  return b;
+}
+function button(parent, text, fn) {
+  const b = document.createElement("button");
+  b.className = "btn";
+  b.textContent = text;
+  b.onclick = fn;
+  parent.appendChild(b);
+  return b;
+}
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+export {
+  startHtmlPlayer
+};
