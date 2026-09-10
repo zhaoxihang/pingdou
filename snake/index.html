@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>吃色块试玩 · 长颈鹿</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #2a1f3d; color: #f6efe4; font-family: "Segoe UI", "PingFang SC", sans-serif; }
+    body { padding: 8px 8px 16px; }
+    .wrap { max-width: 420px; margin: 0 auto; }
+    .top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .top h1 { font-size: 16px; margin: 0; flex: 1; }
+    .remain { font-size: 13px; opacity: .85; }
+    .tip { font-size: 12px; opacity: .7; margin: 0 0 8px; min-height: 1.2em; }
+    .board-wrap {
+      background: #1b1430; border-radius: 12px; padding: 8px; border: 2px solid #5a4578;
+    }
+    #board {
+      display: grid; gap: 1px; width: 100%; aspect-ratio: 16 / 18; background: #3a2a55;
+    }
+    .cell { border-radius: 2px; min-height: 0; }
+    .cell.empty { background: #2a2038; }
+    .cell.snake-head {
+      outline: 2px solid #fff; z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 800; color: #1b120a; text-shadow: 0 0 2px #fff;
+    }
+    .mid {
+      margin-top: 10px; background: #4a3a68; border-radius: 12px; padding: 10px 8px 8px;
+      display: flex; align-items: flex-end; gap: 6px;
+    }
+    #pillars { display: flex; gap: 8px; flex: 1; justify-content: center; }
+    .peg {
+      width: 36px; height: 64px; border-radius: 8px 8px 6px 6px;
+      background: linear-gradient(#e8c87a, #c9a04a); position: relative;
+      box-shadow: inset 0 -4px 0 #a67c2e;
+    }
+    .coil {
+      position: absolute; left: 4px; right: 4px; bottom: 8px; height: 28px;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; color: #fff; border: 1px solid rgba(0,0,0,.35);
+    }
+    .hole {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #444 0%, #0a0610 70%);
+      border: 2px solid #1a1028; flex-shrink: 0; margin-bottom: 6px;
+    }
+    .cap { text-align: center; font-size: 12px; opacity: .8; margin-top: 4px; }
+    #eggs { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+    .egg-row { display: flex; gap: 6px; justify-content: center; }
+    .egg {
+      width: 52px; height: 52px; border-radius: 50%; border: 0; color: #1b120a;
+      font-weight: 800; font-size: 14px; cursor: pointer;
+      box-shadow: inset -4px -4px 0 rgba(0,0,0,.15), 0 3px 6px rgba(0,0,0,.3);
+    }
+    .egg.front { outline: 2px solid #ffe08a; }
+    .egg.buried { opacity: .45; cursor: default; }
+    .egg.ghost { background: transparent !important; box-shadow: none; border: 1px dashed #666; }
+    .tools {
+      margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+    .tools button {
+      border: 0; border-radius: 18px; padding: 10px 12px; min-width: 72px;
+      background: #5b6fd6; color: #fff; font-size: 12px; cursor: pointer;
+    }
+    .note { margin-top: 10px; font-size: 11px; opacity: .55; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1 id="title">吃色块</h1>
+      <div class="remain" id="remain">剩余 0</div>
+    </div>
+    <p class="tip" id="tip">加载中…</p>
+    <div class="board-wrap"><div id="board"></div></div>
+    <div class="mid">
+      <div id="pillars"></div>
+      <div class="hole" title="黑洞"></div>
+    </div>
+    <div class="cap" id="cap">0/5</div>
+    <div id="eggs"></div>
+    <div class="tools">
+      <button type="button" id="btn-speed"><span id="speed-lab">速度 x1</span></button>
+      <button type="button" id="btn-cap">加容量</button>
+      <button type="button" id="btn-any">任意指</button>
+      <button type="button" id="btn-shuffle">随机排</button>
+    </div>
+    <p class="note">独立试玩 · 色块占位 · 左右为河 · 仅从底边进</p>
+  </div>
+  <script src="snake.js"></script>
+</body>
+</html>
