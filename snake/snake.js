@@ -59,32 +59,32 @@
     }
   }
 
-  function makeRoundEgg(hexColor) {
-    const size = 128;
+  function makeOvalEgg(hexColor) {
+    const w = 112;
+    const h = 144;
     const canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
+    canvas.width = w;
+    canvas.height = h;
     const ctx = canvas.getContext("2d");
     const [tr, tg, tb] = parseHex(hexColor);
     const g = ctx.createRadialGradient(
-      size * 0.34, size * 0.32, size * 0.06,
-      size * 0.5, size * 0.52, size * 0.5
+      w * 0.38, h * 0.32, h * 0.04,
+      w * 0.5, h * 0.55, h * 0.52
     );
     g.addColorStop(0, "rgb(" + Math.min(255, tr + 70) + "," + Math.min(255, tg + 70) + "," + Math.min(255, tb + 70) + ")");
     g.addColorStop(0.45, "rgb(" + tr + "," + tg + "," + tb + ")");
     g.addColorStop(1, "rgb(" + ((tr * 0.5) | 0) + "," + ((tg * 0.5) | 0) + "," + ((tb * 0.5) | 0) + ")");
     ctx.beginPath();
-    ctx.arc(size / 2, size / 2, size / 2 - 1, 0, Math.PI * 2);
+    // vertical egg silhouette (narrower, taller)
+    ctx.ellipse(w / 2, h / 2, w * 0.46, h * 0.48, 0, 0, Math.PI * 2);
     ctx.closePath();
     ctx.fillStyle = g;
     ctx.fill();
-    // soft rim
     ctx.strokeStyle = "rgba(0,0,0,0.18)";
     ctx.lineWidth = 3;
     ctx.stroke();
-    // light specular
     ctx.beginPath();
-    ctx.ellipse(size * 0.38, size * 0.34, size * 0.16, size * 0.1, -0.5, 0, Math.PI * 2);
+    ctx.ellipse(w * 0.4, h * 0.34, w * 0.14, h * 0.09, -0.4, 0, Math.PI * 2);
     ctx.fillStyle = "rgba(255,255,255,0.35)";
     ctx.fill();
     return canvas.toDataURL("image/png");
@@ -96,18 +96,22 @@
     canvas.width = size;
     canvas.height = size;
     const ctx = canvas.getContext("2d");
-    if (round) {
-      ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size / 2 - 1, 0, Math.PI * 2);
-      ctx.closePath();
-      ctx.clip();
-    }
-    // fit sprite into canvas preserving aspect
+    // fit sprite into canvas; eggs use vertical oval clip
     const scale = Math.min(size / img.width, size / img.height);
     const dw = img.width * scale;
     const dh = img.height * scale;
     ctx.clearRect(0, 0, size, size);
-    ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
+    if (round) {
+      // vertical oval (egg), not a circle
+      ctx.beginPath();
+      ctx.ellipse(size / 2, size / 2, size * 0.38, size * 0.48, 0, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+      // slight vertical stretch so round art reads as egg
+      ctx.drawImage(img, (size - dw * 0.88) / 2, (size - dh * 1.08) / 2, dw * 0.88, dh * 1.08);
+    } else {
+      ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
+    }
     const imageData = ctx.getImageData(0, 0, size, size);
     const d = imageData.data;
     const [tr, tg, tb] = parseHex(hexColor);
@@ -133,14 +137,14 @@
   function tinted(kind, colorId) {
     const pal = state.level && state.level.palette;
     const hexColor = hex(pal, colorId);
-    const key = kind + ":" + colorId + ":" + hexColor + ":v2";
+    const key = kind + ":" + colorId + ":" + hexColor + ":v3oval";
     if (tintCache[key]) return tintCache[key];
     let img = null;
     if (kind === "egg") img = artReady.egg;
     else if (kind === "head") img = artReady.head;
     else img = artReady.body;
     if (!img) {
-      if (kind === "egg") return makeRoundEgg(hexColor);
+      if (kind === "egg") return makeOvalEgg(hexColor);
       return ART + (kind === "head" ? "snake-head.webp" : "snake-body.webp");
     }
     // eggs stay circular; head/body keep silhouette (no hard circle crop)
