@@ -339,10 +339,6 @@
         const s = document.createElement("div");
         s.className = "coil";
         s.style.backgroundImage = "url(" + headUrl(p.color) + ")";
-        s.style.backgroundSize = "contain";
-        s.style.backgroundRepeat = "no-repeat";
-        s.style.backgroundPosition = "center";
-        s.style.backgroundColor = hex(state.level.palette, p.color);
         s.textContent = String(p.count);
         peg.appendChild(s);
         peg.title = "再出吃";
