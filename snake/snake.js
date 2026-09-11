@@ -90,29 +90,26 @@
     return canvas.toDataURL("image/png");
   }
 
-  function colorizeSprite(img, hexColor, round) {
-    const size = 128;
+  function colorizeSprite(img, hexColor, mode) {
+    // mode: "egg" keeps vertical oval canvas; else square for head/body
+    const isEgg = mode === "egg" || mode === true;
     const canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
+    if (isEgg) {
+      canvas.width = 112;
+      canvas.height = 144;
+    } else {
+      canvas.width = 128;
+      canvas.height = 128;
+    }
+    const sizeW = canvas.width;
+    const sizeH = canvas.height;
     const ctx = canvas.getContext("2d");
-    // fit sprite into canvas; eggs use vertical oval clip
-    const scale = Math.min(size / img.width, size / img.height);
+    const scale = Math.min(sizeW / img.width, sizeH / img.height);
     const dw = img.width * scale;
     const dh = img.height * scale;
-    ctx.clearRect(0, 0, size, size);
-    if (round) {
-      // vertical oval (egg), not a circle
-      ctx.beginPath();
-      ctx.ellipse(size / 2, size / 2, size * 0.38, size * 0.48, 0, 0, Math.PI * 2);
-      ctx.closePath();
-      ctx.clip();
-      // slight vertical stretch so round art reads as egg
-      ctx.drawImage(img, (size - dw * 0.88) / 2, (size - dh * 1.08) / 2, dw * 0.88, dh * 1.08);
-    } else {
-      ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
-    }
-    const imageData = ctx.getImageData(0, 0, size, size);
+    ctx.clearRect(0, 0, sizeW, sizeH);
+    ctx.drawImage(img, (sizeW - dw) / 2, (sizeH - dh) / 2, dw, dh);
+    const imageData = ctx.getImageData(0, 0, sizeW, sizeH);
     const d = imageData.data;
     const [tr, tg, tb] = parseHex(hexColor);
     for (let i = 0; i < d.length; i += 4) {
@@ -137,7 +134,7 @@
   function tinted(kind, colorId) {
     const pal = state.level && state.level.palette;
     const hexColor = hex(pal, colorId);
-    const key = kind + ":" + colorId + ":" + hexColor + ":v3oval";
+    const key = kind + ":" + colorId + ":" + hexColor + ":v4ovalart";
     if (tintCache[key]) return tintCache[key];
     let img = null;
     if (kind === "egg") img = artReady.egg;
@@ -148,7 +145,7 @@
       return ART + (kind === "head" ? "snake-head.webp" : "snake-body.webp");
     }
     // eggs stay circular; head/body keep silhouette (no hard circle crop)
-    tintCache[key] = colorizeSprite(img, hexColor, kind === "egg");
+    tintCache[key] = colorizeSprite(img, hexColor, kind === "egg" ? "egg" : "snake");
     return tintCache[key];
   }
 
