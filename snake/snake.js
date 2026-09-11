@@ -431,6 +431,7 @@
       }
     }
     renderSnakeOverlay(def, bodySet);
+    requestAnimationFrame(() => renderSnakeOverlay(def, bodySet));
   }
 
   function renderSnakeOverlay(def, bodySet) {
