@@ -453,7 +453,7 @@
     if (!body.length) {
       const seg = document.createElement("div");
       seg.className = "snake-seg head";
-      const size = Math.max(36, cellW * 2.4);
+      const size = Math.max(22, cellW * 1.25);
       seg.style.width = size + "px";
       seg.style.height = size + "px";
       seg.style.left = boardRect.width / 2 - size / 2 + "px";
@@ -469,8 +469,8 @@
       const isHead = idx === body.length - 1;
       const seg = document.createElement("div");
       seg.className = "snake-seg " + (isHead ? "head" : "body");
-      const scale = isHead ? 2.55 : 1.85;
-      const size = Math.max(22, Math.min(cellW, cellH) * scale);
+      const scale = isHead ? 1.35 : 1.08;
+      const size = Math.max(14, Math.min(cellW, cellH) * scale);
       // board rows are rendered top=height-1 ... bottom=0
       const visualRow = def.height - 1 - r;
       const left = c * cellW + (cellW - size) / 2;
