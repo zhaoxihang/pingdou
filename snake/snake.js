@@ -1,5 +1,27 @@
 (function () {
   const FRONT_COLS = 5;
+  const GUIDE_KEY = "snakeEat.guideSeen";
+  const ART = "./art/";
+
+  const EGG_ART = {
+    orange: "egg-orange.webp",
+    green: "egg-green.webp",
+    leaf: "egg-green.webp",
+    leaf2: "egg-lime.webp",
+    lime: "egg-lime.webp",
+    sky: "egg-cyan.webp",
+    blue: "egg-blue.webp",
+    cyan: "egg-cyan.webp",
+    ground: "egg-brown.webp",
+    spot: "egg-brown.webp",
+    mane: "egg-brown.webp",
+    brown: "egg-brown.webp",
+    cheek: "egg-pink.webp",
+    pink: "egg-pink.webp",
+    eye: "egg-red.webp",
+    red: "egg-red.webp",
+  };
+
   const state = {
     level: null,
     grid: [],
@@ -9,16 +31,29 @@
     remaining: 0,
     speed: 1,
     busy: false,
-    active: null, // {color,count,r,c,body:[[r,c],...], exiting?:bool}
+    active: null,
     msg: "",
-    blocked: false, // pillars full soft-lock
+    blocked: false,
     savedDef: null,
+    guideStep: -1,
   };
 
   const el = {};
 
   function hex(pal, id) {
     return (pal && pal[id]) || "#888";
+  }
+
+  function eggUrl(color) {
+    return ART + (EGG_ART[color] || "snake-egg.webp");
+  }
+
+  function headUrl(color) {
+    return ART + (color === "orange" ? "snake-head-orange.webp" : "snake-head.webp");
+  }
+
+  function bodyUrl(color) {
+    return ART + (color === "orange" ? "snake-body-orange.webp" : "snake-body.webp");
   }
 
   function countFilled(grid) {
@@ -35,7 +70,6 @@
     return state.level && state.level.rivers === "leftRight";
   }
 
-  /** Left/right edge columns are rivers: impassable. */
   function isRiver(c) {
     if (!hasRivers()) return false;
     const w = state.grid[0].length;
@@ -65,6 +99,7 @@
     state.blocked = false;
     hideBlock();
     renderAll();
+    maybeStartGuide();
   }
 
   function neighbors(r, c, h, w) {
@@ -81,7 +116,6 @@
     const w = state.grid[0].length;
     const cand = [];
     if (r < 0) {
-      // only enter from bottom edge; rivers block left/right columns
       for (let col = 0; col < w; col++) {
         if (isRiver(col)) continue;
         if (state.grid[0][col] === color) cand.push([0, col]);
@@ -105,15 +139,66 @@
 
   function showBlock(text) {
     state.blocked = true;
-    const box = document.getElementById("block");
     document.getElementById("block-msg").textContent = text;
-    box.classList.remove("hidden");
+    document.getElementById("block").classList.remove("hidden");
   }
 
   function hideBlock() {
     state.blocked = false;
     const box = document.getElementById("block");
     if (box) box.classList.add("hidden");
+  }
+
+  const GUIDE = [
+    {
+      title: "点最前排蛇蛋",
+      body: "带黄框的是前排蛋。点一下破出短蛇，从图案底边进去吃同色块。",
+    },
+    {
+      title: "连续吃同色",
+      body: "蛇只能吃碰得到的同色格，吃一格数字减 1、身子变长。左右是河，只能从下面进。",
+    },
+    {
+      title: "上柱还能再点",
+      body: "吃不到就盘在中间柱子上。点柱上的蛇可以再出来继续吃；数字到 0 会钻进右边黑洞。",
+    },
+  ];
+
+  function maybeStartGuide() {
+    try {
+      if (localStorage.getItem(GUIDE_KEY) === "1") {
+        state.guideStep = -1;
+        document.getElementById("guide").classList.add("hidden");
+        return;
+      }
+    } catch (e) {}
+    state.guideStep = 0;
+    showGuide();
+  }
+
+  function showGuide() {
+    const g = document.getElementById("guide");
+    if (state.guideStep < 0 || state.guideStep >= GUIDE.length) {
+      g.classList.add("hidden");
+      return;
+    }
+    const step = GUIDE[state.guideStep];
+    document.getElementById("guide-step").textContent = state.guideStep + 1 + "/" + GUIDE.length;
+    document.getElementById("guide-title").textContent = step.title;
+    document.getElementById("guide-body").textContent = step.body;
+    document.getElementById("guide-next").textContent =
+      state.guideStep === GUIDE.length - 1 ? "开始" : "下一步";
+    g.classList.remove("hidden");
+  }
+
+  function closeGuide(persist) {
+    state.guideStep = -1;
+    document.getElementById("guide").classList.add("hidden");
+    if (persist) {
+      try {
+        localStorage.setItem(GUIDE_KEY, "1");
+      } catch (e) {}
+    }
   }
 
   async function runSnake(snake) {
@@ -130,21 +215,18 @@
       snake.c = nc;
       snake.count -= 1;
       snake.body.push([nr, nc]);
-      // keep body length ≈ eaten segments, min 2 for visibility when growing
       state.remaining = countFilled(state.grid);
       renderAll();
       await wait(110);
     }
 
     if (snake.count <= 0) {
-      // walk toward black hole (off to the right of board)
       snake.exiting = true;
       state.msg = "走向黑洞…";
       renderAll();
       await wait(220);
-      // step body toward right visually by clearing head trail
       for (let i = 0; i < 4; i++) {
-        snake.c = Math.min((state.grid[0].length - 1), (snake.c < 0 ? 0 : snake.c) + 1);
+        snake.c = Math.min(state.grid[0].length - 1, (snake.c < 0 ? 0 : snake.c) + 1);
         snake.body.push([snake.r < 0 ? 0 : snake.r, snake.c]);
         renderAll();
         await wait(90);
@@ -156,7 +238,6 @@
       return "hole";
     }
 
-    // need pillar
     const slot = state.pillars.findIndex((p) => !p);
     if (slot >= 0) {
       state.pillars[slot] = { color: snake.color, count: snake.count };
@@ -167,19 +248,17 @@
       return "pillar";
     }
 
-    // pillars full — put snake back as temp and soft-lock
     state.active = null;
     state.msg = "柱子满了";
     renderAll();
     showBlock("柱子满了。可以加柱或重开本关。");
-    // stash unfinished as a virtual front egg in col 0
     state.eggs[0].unshift({ color: snake.color, count: snake.count });
     renderAll();
     return "full";
   }
 
   async function hatchFrom(col) {
-    if (state.busy || state.blocked) return;
+    if (state.busy || state.blocked || state.guideStep >= 0) return;
     const stack = state.eggs[col];
     if (!stack || !stack.length) return;
     const egg = stack[0];
@@ -195,7 +274,7 @@
   }
 
   async function resumePillar(i) {
-    if (state.busy || state.blocked) return;
+    if (state.busy || state.blocked || state.guideStep >= 0) return;
     const p = state.pillars[i];
     if (!p) return;
     state.busy = true;
@@ -237,12 +316,11 @@
         }
         const bi = bodySet[r + "," + c];
         if (bi != null && state.active) {
-          cell.classList.add("snake-body");
-          cell.style.background = hex(def.palette, state.active.color);
-          if (bi === state.active.body.length - 1) {
-            cell.classList.add("snake-head");
-            cell.textContent = String(state.active.count);
-          }
+          const isHead = bi === state.active.body.length - 1;
+          cell.classList.add(isHead ? "snake-head" : "snake-body");
+          cell.style.backgroundImage =
+            "url(" + (isHead ? headUrl(state.active.color) : bodyUrl(state.active.color)) + ")";
+          if (isHead) cell.textContent = String(state.active.count);
         }
         board.appendChild(cell);
       }
@@ -260,7 +338,11 @@
         peg.classList.add("has");
         const s = document.createElement("div");
         s.className = "coil";
-        s.style.background = hex(state.level.palette, p.color);
+        s.style.backgroundImage = "url(" + headUrl(p.color) + ")";
+        s.style.backgroundSize = "contain";
+        s.style.backgroundRepeat = "no-repeat";
+        s.style.backgroundPosition = "center";
+        s.style.backgroundColor = hex(state.level.palette, p.color);
         s.textContent = String(p.count);
         peg.appendChild(s);
         peg.title = "再出吃";
@@ -288,12 +370,12 @@
           btn.classList.add("ghost");
           btn.disabled = true;
         } else {
-          btn.style.background = hex(state.level.palette, egg.color);
+          btn.style.backgroundImage = "url(" + eggUrl(egg.color) + ")";
           btn.textContent = String(egg.count);
           if (d === 0) {
             btn.classList.add("front");
             btn.onclick = () => hatchFrom(c);
-            if (state.blocked || state.busy) btn.disabled = true;
+            if (state.blocked || state.busy || state.guideStep >= 0) btn.disabled = true;
           } else {
             btn.disabled = true;
             btn.classList.add("buried");
@@ -330,7 +412,7 @@
       renderAll();
     };
     document.getElementById("btn-any").onclick = () => {
-      if (state.busy || state.blocked) return;
+      if (state.busy || state.blocked || state.guideStep >= 0) return;
       for (let c = 0; c < FRONT_COLS; c++) {
         if (state.eggs[c].length > 1) {
           const buried = state.eggs[c].splice(1, 1)[0];
@@ -344,7 +426,7 @@
       renderAll();
     };
     document.getElementById("btn-shuffle").onclick = () => {
-      if (state.busy || state.blocked) return;
+      if (state.busy || state.blocked || state.guideStep >= 0) return;
       const flat = [];
       state.eggs.forEach((col) => flat.push(...col));
       for (let i = flat.length - 1; i > 0; i--) {
@@ -353,8 +435,6 @@
         flat[i] = flat[j];
         flat[j] = t;
       }
-      state.eggs = packEggs(flat);
-      // packEggs re-stripes; rebuild properly
       state.eggs = Array.from({ length: FRONT_COLS }, () => []);
       flat.forEach((e, i) => state.eggs[i % FRONT_COLS].push(e));
       state.msg = "已随机排";
@@ -370,6 +450,15 @@
       hideBlock();
       state.msg = "已加柱";
       renderAll();
+    };
+    document.getElementById("guide-skip").onclick = () => closeGuide(true);
+    document.getElementById("guide-next").onclick = () => {
+      if (state.guideStep >= GUIDE.length - 1) {
+        closeGuide(true);
+        return;
+      }
+      state.guideStep += 1;
+      showGuide();
     };
   }
 
