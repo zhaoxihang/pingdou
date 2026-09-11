@@ -6,33 +6,38 @@
   <title>吃色块试玩 · 长颈鹿</title>
   <style>
     * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; background: #2a1f3d; color: #f6efe4; font-family: "Segoe UI", "PingFang SC", sans-serif; }
-    body { padding: 8px 8px 16px; }
+    html, body { margin: 0; min-height: 100%; background: #1a1428; color: #f6efe4; font-family: "Segoe UI", "PingFang SC", sans-serif; }
+    body { padding: 10px 10px 20px; }
     .wrap { max-width: 420px; margin: 0 auto; }
-    .top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-    .top h1 { font-size: 16px; margin: 0; flex: 1; }
-    .remain { font-size: 13px; opacity: .85; }
-    .tip { font-size: 12px; opacity: .7; margin: 0 0 8px; min-height: 1.2em; }
+    .top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .top h1 { font-size: 17px; margin: 0; flex: 1; font-weight: 700; }
+    .remain { font-size: 13px; opacity: .85; background: rgba(255,255,255,.08); padding: 4px 10px; border-radius: 999px; }
+    .tip { font-size: 12px; opacity: .72; margin: 0 0 8px; min-height: 1.2em; }
     .board-wrap {
-      position: relative; background: #1b1430; border-radius: 12px; padding: 8px 18px;
-      border: 2px solid #5a4578; overflow: hidden;
+      position: relative; background: linear-gradient(180deg,#241a3a,#161022);
+      border-radius: 16px; padding: 10px 26px;
+      border: 1px solid #6a4f8a; box-shadow: 0 10px 28px rgba(0,0,0,.35);
+      overflow: hidden;
     }
     .river-bank {
-      position: absolute; top: 8px; bottom: 8px; width: 14px;
-      background-size: 100% 100%; background-repeat: no-repeat; pointer-events: none; z-index: 2;
+      position: absolute; top: 10px; bottom: 10px; width: 22px;
+      background-size: 100% auto; background-repeat: repeat-y; background-position: center top;
+      pointer-events: none; z-index: 2; opacity: .95;
+      filter: drop-shadow(0 0 2px rgba(80,140,220,.35));
     }
-    .river-bank.left { left: 2px; background-image: url("./art/river-bank-left.webp"); }
-    .river-bank.right { right: 2px; background-image: url("./art/river-bank-right.webp"); }
+    .river-bank.left { left: 3px; background-image: url("./art/river-bank-left.webp"); }
+    .river-bank.right { right: 3px; background-image: url("./art/river-bank-right.webp"); }
     #board {
-      display: grid; gap: 1px; width: 100%; aspect-ratio: 16 / 18; background: #3a2a55;
+      display: grid; gap: 2px; width: 100%; aspect-ratio: 16 / 18;
+      background: #120c1c; border-radius: 8px; padding: 2px;
       position: relative; z-index: 1;
     }
-    .cell { border-radius: 2px; min-height: 0; position: relative; }
+    .cell { border-radius: 4px; min-height: 0; position: relative; box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); }
     .cell.empty { background: #2a2038; }
-    .cell.river { background: linear-gradient(180deg,#3a6ea5,#1e3f66); }
+    .cell.river { background: linear-gradient(180deg,#4a88c8,#1e4a78); }
     .cell.snake-body, .cell.snake-head {
-      background-size: contain; background-repeat: no-repeat; background-position: center;
-      background-color: transparent !important;
+      background-size: 118% 118%; background-repeat: no-repeat; background-position: center;
+      background-color: transparent !important; box-shadow: none;
     }
     .cell.snake-head {
       z-index: 2;
@@ -41,49 +46,59 @@
       padding-bottom: 1px;
     }
     .mid {
-      margin-top: 10px; background: #4a3a68; border-radius: 12px; padding: 10px 8px 8px;
-      display: flex; align-items: flex-end; gap: 6px;
+      margin-top: 12px; background: rgba(74,58,104,.55); border-radius: 14px; padding: 12px 10px 10px;
+      display: flex; align-items: flex-end; gap: 8px; border: 1px solid rgba(255,255,255,.06);
     }
-    #pillars { display: flex; gap: 8px; flex: 1; justify-content: center; }
+    #pillars { display: flex; gap: 10px; flex: 1; justify-content: center; }
     .peg {
-      width: 36px; height: 64px; border: 0; padding: 0; cursor: default;
-      background: url("./art/pillar.webp") center / contain no-repeat; background-color: transparent;
+      width: 40px; height: 72px; border: 0; padding: 0; cursor: default;
+      background: url("./art/pillar.webp") center bottom / contain no-repeat; background-color: transparent;
       position: relative;
     }
-    .peg.has { cursor: pointer; filter: drop-shadow(0 0 4px #ffe08a); }
-    .peg:disabled { opacity: .9; }
+    .peg.has { cursor: pointer; filter: drop-shadow(0 0 6px #ffe08a); }
+    .peg:disabled { opacity: .92; }
     .coil {
-      position: absolute; left: 2px; right: 2px; bottom: 10px; height: 26px;
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      font-size: 12px; font-weight: 800; color: #fff; border: 1px solid rgba(0,0,0,.35);
-      background-size: cover; background-position: center;
+      position: absolute; left: 1px; right: 1px; bottom: 14px; height: 28px;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; color: #fff; border: 0;
+      background-size: contain; background-position: center; background-repeat: no-repeat;
+      background-color: transparent !important;
+      text-shadow: 0 1px 2px #000;
     }
     .hole {
-      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; margin-bottom: 6px;
-      background: url("./art/black-hole.webp") center / contain no-repeat;
-      border: 0;
+      width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; margin-bottom: 8px;
+      background: url("./art/black-hole.webp") center / 115% 115% no-repeat;
+      border: 0; filter: drop-shadow(0 0 6px rgba(120,80,200,.45));
     }
-    .cap { text-align: center; font-size: 12px; opacity: .8; margin-top: 4px; }
-    #eggs { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
-    .egg-row { display: flex; gap: 6px; justify-content: center; }
+    .cap { text-align: center; font-size: 12px; opacity: .8; margin-top: 6px; }
+    #eggs { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .egg-row { display: flex; gap: 8px; justify-content: center; }
     .egg {
-      width: 52px; height: 52px; border-radius: 50%; border: 0; color: #1b120a;
-      font-weight: 800; font-size: 14px; cursor: pointer;
-      background-size: contain; background-repeat: no-repeat; background-position: center;
+      width: 56px; height: 56px; border-radius: 50%; border: 0; color: #1b120a;
+      font-weight: 800; font-size: 15px; cursor: pointer;
+      background-size: 108% 108%; background-repeat: no-repeat; background-position: center;
       background-color: transparent;
-      text-shadow: 0 0 3px #fff, 0 1px 0 #fff;
+      text-shadow: 0 0 4px #fff, 0 1px 0 #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,.28);
     }
-    .egg.front { outline: 2px solid #ffe08a; outline-offset: 1px; }
-    .egg.buried { opacity: .45; cursor: default; }
-    .egg.ghost { background: transparent !important; box-shadow: none; border: 1px dashed #666; }
+    .egg.front { outline: 2px solid #ffe08a; outline-offset: 2px; }
+    .egg.buried {
+      opacity: .55; cursor: default; width: 48px; height: 48px; font-size: 13px;
+      box-shadow: none; filter: saturate(.85);
+    }
+    .egg.ghost {
+      background: transparent !important; box-shadow: none;
+      border: 1px dashed rgba(255,255,255,.18); opacity: .35;
+    }
     .tools {
-      margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+      margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
     }
     .tools button {
-      border: 0; border-radius: 18px; padding: 10px 12px; min-width: 72px;
-      background: #5b6fd6; color: #fff; font-size: 12px; cursor: pointer;
+      border: 0; border-radius: 18px; padding: 10px 14px; min-width: 76px;
+      background: linear-gradient(180deg,#6b7de0,#4f5fc2); color: #fff; font-size: 12px; cursor: pointer;
+      box-shadow: 0 3px 0 #3a458f;
     }
-    .note { margin-top: 10px; font-size: 11px; opacity: .55; text-align: center; }
+    .note { margin-top: 10px; font-size: 11px; opacity: .5; text-align: center; }
     .block {
       position: fixed; inset: 0; background: rgba(0,0,0,.55);
       display: flex; align-items: center; justify-content: center; z-index: 40; padding: 16px;
@@ -141,7 +156,7 @@
       <button type="button" id="btn-any">任意指</button>
       <button type="button" id="btn-shuffle">随机排</button>
     </div>
-    <p class="note">独立试玩 · 美术占位已换 · 点柱可再出</p>
+    <p class="note">独立试玩 · 点柱可再出</p>
   </div>
   <div id="block" class="block hidden">
     <div class="card">
