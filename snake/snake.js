@@ -325,19 +325,19 @@
       snake.body.push([nr, nc]);
       state.remaining = countFilled(state.grid);
       renderAll();
-      await wait(110);
+      await wait(240);
     }
 
     if (snake.count <= 0) {
       snake.exiting = true;
       state.msg = "走向黑洞…";
       renderAll();
-      await wait(220);
+      await wait(360);
       for (let i = 0; i < 4; i++) {
         snake.c = Math.min(state.grid[0].length - 1, (snake.c < 0 ? 0 : snake.c) + 1);
         snake.body.push([snake.r < 0 ? 0 : snake.r, snake.c]);
         renderAll();
-        await wait(90);
+        await wait(170);
       }
       state.msg = "";
       state.active = null;
@@ -352,7 +352,7 @@
       state.msg = "上柱子（点柱可再出）";
       state.active = null;
       renderAll();
-      await wait(280);
+      await wait(400);
       return "pillar";
     }
 
@@ -453,7 +453,7 @@
     if (!body.length) {
       const seg = document.createElement("div");
       seg.className = "snake-seg head";
-      const size = Math.max(28, cellW * 1.9);
+      const size = Math.max(36, cellW * 2.4);
       seg.style.width = size + "px";
       seg.style.height = size + "px";
       seg.style.left = boardRect.width / 2 - size / 2 + "px";
@@ -469,8 +469,8 @@
       const isHead = idx === body.length - 1;
       const seg = document.createElement("div");
       seg.className = "snake-seg " + (isHead ? "head" : "body");
-      const scale = isHead ? 1.95 : 1.45;
-      const size = Math.max(18, Math.min(cellW, cellH) * scale);
+      const scale = isHead ? 2.55 : 1.85;
+      const size = Math.max(22, Math.min(cellW, cellH) * scale);
       // board rows are rendered top=height-1 ... bottom=0
       const visualRow = def.height - 1 - r;
       const left = c * cellW + (cellW - size) / 2;
@@ -480,10 +480,17 @@
       seg.style.left = left + "px";
       seg.style.top = top + "px";
       seg.style.backgroundColor = hex(def.palette, snake.color);
-      seg.style.backgroundImage =
-        "url(" + (isHead ? headUrl(snake.color) : bodyUrl(snake.color)) + ")";
+      if (isHead) {
+        seg.style.backgroundImage = "url(" + headUrl(snake.color) + ")";
+        seg.style.backgroundSize = "110% 110%";
+        seg.textContent = String(snake.count);
+      } else {
+        // body = oversized round beads (optional soft body art)
+        seg.style.backgroundImage = "url(" + bodyUrl(snake.color) + ")";
+        seg.style.backgroundSize = "85% 85%";
+        seg.style.borderRadius = "50%";
+      }
       seg.style.zIndex = String(10 + idx);
-      if (isHead) seg.textContent = String(snake.count);
       layer.appendChild(seg);
     });
   }
