@@ -14,17 +14,31 @@
     .remain { font-size: 13px; opacity: .85; }
     .tip { font-size: 12px; opacity: .7; margin: 0 0 8px; min-height: 1.2em; }
     .board-wrap {
-      background: #1b1430; border-radius: 12px; padding: 8px; border: 2px solid #5a4578;
+      position: relative; background: #1b1430; border-radius: 12px; padding: 8px 18px;
+      border: 2px solid #5a4578; overflow: hidden;
     }
+    .river-bank {
+      position: absolute; top: 8px; bottom: 8px; width: 14px;
+      background-size: 100% 100%; background-repeat: no-repeat; pointer-events: none; z-index: 2;
+    }
+    .river-bank.left { left: 2px; background-image: url("./art/river-bank-left.webp"); }
+    .river-bank.right { right: 2px; background-image: url("./art/river-bank-right.webp"); }
     #board {
       display: grid; gap: 1px; width: 100%; aspect-ratio: 16 / 18; background: #3a2a55;
+      position: relative; z-index: 1;
     }
-    .cell { border-radius: 2px; min-height: 0; }
+    .cell { border-radius: 2px; min-height: 0; position: relative; }
     .cell.empty { background: #2a2038; }
+    .cell.river { background: linear-gradient(180deg,#3a6ea5,#1e3f66); }
+    .cell.snake-body, .cell.snake-head {
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+      background-color: transparent !important;
+    }
     .cell.snake-head {
-      outline: 2px solid #fff; z-index: 1;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 9px; font-weight: 800; color: #1b120a; text-shadow: 0 0 2px #fff;
+      z-index: 2;
+      display: flex; align-items: flex-end; justify-content: center;
+      font-size: 9px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px #000;
+      padding-bottom: 1px;
     }
     .mid {
       margin-top: 10px; background: #4a3a68; border-radius: 12px; padding: 10px 8px 8px;
@@ -32,19 +46,22 @@
     }
     #pillars { display: flex; gap: 8px; flex: 1; justify-content: center; }
     .peg {
-      width: 36px; height: 64px; border-radius: 8px 8px 6px 6px;
-      background: linear-gradient(#e8c87a, #c9a04a); position: relative;
-      box-shadow: inset 0 -4px 0 #a67c2e;
+      width: 36px; height: 64px; border: 0; padding: 0; cursor: default;
+      background: url("./art/pillar.webp") center / contain no-repeat; background-color: transparent;
+      position: relative;
     }
+    .peg.has { cursor: pointer; filter: drop-shadow(0 0 4px #ffe08a); }
+    .peg:disabled { opacity: .9; }
     .coil {
-      position: absolute; left: 4px; right: 4px; bottom: 8px; height: 28px;
+      position: absolute; left: 2px; right: 2px; bottom: 10px; height: 26px;
       border-radius: 10px; display: flex; align-items: center; justify-content: center;
       font-size: 12px; font-weight: 800; color: #fff; border: 1px solid rgba(0,0,0,.35);
+      background-size: cover; background-position: center;
     }
     .hole {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: radial-gradient(circle at 40% 35%, #444 0%, #0a0610 70%);
-      border: 2px solid #1a1028; flex-shrink: 0; margin-bottom: 6px;
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; margin-bottom: 6px;
+      background: url("./art/black-hole.webp") center / contain no-repeat;
+      border: 0;
     }
     .cap { text-align: center; font-size: 12px; opacity: .8; margin-top: 4px; }
     #eggs { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
@@ -52,9 +69,11 @@
     .egg {
       width: 52px; height: 52px; border-radius: 50%; border: 0; color: #1b120a;
       font-weight: 800; font-size: 14px; cursor: pointer;
-      box-shadow: inset -4px -4px 0 rgba(0,0,0,.15), 0 3px 6px rgba(0,0,0,.3);
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+      background-color: transparent;
+      text-shadow: 0 0 3px #fff, 0 1px 0 #fff;
     }
-    .egg.front { outline: 2px solid #ffe08a; }
+    .egg.front { outline: 2px solid #ffe08a; outline-offset: 1px; }
     .egg.buried { opacity: .45; cursor: default; }
     .egg.ghost { background: transparent !important; box-shadow: none; border: 1px dashed #666; }
     .tools {
@@ -65,18 +84,6 @@
       background: #5b6fd6; color: #fff; font-size: 12px; cursor: pointer;
     }
     .note { margin-top: 10px; font-size: 11px; opacity: .55; text-align: center; }
-    .cell.river { background: linear-gradient(180deg,#3a6ea5,#1e3f66) !important; }
-    .cell.snake-body { box-shadow: inset 0 0 0 1px rgba(0,0,0,.25); }
-    .cell.snake-head {
-      outline: 2px solid #fff; z-index: 1;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 9px; font-weight: 800; color: #1b120a; text-shadow: 0 0 2px #fff;
-    }
-    .peg {
-      border: 0; padding: 0; cursor: default;
-    }
-    .peg.has { cursor: pointer; outline: 2px solid #ffe08a; }
-    .peg:disabled { opacity: .85; }
     .block {
       position: fixed; inset: 0; background: rgba(0,0,0,.55);
       display: flex; align-items: center; justify-content: center; z-index: 40; padding: 16px;
@@ -90,7 +97,24 @@
     .block .card button {
       border: 0; border-radius: 14px; padding: 10px 14px; background: #e3942f; color: #fff; font-weight: 700; cursor: pointer;
     }
-
+    .guide {
+      position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 50;
+      display: flex; align-items: flex-start; justify-content: center; padding-top: 18px;
+      pointer-events: none;
+    }
+    .guide.hidden { display: none; }
+    .guide .card {
+      pointer-events: auto; width: min(340px, 94%); background: rgba(27,18,10,.92);
+      padding: 12px; border-radius: 14px; display: flex; flex-direction: column; gap: 8px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.45);
+    }
+    .guide .card h2 { margin: 0; font-size: 15px; }
+    .guide .card p { margin: 0; font-size: 13px; opacity: .9; line-height: 1.4; }
+    .guide .actions { display: flex; gap: 8px; justify-content: flex-end; }
+    .guide .actions button {
+      border: 0; border-radius: 12px; padding: 6px 12px; background: #e3942f; color: #fff; font-size: 13px; cursor: pointer;
+    }
+    .guide .actions button.ghost { background: transparent; border: 1px solid #c47a2c; }
   </style>
 </head>
 <body>
@@ -100,7 +124,11 @@
       <div class="remain" id="remain">剩余 0</div>
     </div>
     <p class="tip" id="tip">加载中…</p>
-    <div class="board-wrap"><div id="board"></div></div>
+    <div class="board-wrap">
+      <div class="river-bank left" aria-hidden="true"></div>
+      <div class="river-bank right" aria-hidden="true"></div>
+      <div id="board"></div>
+    </div>
     <div class="mid">
       <div id="pillars"></div>
       <div class="hole" title="黑洞"></div>
@@ -113,7 +141,7 @@
       <button type="button" id="btn-any">任意指</button>
       <button type="button" id="btn-shuffle">随机排</button>
     </div>
-    <p class="note">独立试玩 · 色块占位 · 左右为河 · 仅从底边进 · 点柱可再出</p>
+    <p class="note">独立试玩 · 美术占位已换 · 点柱可再出</p>
   </div>
   <div id="block" class="block hidden">
     <div class="card">
@@ -121,6 +149,17 @@
       <div class="row">
         <button type="button" id="btn-add-pillar">加柱</button>
         <button type="button" id="btn-restart">重开</button>
+      </div>
+    </div>
+  </div>
+  <div id="guide" class="guide hidden">
+    <div class="card">
+      <div class="step" id="guide-step">1/3</div>
+      <h2 id="guide-title">点最前排蛇蛋</h2>
+      <p id="guide-body">带黄框的是前排蛋，点一下破出短蛇，从图案底边进去吃同色块。</p>
+      <div class="actions">
+        <button type="button" class="ghost" id="guide-skip">跳过</button>
+        <button type="button" id="guide-next">下一步</button>
       </div>
     </div>
   </div>
