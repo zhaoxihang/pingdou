@@ -87,17 +87,18 @@
     #eggs { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
     .egg-row { display: flex; gap: 8px; justify-content: center; }
     .egg {
-      width: 56px; height: 56px; border-radius: 50%; border: 0; color: #1b120a;
+      width: 48px; height: 62px; border: 0; color: #1b120a;
       font-weight: 800; font-size: 15px; cursor: pointer;
-      background-size: cover; background-repeat: no-repeat; background-position: center;
+      /* vertical oval / egg silhouette, not a circle */
+      border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%;
+      background-size: 120% 100%; background-repeat: no-repeat; background-position: center;
       background-color: transparent;
-      clip-path: circle(50% at 50% 50%);
       text-shadow: 0 0 4px #fff, 0 1px 0 #fff;
       box-shadow: 0 4px 10px rgba(0,0,0,.28);
     }
     .egg.front { outline: 2px solid #ffe08a; outline-offset: 2px; }
     .egg.buried {
-      opacity: .55; cursor: default; width: 48px; height: 48px; font-size: 13px;
+      opacity: .55; cursor: default; width: 40px; height: 52px; font-size: 13px;
       box-shadow: none; filter: saturate(.85);
     }
     .egg.ghost {
