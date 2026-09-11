@@ -2,25 +2,8 @@
   const FRONT_COLS = 5;
   const GUIDE_KEY = "snakeEat.guideSeen";
   const ART = "./art/";
-
-  const EGG_ART = {
-    orange: "egg-orange.webp",
-    green: "egg-green.webp",
-    leaf: "egg-green.webp",
-    leaf2: "egg-lime.webp",
-    lime: "egg-lime.webp",
-    sky: "egg-cyan.webp",
-    blue: "egg-blue.webp",
-    cyan: "egg-cyan.webp",
-    ground: "egg-brown.webp",
-    spot: "egg-brown.webp",
-    mane: "egg-brown.webp",
-    brown: "egg-brown.webp",
-    cheek: "egg-pink.webp",
-    pink: "egg-pink.webp",
-    eye: "egg-red.webp",
-    red: "egg-red.webp",
-  };
+  const artReady = { egg: null, head: null, body: null };
+  const tintCache = Object.create(null);
 
   const state = {
     level: null,
@@ -44,16 +27,127 @@
     return (pal && pal[id]) || "#888";
   }
 
+  function parseHex(h) {
+    const s = (h || "#888888").replace("#", "");
+    const full = s.length === 3 ? s[0]+s[0]+s[1]+s[1]+s[2]+s[2] : s;
+    return [
+      parseInt(full.slice(0, 2), 16) || 0,
+      parseInt(full.slice(2, 4), 16) || 0,
+      parseInt(full.slice(4, 6), 16) || 0,
+    ];
+  }
+
+  function loadImg(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  async function ensureArt() {
+    if (!artReady.egg) {
+      const [egg, head, body] = await Promise.all([
+        loadImg(ART + "snake-egg.webp"),
+        loadImg(ART + "snake-head.webp"),
+        loadImg(ART + "snake-body.webp"),
+      ]);
+      artReady.egg = egg;
+      artReady.head = head;
+      artReady.body = body;
+    }
+  }
+
+  function makeRoundEgg(hexColor) {
+    const size = 128;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext("2d");
+    const [tr, tg, tb] = parseHex(hexColor);
+    const g = ctx.createRadialGradient(
+      size * 0.34, size * 0.32, size * 0.06,
+      size * 0.5, size * 0.52, size * 0.5
+    );
+    g.addColorStop(0, "rgb(" + Math.min(255, tr + 70) + "," + Math.min(255, tg + 70) + "," + Math.min(255, tb + 70) + ")");
+    g.addColorStop(0.45, "rgb(" + tr + "," + tg + "," + tb + ")");
+    g.addColorStop(1, "rgb(" + ((tr * 0.5) | 0) + "," + ((tg * 0.5) | 0) + "," + ((tb * 0.5) | 0) + ")");
+    ctx.beginPath();
+    ctx.arc(size / 2, size / 2, size / 2 - 1, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fillStyle = g;
+    ctx.fill();
+    // soft rim
+    ctx.strokeStyle = "rgba(0,0,0,0.18)";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    // light specular
+    ctx.beginPath();
+    ctx.ellipse(size * 0.38, size * 0.34, size * 0.16, size * 0.1, -0.5, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255,255,255,0.35)";
+    ctx.fill();
+    return canvas.toDataURL("image/png");
+  }
+
+  function colorizeSprite(img, hexColor, round) {
+    const size = 128;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext("2d");
+    if (round) {
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, size / 2 - 1, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+    }
+    ctx.drawImage(img, 0, 0, size, size);
+    const imageData = ctx.getImageData(0, 0, size, size);
+    const d = imageData.data;
+    const [tr, tg, tb] = parseHex(hexColor);
+    for (let i = 0; i < d.length; i += 4) {
+      const a = d[i + 3];
+      if (a < 8) continue;
+      const r = d[i], g = d[i + 1], b = d[i + 2];
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      // keep eyes / near-white / near-black untoned
+      if (max - min < 28 && (lum > 0.82 || lum < 0.18)) continue;
+      const shade = 0.35 + lum * 0.9;
+      d[i] = Math.min(255, (tr * shade) | 0);
+      d[i + 1] = Math.min(255, (tg * shade) | 0);
+      d[i + 2] = Math.min(255, (tb * shade) | 0);
+    }
+    ctx.putImageData(imageData, 0, 0);
+    return canvas.toDataURL("image/png");
+  }
+
+  function tinted(kind, colorId) {
+    const pal = state.level && state.level.palette;
+    const hexColor = hex(pal, colorId);
+    const key = kind + ":" + colorId + ":" + hexColor;
+    if (tintCache[key]) return tintCache[key];
+    if (kind === "egg") {
+      tintCache[key] = makeRoundEgg(hexColor);
+      return tintCache[key];
+    }
+    const img = kind === "head" ? artReady.head : artReady.body;
+    if (!img) return ART + (kind === "head" ? "snake-head.webp" : "snake-body.webp");
+    tintCache[key] = colorizeSprite(img, hexColor, true);
+    return tintCache[key];
+  }
+
   function eggUrl(color) {
-    return ART + (EGG_ART[color] || "snake-egg.webp");
+    return tinted("egg", color);
   }
 
   function headUrl(color) {
-    return ART + (color === "orange" ? "snake-head-orange.webp" : "snake-head.webp");
+    return tinted("head", color);
   }
 
   function bodyUrl(color) {
-    return ART + (color === "orange" ? "snake-body-orange.webp" : "snake-body.webp");
+    return tinted("body", color);
   }
 
   function countFilled(grid) {
@@ -318,6 +412,8 @@
         if (bi != null && state.active) {
           const isHead = bi === state.active.body.length - 1;
           cell.classList.add(isHead ? "snake-head" : "snake-body");
+          const col = hex(def.palette, state.active.color);
+          cell.style.backgroundColor = col;
           cell.style.backgroundImage =
             "url(" + (isHead ? headUrl(state.active.color) : bodyUrl(state.active.color)) + ")";
           if (isHead) cell.textContent = String(state.active.count);
@@ -338,6 +434,7 @@
         peg.classList.add("has");
         const s = document.createElement("div");
         s.className = "coil";
+        s.style.backgroundColor = hex(state.level.palette, p.color);
         s.style.backgroundImage = "url(" + headUrl(p.color) + ")";
         s.textContent = String(p.count);
         peg.appendChild(s);
@@ -468,6 +565,11 @@
     el.tip = document.getElementById("tip");
     el.speedLab = document.getElementById("speed-lab");
     bindTools();
+    try {
+      await ensureArt();
+    } catch (e) {
+      console.warn("art preload failed", e);
+    }
     const res = await fetch("levels/giraffe.json");
     const def = await res.json();
     loadLevel(def);
