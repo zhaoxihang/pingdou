@@ -102,7 +102,12 @@
       ctx.closePath();
       ctx.clip();
     }
-    ctx.drawImage(img, 0, 0, size, size);
+    // fit sprite into canvas preserving aspect
+    const scale = Math.min(size / img.width, size / img.height);
+    const dw = img.width * scale;
+    const dh = img.height * scale;
+    ctx.clearRect(0, 0, size, size);
+    ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
     const imageData = ctx.getImageData(0, 0, size, size);
     const d = imageData.data;
     const [tr, tg, tb] = parseHex(hexColor);
@@ -112,9 +117,11 @@
       const r = d[i], g = d[i + 1], b = d[i + 2];
       const max = Math.max(r, g, b), min = Math.min(r, g, b);
       const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-      // keep eyes / near-white / near-black untoned
-      if (max - min < 28 && (lum > 0.82 || lum < 0.18)) continue;
-      const shade = 0.35 + lum * 0.9;
+      // keep eye whites / pupils / deep shadows
+      if (lum > 0.9) continue;
+      if (lum < 0.12 && max - min < 40) continue;
+      // gray/cream masters: shade target by source luminance
+      const shade = Math.max(0.2, Math.min(1.25, lum * 1.35));
       d[i] = Math.min(255, (tr * shade) | 0);
       d[i + 1] = Math.min(255, (tg * shade) | 0);
       d[i + 2] = Math.min(255, (tb * shade) | 0);
@@ -126,15 +133,18 @@
   function tinted(kind, colorId) {
     const pal = state.level && state.level.palette;
     const hexColor = hex(pal, colorId);
-    const key = kind + ":" + colorId + ":" + hexColor;
+    const key = kind + ":" + colorId + ":" + hexColor + ":v2";
     if (tintCache[key]) return tintCache[key];
-    if (kind === "egg") {
-      tintCache[key] = makeRoundEgg(hexColor);
-      return tintCache[key];
+    let img = null;
+    if (kind === "egg") img = artReady.egg;
+    else if (kind === "head") img = artReady.head;
+    else img = artReady.body;
+    if (!img) {
+      if (kind === "egg") return makeRoundEgg(hexColor);
+      return ART + (kind === "head" ? "snake-head.webp" : "snake-body.webp");
     }
-    const img = kind === "head" ? artReady.head : artReady.body;
-    if (!img) return ART + (kind === "head" ? "snake-head.webp" : "snake-body.webp");
-    tintCache[key] = colorizeSprite(img, hexColor, true);
+    // eggs stay circular; head/body keep silhouette (no hard circle crop)
+    tintCache[key] = colorizeSprite(img, hexColor, kind === "egg");
     return tintCache[key];
   }
 
