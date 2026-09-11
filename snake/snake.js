@@ -404,10 +404,13 @@
         bodySet[rc[0] + "," + rc[1]] = idx;
       });
     }
+    const cells = [];
     for (let r = def.height - 1; r >= 0; r--) {
       for (let c = 0; c < def.width; c++) {
         const cell = document.createElement("div");
         cell.className = "cell";
+        cell.dataset.r = String(r);
+        cell.dataset.c = String(c);
         if (isRiver(c)) {
           cell.classList.add("river");
         } else {
@@ -422,15 +425,62 @@
         if (bi != null && state.active) {
           const isHead = bi === state.active.body.length - 1;
           cell.classList.add(isHead ? "snake-head" : "snake-body");
-          const col = hex(def.palette, state.active.color);
-          cell.style.backgroundColor = col;
-          cell.style.backgroundImage =
-            "url(" + (isHead ? headUrl(state.active.color) : bodyUrl(state.active.color)) + ")";
-          if (isHead) cell.textContent = String(state.active.count);
         }
         board.appendChild(cell);
+        cells.push(cell);
       }
     }
+    renderSnakeOverlay(def, bodySet);
+  }
+
+  function renderSnakeOverlay(def, bodySet) {
+    const layer = el.snakeLayer;
+    if (!layer) return;
+    layer.innerHTML = "";
+    if (!state.active) return;
+    const snake = state.active;
+    const boardRect = el.board.getBoundingClientRect();
+    if (!boardRect.width) return;
+    const cellW = boardRect.width / def.width;
+    const cellH = boardRect.height / def.height;
+    const body = snake.body || [];
+    // if just hatched / no tile yet, park a big head under the board entry
+    if (!body.length) {
+      const seg = document.createElement("div");
+      seg.className = "snake-seg head";
+      const size = Math.max(28, cellW * 1.9);
+      seg.style.width = size + "px";
+      seg.style.height = size + "px";
+      seg.style.left = boardRect.width / 2 - size / 2 + "px";
+      seg.style.top = boardRect.height - size * 0.35 + "px";
+      seg.style.backgroundColor = hex(def.palette, snake.color);
+      seg.style.backgroundImage = "url(" + headUrl(snake.color) + ")";
+      seg.textContent = String(snake.count);
+      layer.appendChild(seg);
+      return;
+    }
+    body.forEach((rc, idx) => {
+      const [r, c] = rc;
+      const isHead = idx === body.length - 1;
+      const seg = document.createElement("div");
+      seg.className = "snake-seg " + (isHead ? "head" : "body");
+      const scale = isHead ? 1.95 : 1.45;
+      const size = Math.max(18, Math.min(cellW, cellH) * scale);
+      // board rows are rendered top=height-1 ... bottom=0
+      const visualRow = def.height - 1 - r;
+      const left = c * cellW + (cellW - size) / 2;
+      const top = visualRow * cellH + (cellH - size) / 2;
+      seg.style.width = size + "px";
+      seg.style.height = size + "px";
+      seg.style.left = left + "px";
+      seg.style.top = top + "px";
+      seg.style.backgroundColor = hex(def.palette, snake.color);
+      seg.style.backgroundImage =
+        "url(" + (isHead ? headUrl(snake.color) : bodyUrl(snake.color)) + ")";
+      seg.style.zIndex = String(10 + idx);
+      if (isHead) seg.textContent = String(snake.count);
+      layer.appendChild(seg);
+    });
   }
 
   function renderPillars() {
@@ -567,6 +617,7 @@
 
   async function boot() {
     el.board = document.getElementById("board");
+    el.snakeLayer = document.getElementById("snake-layer");
     el.pillars = document.getElementById("pillars");
     el.cap = document.getElementById("cap");
     el.eggs = document.getElementById("eggs");
